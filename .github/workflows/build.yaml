@@ -15,14 +15,14 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
-          python-version: '3.7'
+          python-version: '3.8'
           architecture: 'x64'
 
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip     # install pip
-          python3 -m pip install mkdocs            # install mkdocs 
-          python3 -m pip install mkdocs-gitbook   # install gitbook theme
+          python3.8 -m pip install --upgrade pip     # install pip
+          python3.8 -m pip install mkdocs            # install mkdocs 
+          python3.8 -m pip install mkdocs-gitbook   # install gitbook theme
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
