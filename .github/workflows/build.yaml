@@ -15,22 +15,22 @@ jobs:
       - name: Install python
         uses: actions/setup-python@v1
         with:
-          python-version: '3.7'
+          python-version: '3.8'
 
       - name: Upgrade pip
-        run: pip install --upgrade pip
-
-      - name: pip Install mkdocs
-        run: brew uninstall --force mkdocs
+        run: pip3 install --upgrade pip3
 
       - name: brew uninstall mkdocs
         run: brew uninstall --force mkdocs
 
-      - name: pip unInstall mkdocs
-        run: pip uninstall mkdocs
+      - name: pip3 unInstall mkdocs
+        run: pip3 uninstall mkdocs
+
+      - name: pip3 Install mkdocs
+        run: pip3 install mkdocs
 
       - name: Install theme
-        run: pip install mkdocs-gitbook          
+        run: pip3 install mkdocs-gitbook          
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
