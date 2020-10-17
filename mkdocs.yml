@@ -5,7 +5,7 @@ nav:
 
 
 theme: 
-  name: gitbook
+  name: mkdocs-gitbook-0.0.1
   highlightjs: true
 
 #markdown_extensions:
