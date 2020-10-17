@@ -12,10 +12,16 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v1
 
+      - name: Install python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+          
       - name: Install theme
-        run: 
-          sudo pip uninstall mkdocs-gitbook
-          pip install mkdocs-material --user
+        run: |
+          pip install --upgrade pip
+          pip install mkdocs
+          pip install mkdocs-gitbook
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
