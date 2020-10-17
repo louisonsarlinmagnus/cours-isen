@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Install theme
-        script: pip install mkdocs-gitbook
+        run: pip install mkdocs-gitbook
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
