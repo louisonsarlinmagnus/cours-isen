@@ -5,7 +5,7 @@ nav:
 
 
 theme: 
-  name: 'gitbook'
+  name: gitbook
   highlightjs: true
 
 #markdown_extensions:
