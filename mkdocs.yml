@@ -2,7 +2,7 @@ site_name: Mes cours
 nav:
   - Accueil: index.md
   - Tech:
-    - Opto-électronique: optoelec.md
+    - Opto-électronique: Tech/optoElectronique.md
   - A propos: about.md
 
 
