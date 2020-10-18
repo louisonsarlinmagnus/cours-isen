@@ -1,5 +1,5 @@
 #<center>Linux Embarqué</center>
-<font size="2"><center><span style="color:grey">Laurent MASSON</span></center>
+<font size="2"><center><span style="color:grey">Laurent MASSON</span></center></font>
 
 <center><img src="https://www.techspot.com/images2/downloads/topdownload/2014/05/linux.png" alt="drawing" width="200"/></center>
 
