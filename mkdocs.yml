@@ -3,7 +3,7 @@ nav:
   - Accueil: index.md
   - Tech:
     - Opto-électronique: tech-optoElectronique.md
-    - Linux Embarqué: tech-linuxEmbarque.md
+    - Linux Embarqué: test.md
   - A propos: about.md
 
 
