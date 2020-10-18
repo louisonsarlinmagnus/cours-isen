@@ -1,13 +1,13 @@
-#<center>Linux Embarquette</center>
-######<center><span style="color:grey">Laurent MASSON</span></center>
+#<center>Linux Embarqué</center>
+<font size="2"><center><span style="color:grey">Laurent MASSON</span></center>
 
 <center><img src="https://www.techspot.com/images2/downloads/topdownload/2014/05/linux.png" alt="drawing" width="200"/></center>
 
 ***
 
-###<center>Jour 1</center>
+##<center>Jour 1</center>
 ***
-##INTRODUCTION
+###INTRODUCTION
 
 **Organisation du cours:**
 
@@ -34,9 +34,9 @@ Conception (choix du bootloader, choix du noyau, config du bootloader, rootfs, b
 ***
 
 
-###<center>Jour 2</center>
+##<center>Jour 2</center>
 ***
-##TP0: préparation
+###TP0: préparation
 
 On commence par noter l'adresse physique du Pc qui servira aux manips pour l'identifier sur le réseau via le [DHCP][2] du prof.
 
@@ -60,7 +60,7 @@ Modifier la variable de démarrage pour démarrer sur un disque dur: `setenv boo
 
 
 ***
-##TP1: Hello World
+###TP1: Hello World
 
 On a créer un fichier .c faisant Hello World.
 via FileZilla on le transfert sur le serveur. Via gcc ça fonctionne
@@ -72,7 +72,7 @@ On essaye de monter la clé usb wtf
 
 Pour monter la clé usb:
 
-```
+```bash
 - mkdir montage
 - mount /dev/sdb1 /wymedia/montage/
 ```
@@ -80,7 +80,7 @@ Pour monter la clé usb:
 **TADA**
 
 ***
-##TP2: Gestion de ventilateur
+###TP2: Gestion de ventilateur
 
 Pour gérer la vitesse du ventilateur on a chercher le fichier dans lequel est stocker la valeur du pwm du moteur.
 
@@ -90,8 +90,8 @@ Pour pouvoir modifier la valeur il faut désactiver la gestion automatique du ve
 
 
 ***
-##TP3: Utilisation de Git
-```
+###TP3: Utilisation de Git
+```bash
 mkdir TP3
 cp TP2 TP3
 cd /TP3
@@ -104,7 +104,7 @@ git commit -m Smooth
 ```
 
 ***
-##TP4: Script Bash
+###TP4: Script Bash
 ```bash
 #!/bin/bash
 
@@ -124,9 +124,9 @@ fi
 
 
 ***
-##TP5: Compiler le Kernel
+###TP5: Compiler le Kernel
 
-```
+```bash
 tar -xjf kernel-wyplay.tar.bz2
 ```
 
@@ -158,7 +158,7 @@ fi
 
 PARTIE 2
 
-```
+```bash
 source script.sh sh4
 cd Cours/soucres/TP05-kernel/kernel-wyplay
 make help
@@ -166,10 +166,10 @@ make wymdbox01_defconfig
 make uImage -j
 ```
 
-###<center>Jour 3</center>
+##<center>Jour 3</center>
 ***
-##TP6: Bootloader en NFS
-```
+###TP6: Bootloader en NFS
+```bash
 cd Cours/soucres/TP05-kernel/kernel-wyplay/arch/sh/boot
 cp uImage ~/boot/
 ```
@@ -190,7 +190,7 @@ Recherches:
 
 Dans le boot loader on modifie certain paramètre comme suivant:
 
-```
+```bash
 setenv bootcmd "run boot_nfs_nfs"
 saveenv
 
@@ -198,7 +198,7 @@ saveenv
 
 
 ***
-##TP7: Gestion des LEDS
+###TP7: Gestion des LEDS
 
 On repère dans le schéma éléctrique que les led sont appeller:
 >PIO1_3/SC1CG_CLK/DSSMCD_CLK
@@ -206,7 +206,7 @@ On repère dans le schéma éléctrique que les led sont appeller:
 >PIO1_5/NRSSA_DATAIN/ASC1_RTS
 
 On a ajouter des lignes dans
-```
+```bash
 /home/groupe5/Cours/TP05-kernel/kernel-wyplay/arch/sh/boards/st/wymdbox01/gpio.c
 ```
 
@@ -217,7 +217,7 @@ pio_ptr = stpio_request_set_pin(1, 5, "LED1", STPIO_OUT, 1);
 ```
 
 Puis on a recompiler le kernel
-```
+```bash
 cd TP/TP4/
 source script.sh sh4
 cd Cours/soucres/TP05-kernel/kernel-wyplay
@@ -231,21 +231,21 @@ cp Cours/soucres/TP05-kernel/kernel-wyplay/arch/sh/boot/uImage ~/boot/
 **TADAM on a les leds qui brillent**
 
 ***
-##TP8 : Compilation statique
+###TP8 : Compilation statique
 
 
 ***
-##TP9 : Création d'un rootfs
+###TP9 : Création d'un rootfs
 
 Pour la création de l'architecture
-```
+```bash
 mkdir -p {boot,dev,etc,lib,usr,bin,sbin,usr/bin,proc,sys,var,root,home,mnt,opt,tmp,media}
 ```
 On attend le prof pour le MAKEDEV*
 
 On *make* les modules via:
 
-```
+```bash
 cd TP/TP4/
 source script.sh sh4
 cd Cours/soucres/TP05-kernel/kernel-wyplay
@@ -257,13 +257,13 @@ make modules_install
 
 
 ***
-##TP10 : Création du initramfs
+###TP10 : Création du initramfs
 
 **On le fait pas**
 
 ***
-##TP11 : Compilation de busybox
-```
+###TP11 : Compilation de busybox
+```bash
 cd ~/Cours/sources/TP11-busybox/busybox
 tar -xjf busybox.tar.bz2
 make menuconfig
@@ -280,10 +280,10 @@ On positionne dans menuconfig: `/home/groupeX/rootfs`
 
 `setenv bootfile ../boot/uImage` 
 
-###<center>Jour 4</center>
+##<center>Jour 4</center>
 
 ***
-##TP12 : libc
+###TP12 : libc
 
 On va dans *~/Cours/sources*, on copie libc.tar.bz2 dans *~/rootfs*
 On décompresse via `tar -xjf libc.tar.bz2`
@@ -294,13 +294,13 @@ On lance le programme
 
 
 ***
-##TP13 : L'Init
+###TP13 : L'Init
 
 On créer un script qui monte ce qu'il faut correctement
 
 Pour se faire on a d'abord modifier une variable systeme de uImage, il s'agit de la variable *arg_kgdb*, on y met dedans `init=/sbin/script.sh`. Cette modification permet de lancer notre programme init.
 
-```Bash
+```bash
 #!/bin/bash
 echo "Debut montage"
 /bin/mount proc /proc/ -t proc
@@ -309,7 +309,7 @@ echo "Fin montage"
 ```
 
 ***
-##TP14 : Le Process d'Init
+###TP14 : Le Process d'Init
 
 `setenv arg_kgdb init=/sbin/init.sh`
 `saveenv`
