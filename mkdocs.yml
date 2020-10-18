@@ -2,7 +2,8 @@ site_name: Mes cours
 nav:
   - Accueil: index.md
   - Tech:
-    - Opto-électronique: Tech/optoElectronique.md
+    - Opto-électronique: tech-optoElectronique.md
+    - Linux Embarqué: tech-linuxEmbarque.md
   - A propos: about.md
 
 
