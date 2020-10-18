@@ -1,9 +1,6 @@
 #<center>International strategy</center>
-##<center><span style="color:"black">Resume</span></center>
-######<center>Louison SARLIN--MAGNUS</center>
-
-###1. Our environment are changing
-####1.1 Our world are changing!
+##1. Our environment are changing
+###1.1 Our world are changing!
 
 Links:
 
@@ -42,7 +39,7 @@ The last sentence of this video is *"The world is changing so are we"*, it's a p
 
 ***
 
-####1.2 Sustainable development
+###1.2 Sustainable development
 
 Link : [L'histoire des choses (VOSTFR)](https://www.youtube.com/watch?v=atrlL_7sAPA)  
 
@@ -93,7 +90,7 @@ This system is not this hypothetical, involved people can make things change.
 
 ***
 
-####1.3 Blue ocean strategy
+###1.3 Blue ocean strategy
 
 Link : [Make the competition irrelevant: BLUE OCEAN STRATEGY](https://www.youtube.com/watch?v=5Xd5lvyWMe8)  
 
@@ -125,8 +122,8 @@ To put it in a nutshell, to create your own blue ocean market, you have to focus
 
 ***
 
-###2. Why International strategy?Ways to expand your business?
-####2.1 3 Questions in a international context
+##2. Why International strategy?Ways to expand your business?
+###2.1 3 Questions in a international context
 
 Link : [The Strategy of International Business](https://www.youtube.com/watch?v=wnOj3hP4hlE)  
 
@@ -134,7 +131,7 @@ Link : [The Strategy of International Business](https://www.youtube.com/watch?v=
 
 ***
 
-####2.2 Ansoff Matrix ( Development)
+###2.2 Ansoff Matrix ( Development)
 
 Link : [The Ansoff Matrix](https://www.youtube.com/watch?v=4dKliWrCywM)  
 
@@ -151,7 +148,7 @@ The Ansoff matrix allows you to classify growth strategies. We mainly have 4 str
 
 ***
 
-####2.3 International strategy organization
+###2.3 International strategy organization
 
 Link : [International Strategy](https://www.youtube.com/watch?v=z7M1vQTvkx4)  
 
@@ -171,7 +168,7 @@ And last strategy is to be a *"transnational"* company. At some point it looks s
 
 ***
 
-####2.4 PESTEL Analysis before international expansion
+###2.4 PESTEL Analysis before international expansion
 
 Link : [PESTLE analysis](https://www.youtube.com/watch?v=GFVKKTwkANY)  
 
@@ -194,7 +191,7 @@ PESTEL stand for:
 
 ***
 
-####2.5 4P’s Marketing
+###2.5 4P’s Marketing
 
 Link : [The 4 Ps of The Marketing Mix Simplified](https://www.youtube.com/watch?v=Mco8vBAwOmA)  
 
@@ -210,7 +207,7 @@ One you have chosen your product, you need to know your target market. Based on 
 
 ***
 
-####2.6 7P’s Marketing
+###2.6 7P’s Marketing
 
 Link : [What is Marketing Mix, 7P's of marketing](https://www.youtube.com/watch?v=30wsxsZjEGs)  
 
@@ -220,7 +217,7 @@ Link : [What is Marketing Mix, 7P's of marketing](https://www.youtube.com/watch?
 
 ***
 
-####2.7 SWOT analysis
+###2.7 SWOT analysis
 
 Link : [Business strategy - SWOT analysis](https://www.youtube.com/watch?v=9-NWhwskTO4)  
 

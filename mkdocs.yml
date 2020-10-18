@@ -4,6 +4,11 @@ nav:
   - Tech:
     - Opto-électronique: tech-optoElectronique.md
     - Linux Embarqué: tech-linuxEmbarque.md
+    - Réseaux informatiques: tech-reseau.md
+    - Smart-Card: tech-smartCard.md
+  - Sciences molles:
+    - Stratégie internationale: molle-strategieInternationale.md
+    - Méthodologie de recherche: molle-methodologieRecherche.md
   - A propos: about.md
 
 

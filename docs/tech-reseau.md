@@ -1,4 +1,4 @@
-#<center>RESEAU DU CUL</center>
+#<center>RESEAU</center>
 
 ##Chapitre 1: Je sais pas
 Le code MANCHESTER !! YES !!
@@ -149,7 +149,7 @@ RMP:
 ***
 ##4)
 
-<img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/p1080x2048/87055251_192330161974339_3312437550731231232_n.jpg?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=fUS-hjzRLssAX8GsJjj&_nc_ht=scontent-cdt1-1.xx&_nc_tp=6&oh=3bf5f76f2427c6f219a16092dadeb0a4&oe=5E920DE6"/>
+<img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/p1080x2048/87055251_192330161974339_3312437550731231232_n.jpg?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=fUS-hjzRLssAX8GsJjj&_nc_ht=scontent-cdt1-1.xx&_nc_tp=6&oh=3bf5f76f2427c6f219a16092dadeb0a4&oe=5E920DE6" alt="!! Image Not Found !!"/>
 
 
 ***
@@ -243,4 +243,4 @@ On remarque que les 6 permière colonnes sont identiques, on peut donc simplifie
 
 Liens utiles:
 
-https://www.sebastienadam.be/ipcalculator/
+[sebastienadam](https://www.sebastienadam.be/ipcalculator/)

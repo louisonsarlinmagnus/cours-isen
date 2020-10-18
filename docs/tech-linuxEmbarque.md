@@ -210,7 +210,7 @@ On a ajouter des lignes dans
 /home/groupe5/Cours/TP05-kernel/kernel-wyplay/arch/sh/boards/st/wymdbox01/gpio.c
 ```
 
-```javascript
+```cpp
 pio_ptr = stpio_request_set_pin(1, 3, "LED3", STPIO_OUT, 1);
 pio_ptr = stpio_request_set_pin(1, 4, "LED2", STPIO_OUT, 1);
 pio_ptr = stpio_request_set_pin(1, 5, "LED1", STPIO_OUT, 1);
