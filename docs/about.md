@@ -16,4 +16,6 @@ Prérequis: python 3.8
 * `mkdocs -h`: Obtenir de l'aire  
 
 
-## Mise en ligne (github)
+## Mise en ligne (github.io)
+
+La mise en ligne se fait par la commande: `mkdocs gh-deploy`  

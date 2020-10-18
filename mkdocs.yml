@@ -1,11 +1,13 @@
 site_name: Mes cours
 nav:
   - Accueil: index.md
+  - Tech:
+    - Opto-électronique: optoelec.md
   - A propos: about.md
 
 
 theme: 
-  name: gitbook
+  name: material
   highlightjs: true
 
 #markdown_extensions:
