@@ -1,26 +1,18 @@
 #<center>Réseaux électrique</center>
 ##<center><span style="color:"black">Rapport de recherches</span></center>
-######<center>Guillaume DESSERME, Nicolas PETIT, <span title="Le meilleur du groupe!">Louison SARLIN--MAGNUS</span>, Florian SIGALAS, Clément SIRJEAN</center>
+<font size="2"><center>Guillaume DESSERME, Nicolas PETIT, <span title="Le meilleur du groupe!">Louison SARLIN--MAGNUS</span>, Florian SIGALAS, Clément SIRJEAN</center></font>
 
 <br>
 <center>
   <figure>
-    <img src="https://www.groupe-bage.com/images/metiers/reseau-electriques.jpg"
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ligne_haute-tension.jpg"
     width="600"
     >
-    <figcaption>*Figure 1: Ligne Très Haute Tension (THT)*</figcaption>
+    <figcaption><i>Figure 1: Ligne Très Haute Tension (THT)</i></figcaption>
   </figure>
 </center>
 
-
-<br>
-<br>
-<br>
-<br>
-
 ***
-
-
 
 ####<a href="#def"><span style="color:black">1. Définition</span></a>
 ####<a href="#role"><span style="color:black">2. Rôles d'un réseau électrique</span></a>
@@ -47,14 +39,8 @@
 #####<a href="#voiture-bilan"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4 Quel futur pour la voiture électrique?</span>
 ####<a href="#sources"><span style="color:black">Sources</span>
 
-
-
-<br>
-<br>
-<br>
-<br>
-
 ***
+  
 ###<a id="def"><span style="color:black">1.Définition</span></a>
 Un réseau électrique est l'ensemble des infrastructures permettant d'acheminer l'énergie électrique des lieux de production jusqu'aux lieux de consommation.  
 Ce réseau doit aussi assurer la gestion dynamique de l'ensemble production-transport-consommation, mettant en œuvre des réglages ayant pour but d'assurer la stabilité de l'ensemble. Il est constitué de lignes électriques et de postes de transformation. 
@@ -64,18 +50,12 @@ Ce réseau doit aussi assurer la gestion dynamique de l'ensemble production-tran
     <img src="https://img.aws.la-croix.com/2019/03/04/1201006339/Photo-dillustration-En-Allemagne-7-700-kilometres-cables-necessaires-1-750-seulement-effet-approuves-950-realises_0_729_487.jpg"
     width="600"
     >
-    <figcaption>*Figure 2: Ligne Très Haute Tension (THT)*</figcaption>
+    <figcaption><i>Figure 2: Ligne Très Haute Tension (THT)</i></figcaption>
   </figure>
 </center>
 
-
-<br>
-<br>
-<br>
-<br>
-
 ***
-
+  
 ###<a id="role"><span style="color:black">2. Rôles d'un réseau électrique</span></a>
 
 Le rôle primaire du réseau électrique est d'acheminer de l'électricité a tous les français. Pour garantir cet accès on procède au calcul du "critère de défaillance unique". C’est-à-dire qu'on prévoit à tout moment une solution alternative en cas de défaillance d'une ligne de transport. 
@@ -93,15 +73,11 @@ Rte met a disposition sur son site un outil, appelé [*eco2mix*](https://www.rte
     <img src="https://media.castorama.fr/is/image/Castorama/NPC_HT_1710_comprendre_installation_electrique_2?wid=720&fmt=png"
     width="600"
     >
-    <figcaption>*Figure 3: Schéma d'un réseau électrique*</figcaption>
+    <figcaption><i>Figure 3: Schéma d'un réseau électrique</i></figcaption>
   </figure>
 </center>
 
-<br>
-<br>
-<br>
-<br>
-
+  
 ***
 
 ###<a id="architecture"><span style="color:black">3. Architecture</span></a>
@@ -122,7 +98,7 @@ En plus des $100 000 km$ de ligne aérienne, le réseau français dispose de pr�
     <img src="https://www.edf.fr/sites/default/files/mediatheque/2018/transport/energie-a-az_reseau-tht_2018.png"
     width="600"
     >
-    <figcaption>*Figure 4: Carte du réseau THT français*</figcaption>
+    <figcaption><i>Figure 4: Carte du réseau THT français</i></figcaption>
   </figure>
 </center>
 
@@ -140,9 +116,7 @@ On a ensuite 7 centres régionaux qui s'occupent localement des lignes de plus f
 
 Ces centres régionaux veillent en temps réel à l'équilibre consommation-production électrique dans les zones concernées.
 
-<br>
-<br>
-
+  
 ####<a id="distribution"><span style="color:black">3.2 Réseau de distribution</span></a>
 
 L'interface entre le réseau de transport et le réseau de distribution se fait par pas moins de 2 200 postes de transformation qui ont pour but d'abaisser les Hautes Tensions (90kV, 20kV) en tension utilisables par le consommateur (220V dans le cas d'un particulier).
@@ -154,7 +128,7 @@ Le réseau de distribution est donc bien plus long. En effet, il mesure pas moin
     <img src="https://www.fournisseur-energie.com/wp-content/uploads/2017/06/.%C3%89lagage-pr%C3%A8s-des-lignes-%C3%A9lectriques.png"
     width="600"
     >
-    <figcaption>*Figure 5: Différents types de lignes électriques*</figcaption>
+    <figcaption><i>Figure 5: Différents types de lignes électriques</i></figcaption>
   </figure>
 </center>
 
@@ -169,15 +143,11 @@ Le développement de la production d’énergie décentralisée (éolien, photov
     <img src="https://www.comwatt.com/wp-content/uploads/2018/08/logement-durable-panneaux-photovoltaiques-energie-solaire-1024x612.jpg"
     width="600"
     >
-    <figcaption>*Figure 6: Exploitation photovoltaïque*</figcaption>
+    <figcaption><i>Figure 6: Exploitation photovoltaïque</i></figcaption>
   </figure>
 </center>
 
-<br>
-<br>
-<br>
-<br>
-
+  
 ***
 
 ###<a id="stabilité"><span style="color:black">4. Stabilité du réseau</span></a>  
@@ -226,7 +196,7 @@ Elles jouent un rôle prédominant dans les phénomènes de stabilité des rése
     <img src="https://cdn.discordapp.com/attachments/689414727109181477/699263067006959816/unknown.png"
     width="600"
     >
-    <figcaption>*Figure 7: Représeantation d'une machine synchrone*</figcaption>
+    <figcaption><i>Figure 7: Représeantation d'une machine synchrone</i></figcaption>
   </figure>
 </center>
 
@@ -243,7 +213,7 @@ Avec :
     <img src="https://cdn.discordapp.com/attachments/689414727109181477/699263451503132692/unknown.png"
     width="600"
     >
-    <figcaption>*Figure 8: Diagramme vectoriel d'une machine synchrone*</figcaption>
+    <figcaption><i>Figure 8: Diagramme vectoriel d'une machine synchrone</i></figcaption>
   </figure>
 </center>
 
@@ -259,7 +229,7 @@ Il est clair que la puissance électrique transmise au réseau est limitée à l
     <img src="https://cdn.discordapp.com/attachments/689414727109181477/699265689701056522/unknown.png"
     width="600"
     >
-    <figcaption>*Figure 9*</figcaption>
+    <figcaption><i>Figure 9</i></figcaption>
   </figure>
 </center>
 
@@ -268,7 +238,7 @@ Il est clair que la puissance électrique transmise au réseau est limitée à l
     <img src="https://cdn.discordapp.com/attachments/689414727109181477/699265484503253022/unknown.png"
     width="600"
     >
-    <figcaption>*Figure 10*</figcaption>
+    <figcaption><i>Figure 10</i></figcaption>
   </figure>
 </center>
 
@@ -302,11 +272,7 @@ On a donc : $\delta_{max,generateur} = \delta_{max,total} - \delta_{transformate
 
 Plus la ligne est longue, plus l'angle interne du générateur doit être faible, la marge de manœuvre est réduite. Si ce critère n'est pas respecté, il y a un risque en cas de défaut que le générateur perde son synchronisme. Autrement dit que la centrale électrique cesse d'alimenter le réseau.
 
-<br>
-<br>
-<br>
-<br>
-
+  
 ***
 
 
@@ -332,17 +298,13 @@ Paris échappe de peu au black-out, grâce aux équipes d'EDF qui limitent les d
 
 <center>
   <figure>
-    <img src="https://www.power-technology.com/wp-content/uploads/image-digitalinsightresearch/Archive/nri/power/features/Worst%20blackouts%20in%20the%20last%2050%20years/5-image.jpg"
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Toronto_ON_2003_Blackout.jpg"
     width="600"
     >
-    <figcaption>*Figure x2: Conséquence d'un black-out aux États-unis*</figcaption>
+    <figcaption><i>Figure 11: Conséquence d'un black-out aux États-unis</i></figcaption>
   </figure>
 </center>
-
-<br>
-<br>
-<br>
-<br>
+  
 
 ***
 
@@ -369,7 +331,7 @@ Il y a environ $300 Km$ de câble dans un navire de 150 mètres.
     <img src="https://cdn.discordapp.com/attachments/695917872723263559/695984688908468254/unknown.png"
     width="600"
     >
-    <figcaption>*Figure x3: Exemple de production-consommation d'énergie*</figcaption>
+    <figcaption><i>Figure 12: Exemple de production-consommation d'énergie</i></figcaption>
   </figure>
 </center>
 
@@ -387,7 +349,7 @@ Plusieurs technologies de propulsion permettent différentes configuration élec
     <img src="https://cdn.discordapp.com/attachments/695917872723263559/695984976843505694/unknown.png"
     width="600"
     >
-    <figcaption>*Figure x4: Schéma de principe de production et stockage de l'électricité à bord d'un navire*</figcaption>
+    <figcaption><i>Figure 13: Schéma de principe de production et stockage de l'électricité à bord d'un navire</i></figcaption>
   </figure>
 </center>
 
@@ -402,7 +364,7 @@ BPC navire tout électrique Puissance DIESEL installée ; 3 diesels principaux W
     <img src="https://cdn.discordapp.com/attachments/695917872723263559/695986371692724274/unknown.png"
     width="600"
     >
-    <figcaption>*Figure x5: Réseau principal de distribution*</figcaption>
+    <figcaption><i>Figure 14: Réseau principal de distribution</i></figcaption>
   </figure>
 </center>
 
@@ -431,13 +393,7 @@ Exemple de sous-systèmes pris en charge par le PMS:
 - Contrôles, commandes automatique : pompes, vannes, télé-jaugeage, disjoncteurs, etc.
 
 Le principe de fonctionnement d'un navire est relativement proche de la gestion du parc électrique légèrement plus moderne peut être.         
-
-
-
-<br>
-<br>
-<br>
-<br>
+  
 
 ***
 
@@ -455,7 +411,7 @@ Certaines contraintes seront mieux gérées grâce aux Smart grids telles que l'
     <img src="http://www.smartgrids-cre.fr/media/images/site_images/consommateurs/schema1.jpg"
     width="600"
     >
-    <figcaption>*Figure x0: Projection d'évolution du nombre de véhicules légers électriques en France*</figcaption>
+    <figcaption><i>Figure 15: Projection d'évolution du nombre de véhicules légers électriques en France<i></figcaption>
   </figure>
 </center>
 
@@ -480,7 +436,7 @@ Le développement des énergies de sources renouvelables est ainsi souvent frein
     <img src="https://cdn.pixabay.com/photo/2016/03/29/17/23/solarpark-1288842_960_720.jpg"
     width="600"
     >
-    <figcaption>*Figure x7: Parc de production éolien et solaire*</figcaption>
+    <figcaption><i>Figure 16: Parc de production éolien et solaire</i></figcaption>
   </figure>
 </center>
 
@@ -520,12 +476,7 @@ En résumé, les réseaux électriques intelligents :
 - rendront actif le consommateur au sein du système électrique,
 - fourniront au consommateur la connaissance suffisante permettant un pilotage efficace de sa consommation,
 - participeront à l’élaboration d’un système électrique décarboné.
-
-
-<br>
-<br>
-<br>
-<br>
+  
 
 ***
 
@@ -550,8 +501,6 @@ En France, la loi des mobilités pourrait apporter certains avantages :
   - Zones à mobilité restreintes où ces véhicules pourront évoluer sans problème.
   - Faire en sorte que tout soit très clair et simple pour l'utilisateur du véhicule électrique.
 
-<br>
-<br>
 
 ####<a id="voiture-limites"><span style="color:black">8.2 Limites de la voiture électrique</span></a>  
 
@@ -561,9 +510,7 @@ Si on veut améliorer l'autonomie de la voiture, on doit augmenter le nombre/la 
 Enfin, selon certaines études, la voiture électrique devient moins émettrice de CO2 que la voiture thermique à partir de $50.000 km$, or la voiture électrique n'est aujourd'hui pas en mesure et pas conçue pour effectuer de longues distances.  
 
 Actuellement, aucune étude fiable démontre que le véhicule électrique réduira les émissions carbones, au contraire il pourrait exister un effet pervers selon les endroits où les batteries sont fabriquées.
-
-<br>
-<br>
+  
 
 ####<a id="voiture-impact"><span style="color:black">8.3 Impact sur les réseaux électriques</span></a>  
 
@@ -574,7 +521,7 @@ Le déploiement d'infrastructures de charge de véhicules électriques sur l'ens
     <img src="https://cdn.discordapp.com/attachments/695917872723263559/695969420492668998/unknown.png"
     width="600"
     >
-    <figcaption>*Figure x6: Schéma décrivant le principe de Smart-Grid*</figcaption>
+    <figcaption><i>Figure 17: Schéma décrivant le principe de Smart-Grid</i></figcaption>
   </figure>
 </center>
 
@@ -589,7 +536,7 @@ Cette modélisation permet de définir des courbes de charge « naturelle » des
     <img src="https://cdn.discordapp.com/attachments/695917872723263559/695970587163492362/unknown.png"
     width="600"
     >
-    <figcaption>*Figure x1: Courbes de charge type pour un jour ouvré moyen pour  un million de véhicules électriques*</figcaption>
+    <figcaption><i>Figure 18: Courbes de charge type pour un jour ouvré moyen pour  un million de véhicules électriques</i></figcaption>
   </figure>
 </center>
 
@@ -607,13 +554,7 @@ Selon ce même rapport, un parc national composé de 15,6 millions de véhicules
 L’électrification est même considérée comme une « opportunité », à condition que la recharge soit pilotée. Les millions de véhicules électriques branchés pendant plusieurs heures pourront en effet contribuer à terme à l’équilibre du réseau grâce au "*Véhicule to Grid*" (V2G), en y injectant du courant lors des pics de consommation.  
 
 Une solution d’autant plus pertinente qu’une voiture est utilisée pour se déplacer seulement $4\%$ de son temps ! Sans attendre la mise en place du V2G, un pilotage simple tel qu’un système de lancement de charge en heures creuses similaire à celui de nos ballons d’eau chaude permettrait déjà d’éviter de forts appels de puissance et une économie de 5 millions de tonnes de CO2, estime RTE.
-
-
-
-
-
-<br>
-<br>
+  
 
 ####<a id="voiture-bilan"><span style="color:black">8.4 Quel futur pour la voiture électrique?</span></a>  
 
@@ -622,16 +563,7 @@ Aujourd'hui, il est sûr que la voiture électrique ne constitue pas une solutio
 De plus, rendre le réseau intelligent et communicant, en développant les Smart Grids, est l’ambition de toutes les entreprises concernées par la voiture électrique, comme les fournisseurs d’électricité, les concepteurs des bornes électriques et les constructeurs automobiles.
 
 Cependant, le *Shift-Project* et les ingénieurs spécialisés dans ce domaine nous rappelle qu'il est essentiel de nous réorienter vers des modes de vie plus sobres : Il est plus simple de s'affranchir d'un certain nombre de contraintes géopolitiques ou de balances commerciales en consommant moins et en fabricant des voitures certes peut-être moins confortables mais plus petites, sans oublier les transports en commun ou les vélos.
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-
+  
 
 ***
 

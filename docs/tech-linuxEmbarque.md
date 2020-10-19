@@ -3,8 +3,6 @@
 
 <center><img src="https://www.techspot.com/images2/downloads/topdownload/2014/05/linux.png" alt="drawing" width="200"/></center>
 
-***
-
 ##<center>Jour 1</center>
 ***
 ###INTRODUCTION

@@ -6,6 +6,9 @@ nav:
     - Linux Embarqué: tech-linuxEmbarque.md
     - Réseaux informatiques: tech-reseau.md
     - Smart-Card: tech-smartCard.md
+    - Système d'exploitation: tech-OS.md
+    - Réseaux électriques: tech-reseauxElectriques.md
+    - Rapport de recherche sur les réseaux électriques: tech-rapportRechercheElec.md
   - Sciences molles:
     - Stratégie internationale: molle-strategieInternationale.md
     - Méthodologie de recherche: molle-methodologieRecherche.md
@@ -16,28 +19,32 @@ theme:
   name: material
   highlightjs: true
 
-#markdown_extensions:
-#  - codehilite:
-#      linenums: true
-#  - admonition
-#  - pymdownx.arithmatex
-#  - pymdownx.betterem:
-#      smart_enable: all
-#  - pymdownx.caret
-#  - pymdownx.critic
-#  - pymdownx.details
-#  - pymdownx.emoji:
-#      emoji_index: !!python/name:materialx.emoji.twemoji
-#      emoji_generator: !!python/name:materialx.emoji.to_svg
-#  - pymdownx.inlinehilite
-#  - pymdownx.magiclink
-#  - pymdownx.mark
-#  - pymdownx.smartsymbols
-#  - pymdownx.superfences
-#  - pymdownx.tasklist:
-#      custom_checkbox: true
-#  - pymdownx.tabbed
-#  - pymdownx.tilde
+markdown_extensions:
+  - codehilite:
+      linenums: true
+  - admonition
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
 
 
 copyright: '&copy; 2020 Louison SARLIN--MAGNUS'

@@ -1,18 +1,13 @@
-#<center>On fait des exos sur les Réseaux</center>
-######<center>*pouloulou*</center>
-#####<center>Louison SARLIN--MAGNUS</center>
+#<center>Linux Embarqué</center>
+<font size="1"><center>*pouloulou*</center></font>
 
-***
-
-##Exercice 1 : 
-<span style="color:black">
+##Exercice 1 
 Intérêt du transport de l'électricité à haute tension.
 On cherche à quantifier les pertes Joule occasionnées lors du transport d’une puissance électrique de 100MW sur une distance de 100km en triphasé.
 Le facteur de puissance de la ligne est de 0, 95.
-</span>
-
+  
 **1. Déterminer le courant de ligne pour une tension de 400 kV puis 100 kV.**  
-$P = \sqrt{3} \times U \times Ixcos(\varphi)$  
+$P =\sqrt{3} \times U \times Ixcos(\varphi)$  
 $I = \frac{P}{\sqrt{3} \times U \times cos(\varphi)}$  
   
 Donc $I = 152 A$ (pour U=400kV)  
@@ -43,12 +38,12 @@ $r=\frac{1.10^{8} - 852.10^{3}}{1.10^{8}}=0,991$
 
 ***
 
-##Exercice 2 : Stabilité en fréquence du réseau électrique
+##Exercice 2 
+<font size="5">Stabilité en fréquence du réseau électrique</font>  
 Un turbo-alternateur de centrale nucléaire a les spécifications suivantes: 1140 MVA/27 kV.
 Il délivre de l’énergie au réseau comme l’indique le schéma ci-après:
-
 <center>
-  <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/91873396_220396492504824_8801434277897043968_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=6eT9qWYuhfwAX9Ppfc_&_nc_ht=scontent-cdt1-1.xx&oh=354ce32a395413f1cc822c8c5cf60236&oe=5EADA033" width="600"/>
+  <img src="https://i.imgur.com/zuwWxzH.png" width="300"/>
 </center>
 
 **1.  Quelle est la puissance mécanique développée sur l’arbre ?**  
@@ -69,11 +64,12 @@ Le réglage de la fréquence réseau se fait par le biais de la puissance active
 
 ***
 
-##Pas d'exercice 3
+<font size="5">Pas d'exercice 3...</font>
 
 ***
 
-##Exercice 4 : Stabilité en tension du réseau électrique - réglage de la puissance réactive
+##Exercice 4
+<font size="5">Stabilité en tension du réseau électrique - réglage de la puissance réactive</font>  
 On cherche à dimensionner le gradin de condensateurs du schéma ci-dessous pour compensertotalement la puissance réactive de la charge. Il s’agit d’un réseau triphasé 230V/400V.  
 **1.  Déterminer la valeur de C à mettre en place.**  
 On sait que : 
@@ -153,7 +149,8 @@ Finalement : $Q_{total} = 33.47kVAR$
 
 ***
 
-##Exercice 5 : Stabilité en tension du réseau électrique
+##Exercice 5
+<font size="5">Stabilité en tension du réseau électrique</font>  
 Le caractère inductif et résistif des lignes de transport électrique ont pour conséquence de faire chuter la tension du réseau. En vous basant sur le modèle monophasé de ligne proposé ci-dessous, nous allons déterminercette chute de tension.
 
 <center>
@@ -167,7 +164,7 @@ $Pr=V_c \times i \times sin(\varphi)$
 **2.  Tracer le diagramme de Fresnel ($V_c$,$V_p$,$\Delta V$ et $I$) du circuit en prenant la tension $V_c$commeréférence.**  
 
 <center>
-  <img src="https://cdn.discordapp.com/attachments/695917872723263559/695918177263157268/unknown.png" width="600"/>
+  <img src="https://cdn.discordapp.com/attachments/695917872723263559/695918177263157268/unknown.png" alt="Image not found" width="600"/>
 </center>
 
 Avec $Vp = R \times I+jLw \times I+Vc$
@@ -175,7 +172,7 @@ Avec $Vp = R \times I+jLw \times I+Vc$
 **3.  Si l’on suppose que la ligne n’est pas trop chargée, l’angle entre $V_c$ et $V_p$ peut être négligé.Déterminer alors l’expression de $\Delta V$ en fonction de$I$,$R$,$L$,$\omega$ et $\phi$.**  
 
 <center>
-  <img src="https://cdn.discordapp.com/attachments/695917872723263559/695918249086287983/unknown.png" width="600"/>
+  <img src="https://cdn.discordapp.com/attachments/695917872723263559/695918249086287983/unknown.png" alt="Image not found" width="600"/>
 </center>
 
 One voit que :  
@@ -191,7 +188,8 @@ $\Delta V = \frac{R*P+L*w*Q}{Vc}$
 Il faut ajouter des condensateurs pour compenser Q.
 ***
 
-##Exercice 6 : Stabilité en tension
+##Exercice 6
+<font size="5">Stabilité en tension</font>  
 Une  ligne  aérienne  triphasée  alimente  un  récepteur  triphasé  équilibré  qui  consomme  unepuissance active $P1$ de $1,50 MW$ et impose un facteur de puissance $k1$ de $0,9$.  
 La valeur efficace de la tension entre phases à l’arrivée de la ligne est $U_A=20kV$, sa fréquence $f=50 Hz$.  
 Chaque fil de ligneaune résistance linéique de $220mΩ/k$ met une inductance linéique de $1,2 mH/km$. La ligne fait $50km$ de long.  
@@ -256,8 +254,10 @@ $\frac{\Delta U}{U_D} = \frac{2}{22} = 0.09 = 9\%$
 
 ***
 
-##Exercice 7 : Nécessité d'interconnecter les centrales de production
-####D. Impact de la distance au site de production
+##Exercice 7
+<font size="5">Nécessité d'interconnecter les centrales de production</font>  
+###Partie A
+<font size="3">Impact de la distance au site de production</font>
 Nous prenons un modèle monophasé de ligne pour l’étude de la chute de tension dans leréseau électrique THT de tension composée $U_r=400kV$.
 La ligne a une inductance linéique $l=1,1mH/km$. La distance en kms séparant centrale de production et récepteur est notée $x$. Lerécepteur est de type inductif et présente un facteur de puissance de $0,90$.
 
@@ -293,7 +293,8 @@ $V_A = V_D-I.l.\omega.x.\sin(\phi)$
 $\iff V_D-V_A = I.l.\omega.x.\sin(\phi)$
 $x=\frac{V_D-V_A}{I.l.\omega.x.\sin(\phi)} = \frac{231-218}{830\times 1,1.10^{-3}\times 2\pi \times 50\times\sin(26)} =1034m$
 
-####E. Interconnexion des centrales de production
+###Partie B
+<font size="3">Interconnexion des centrales de production</font>  
 Nous allons voir comment un réseau de production maillé permet de limiter la chute de tensionen ligne.
 Les 2 centrales sont espacées d’une distance $d=200kms$. Nous supposerons pour la suiteque les tensions de réseau aux deux extrémités de la ligne sont synchrones.
 
@@ -325,7 +326,8 @@ $\underline{I_1}= \underline{I}.\frac{d-x}{d}$
 
 ***
 
-##Exercice 8 : Optimisation du réseau électrique
+##Exercice 8
+<font size="5">Optimisation du réseau électrique</font>  
 Pour le circuit suivant, sachant que les charges sont alimentées en 230V, déterminer :  
 
 **1.  Le facteur de puissance des deux charges parallèles**  
