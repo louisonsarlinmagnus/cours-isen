@@ -8,10 +8,11 @@ nav:
     - Smart-Card: tech-smartCard.md
     - Système d'exploitation: tech-OS.md
     - Réseaux électriques: tech-reseauxElectriques.md
-    - Rapport de recherche sur les réseaux électriques: tech-rapportRechercheElec.md
   - Sciences molles:
     - Stratégie internationale: molle-strategieInternationale.md
-    - Méthodologie de recherche: molle-methodologieRecherche.md
+  - Recherches:
+    - Les réseaux électriques: recherche-reseauxElec.md
+    - Transition énergétique: recherche-transitionEnergetique.md
   - A propos: about.md
 
 
