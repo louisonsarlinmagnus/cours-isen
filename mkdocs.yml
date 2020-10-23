@@ -1,15 +1,22 @@
 site_name: Mes cours
+
+# Repository
+repo_name: Edition
+repo_url: https://github.com/louisonsarlinmagnus/cours-isen
+
 nav:
   - Accueil: index.md
   - Tech:
-    - Opto-électronique: tech-optoElectronique.md
+    - Cyber Sécurité: tech-cybersecurite.md
+    - Developpement Opérationnel: tech-DevOps.md
     - Linux Embarqué: tech-linuxEmbarque.md
+    - Opto-électronique: tech-optoElectronique.md
+    - Réseaux électriques: tech-reseauxElectriques.md
     - Réseaux informatiques: tech-reseau.md
     - Smart-Card: tech-smartCard.md
     - Système d'exploitation: tech-OS.md
-    - Réseaux électriques: tech-reseauxElectriques.md
-    - Cyber Sécurité: tech-cybersecurite.md
   - Sciences molles:
+    - Gestion de la qualité: molle-qualite.md
     - Stratégie internationale: molle-strategieInternationale.md
   - Recherches:
     - Les réseaux électriques: recherche-reseauxElec.md
