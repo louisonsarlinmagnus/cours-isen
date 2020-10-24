@@ -193,7 +193,7 @@ Quels sont les principales données d'entrées et sorties de votre processus?
 
 Quels sont les indicateurs de votre processus?
 
-    - 
+  - 
 
 OSEF
 
@@ -202,36 +202,36 @@ OSEF
 ## RAPPEL
 ### Définitions
 
-    - Qualité:
-            - Ensemble des caracteristiques d'une entreprise qui lui donnent
-            l'aptitude à satisfaire des besoins qui sont exprimés
+  - Qualité:
+          - Ensemble des caracteristiques d'une entreprise qui lui donnent
+          l'aptitude à satisfaire des besoins qui sont exprimés
 
-    - Client:
-            - Personne qui reçoit d'une entreprise, contre paiement, des
-            fournitures commerciales ou des services
+  - Client:
+          - Personne qui reçoit d'une entreprise, contre paiement, des
+          fournitures commerciales ou des services
 
-    - Partie intéréssée:
-            - Un personne ou un organisme qui peut avoir une incidence ou être
-            affecté par une décision ou activité de l’organisme
+  - Partie intéréssée:
+          - Un personne ou un organisme qui peut avoir une incidence ou être
+          affecté par une décision ou activité de l’organisme
 
-    - Management de la qualité: Ensemble des disposition prisent pas un
-    organisme dans le but de satisfaire ses clients
-            - Orientation client
-            - Leadership
-            -Implication du personnel
-            - Approche processus
-            - Amélioration
-            - Prise de décision fondée sur des preuves
-            - Management des relations avec les parties interessées
+  - Management de la qualité: Ensemble des disposition prisent pas un
+  organisme dans le but de satisfaire ses clients
+          - Orientation client
+          - Leadership
+          -Implication du personnel
+          - Approche processus
+          - Amélioration
+          - Prise de décision fondée sur des preuves
+          - Management des relations avec les parties interessées
 
-    - ISO 9001: Norme internationnale qui défini les exigences en matiere de
-    systeme de management
-            - Satisfaction client
-            - Amélioration continue
-            - Mise en place d'un SMQ (Système de Management de la Qualité)
-            - Approche **processus**
-            - Anticiper les risques
-            - Cohérence entre la stratégie et la SMQ
+  - ISO 9001: Norme internationnale qui défini les exigences en matiere de
+  systeme de management
+          - Satisfaction client
+          - Amélioration continue
+          - Mise en place d'un SMQ (Système de Management de la Qualité)
+          - Approche **processus**
+          - Anticiper les risques
+          - Cohérence entre la stratégie et la SMQ
 
 ###**Pourquoi un audit?**####
 Les audit on pour but de vérifier que toutes les règles imposées sont
@@ -302,15 +302,15 @@ L'AMDEC est une méthode rigoureuse de travail en **groupe**.
  
 On peut faire :
 
-    - une AMDEC Produit, pour vérifier la conformité d'un produit développé par rapport aux exigences du client,
-    - une AMDEC Processus, pour valider la fiabilité du processus de fabrication,
-    - une AMDEC Moyen, pour vérifier la fiabilité d'un équipement.
+  - une AMDEC Produit, pour vérifier la conformité d'un produit développé par rapport aux exigences du client,
+  - une AMDEC Processus, pour valider la fiabilité du processus de fabrication,
+  - une AMDEC Moyen, pour vérifier la fiabilité d'un équipement.
  
 On recense toutes les causes de défaillance de chaque mode et d'évaluer la criticité:
 
-    - note "G" : Gravité du défaut,
-    - note "O" : Fréquence de défaillance,
-    - note "D" : Probabilité de non détection.
+  - note "G" : Gravité du défaut,
+  - note "O" : Fréquence de défaillance,
+  - note "D" : Probabilité de non détection.
 
 L'indice de criticité est obtenu par le produit des trois notes : C : G x O x D
 Plus la criticité est importante, plus la défaillance considérée est préoccupante. Lorsque la criticité dépasse la limite prédéfinie par le groupe, ce dernier recherche les actions d'amélioration possibles pour la ramener à un niveau acceptable en jouant sur chaque cotation.
