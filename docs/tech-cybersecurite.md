@@ -38,14 +38,14 @@ XSS: Cross Site Scripting
 
 ### Attaque XXE
 
-XXE: e**X**ternal **X**ML **E**ntity
+XXE: e<b>X</b>ternal <b>X</b>ML <b>E</b>ntity
 
 On vole des données sécurisées en utilisant des failles de configuration dans un parseur XML. On peut attaquer en direct, ou en utilisant un fichier *.dtd*.
 
 
 ### Attaque CSRF
 
-**C**ross **S**ite **R**equest **F**orgery
+<b>C</b>ross <b>S</b>ite <b>R</b>equest <b>F</b>orgery
 
 Mon objectif est de profité de sa connexion sur le serveur web d'administration pour prendre le contrôle.
 
