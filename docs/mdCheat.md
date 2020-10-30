@@ -1,7 +1,5 @@
 # <center>Markdown Cheat Sheet</center>
 
-[cheatsheet](http://www-lmpa.univ-littoral.fr/~marion/docs-and-tips/cheatsheet/)  
-
 ## Résumé
 
 | Effet                | Md              | HTML                             |
@@ -22,62 +20,142 @@
 
 ## Titres
 
-```
-# Grand titre
-## Moyen Titre
-### Petit Titre
-#### Petit Sous Titre
-##### Très Petit Titre
-###### Très Petit Sous titre
-```
+
+!!! example "Titres"
+
+    === "Markdown"
+        ```md
+        # Grand titre
+        ## Moyen Titre
+        ### Petit Titre
+        #### Petit Sous Titre
+        ##### Très Petit Titre
+        ###### Très Petit Sous Titre
+        ```
+
+    === "HTML"
+        ````html
+        <h1>Grand titre</h1>
+            <h2>Moyen Titre</h2>
+                <h3>Petit Titre</h3>
+                    <h4>Petit Sous Titre</h4>
+                        <h5>Très Petit Titre</h3>
+                            <h6>Très Petit Sous Titre</h4>
+        ````
+
+    === "Rendu"
+        <h1>Grand titre</h1>
+            <h2>Moyen Titre</h2>
+                <h3>Petit Titre</h3>
+                    <h4>Petit Sous Titre</h4>
+                        <h5>Très Petit Titre</h3>
+                            <h6>Très Petit Sous Titre</h4>
 
 
 ## Listes
 
-```
-1. Premièrement
-2. Puis on sous-liste:
-    - Liste
-      + Un élément
-1. Ensuite (les nombres n'importent pas)
-4. Enfin un dernier item
+### Liste numérotée
 
-</a> #On arrête la liste
-```
+!!! example "Liste numérotée"
 
+    === "Markdown"
+        ```md
+        1. Premièrement
+        2. Puis le second
+        1. Ensuite (les nombres n'importent pas)
+        4. Enfin un dernier item
+        </a> #On arrête la liste
+        ```
+
+    === "HTML"
+        ````html
+        <ol>
+          <li>Premièrement</li>
+          <li>Puis le second</li>
+          <li>Ensuite</li>
+          <li>Enfin un dernier item</li>
+        </ol>
+        ````
+
+    === "Rendu"
+        1. Premièrement
+        2. Puis le second:
+        1. Ensuite (les nombres n'importent pas)
+        4. Enfin un dernier item
+
+
+### Liste à puces
+
+!!! example "Liste à puces"
+
+    === "Markdown"
+        ```md
+        - Premier
+        - Second
+            + Troisième
+        ```
+
+    === "HTML"
+        ```html
+        <ul>
+            <li>Premier</li>
+            <li>Second le second</li>
+            <ul>
+                <li>Troisième</li>
+            </ul>
+        </ul>
+        ```
+
+    === "Rendu"
+        - Premier
+        - Second
+            + Troisième
 
 
 ## Liens
 
 ### Liens externes
 
-```
-[Lien en ligne](https://www.pouet.com)
+!!! example "Liens externes"
 
-[Lien en référence][dU tExT eN liEn] #Non case-sensitive
+    === "Markdown"
+        ```md
+        [Lien en ligne](https://www.pouet.com)
+        [Lien en référence][dU tExT eN liEn] #Non case-sensitive
+        [Référence grâce a un nombre][1]
+        On référence le lien direct [lien direct].
+        [du text en lien]: https://www.pouet.com
+        [1]: https://www.pouet.com
+        [lien direct]: https://www.pouet.com
+        ```
 
-[Référence grâce a un nombre][1]
+    === "HTML"
+        ```html
+        <a href="https://www.pouet.com">Lien en ligne</a>
+        <a href="https://www.pushaune.com" target="_blank">Pour ouvrir dans un nouveau onglet</a>
+        ```
 
-On référence le lien direct [lien direct].
-
-[du text en lien]: https://www.pouet.com
-[1]: https://www.pouet.com
-[lien direct]: https://www.pouet.com
-```
 
 ### Liens internes
 
-```
-[Référence a un fichier](../blob/master/LICENSE)
+!!! example "Liens externes"
 
-[Réference a un paragraphe](#liens)
+    === "Markdown"
+        ```md
+        [Référence a un fichier](../blob/master/LICENSE)
+        [Réference a un paragraphe](#liens)
+        ```
 
-```
+    === "HTML"
+        ```html
+        <a href="../blob/master/LICENSE">Référence a un fichier</a>
+        <a href="#liens">Réference a un paragraphe</a>
+        ```
 
 
 ## Images
 
-!!! example "Injecting Classes"
+!!! example "Images"
 
     === "Markdown"
         ```md
@@ -105,125 +183,429 @@ On référence le lien direct [lien direct].
         </center>
         ```
 
-Markdown:  
-```md
-Image en ligne:
-![alt text](https://www.pouet.com/images/image.png "Logo Title Text 1")
-
-Image en référence:
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://www.pouet.com/images/image.png "Logo Title Text 2"
-```
-
-HTML:  
-```html
-<center>
-  <figure>
-    <img src="https://www.pouet.com/images/image.png"
-    alt="Image introuvable"
-    width="600"
-    height="600"
-    >
-    <figcaption><i>Figure x: Description de l'image</i></figcaption>
-  </figure>
-</center>
-```
-
 
 ## Code
 
+!!! example "Example"
 
-!!! tip "Ajout des numeros de ligne"
-    Il suffit d'ajouter `linenums="num_premiere_ligne"` après le language
-   
+    === "Markdown"
+        ````md
+        ```language linenums="1"
+        du code dans un language  
+        ```
+        ````
+
+    === "HTML"
+        ```html
+        <pre><code>
+            Du code
+        </code></pre>
+        ```
+
+    === "Rendu"
+        ```java linenums="1"
+        public class HelloWorld {
+          // Définition de la fonction main
+          public static void main(String[] arg){
+            // Affichage du commentaire Hello world dans la fenêtre de commande
+            System.out.println("Hello world");
+          }
+        } 
+        ```
+
+!!! tip "Poupée russe"
+    Il est possible d'emboiter des blocs de code en ajoutant un ` a chaque incrément.
+
+## LaTex
+
+!!! tip "LaTex"
+    Pour utiliser le LaTex il suffit d'entourer la formule par le symbole '$'.
+
+| Opération        | LaTex         | Rendu           |
+|------------------|---------------|-----------------|
+| Signe $\times$   | \times        | $\times$        |
+| Puissance        | a^{b}         | $a^{b}$         |
+| Indice           | a_{b}         | $a_{b}$         |
+| Racine           | \sqrt[n]{x}   | $\sqrt[n]{x}$   |
+| Fraction         | \frac{a}{c}   | $\frac{a}{c}$   |
+| Somme            | \sum_{i=0}^n  | $\sum_{i=0}^n$  |
+| Produit          | \prod_{i=0}^n | $\prod_{i=0}^n$ |
+| Fraction         | \frac{a}{c}   | $\frac{a}{c}$   |
+| Intégrale        | \int_a^b      | $\int_a^b$      |
+| Caractères grecs | \alpha        | $\alpha$        |
+| Fonction trigo   | \sin          | $\sin$          |
+| Exponentielle    | \exp(x)       | $\exp(x)$       |
+| Infini           | \infty        | $\infty$        |
+| Vecteur          | \vec{a}       | $\vec{a}$       |
 
 
-Markdown:  
-<code>
-\```language  
-du code dans un language  
-\```
-</code>
 
-HTML:  
-```html
-<pre><code>
-    Du code
-</code></pre>
-```
 
 ## Tableaux
 
 [Table formatter util](http://markdowntable.com/)  
 
+!!! example "Example"
 
-Markdown:  
-```
-| Firstname | Lastname | Age |
-|-----------|----------|-----|
-| Jill      | Smith    | 50  |
-| Eve       | Jackson  | 94  |
-```
-
-HTML:
-```html
- <table style="width:100%">
-  <tr> 
-    <th>Firstname</th>   <!--th pour les headers-->
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>                   <!--tr pour les lignes-->
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>          <!--td pour les colonnes-->
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-</table> 
-```
-
-## Diagrammes UML
-
-<code>
-\```mermaid<br>
-graph TD<br>
-    A[Hard] -->|Text| B(Round)<br>
-    B --> C{Decision}<br>
-    C -->|One| D[Result 1]<br>
-    C -->|Two| E[Result 2]<br>
-\```
-</code>
-
-
-[Marion](http://www-lmpa.univ-littoral.fr/~marion/docs-and-tips/cheatsheet/#new-2019-autres-tests)
-
-[md synthax](http://facelessuser.github.io/PyMdown/user-guide/markdown-syntax/)
-
-[pydown](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/)
-
-## LaTex
-
-## SuperFences
-
-!!! example "Injecting Classes"
+    === "Markdown"
+        ```md
+        | Firstname | Lastname | Age |
+        |-----------|----------|-----|
+        | Jill      | Smith    | 50  |
+        | Eve       | Jackson  | 94  |
+        ```
 
     === "HTML"
         ```html
-        <table class="extra-class highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="extra-class highlight"><pre><span></span><code><span cv></td><td class="code"><div class="extra-class highlight"><pre><span></span><code><span class="kn">import</span> <spanlass="kn">import</span> <span class="nn">hello_world</span>\n</code></pre></div>\n</td></tr></table>
+         <table style="width:100%">
+          <tr> 
+            <th>Firstname</th>   <!--th pour les headers-->
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+          <tr>                   <!--tr pour les lignes-->
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>          <!--td pour les colonnes-->
+          </tr>
+          <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+          </tr>
+        </table> 
         ```
 
-    === "Markdown"
+    === "Rendu"
+        | Firstname | Lastname | Age |
+        |-----------|----------|-----|
+        | Jill      | Smith    | 50  |
+        | Eve       | Jackson  | 94  |
+
+
+## Diagrammes Mermaid
+
+### Flowchart
+
+!!! example "Flowchart"
+
+    === "Code"
         ````
-        ```{.python .extra-class linenums="1"}
-        import hello_world
+        ```mermaid
+        graph TD;
+            A-->B;
+            A-->C;
+            B-->D;
+            C-->D;
         ```
         ````
+
+    === "Rendu"
+        ```mermaid
+            graph TD;
+                A-->B;
+                A-->C;
+                B-->D;
+                C-->D;
+        ```
+
+
+### Sequence diagram
+
+
+!!! example "Flowchart"
+
+    === "Code"
+        ````
+        ```mermaid
+        sequenceDiagram
+            participant Alice
+            participant Bob
+            Alice->>John: Hello John, how are you?
+            loop Healthcheck
+                John->>John: Fight against hypochondria
+            end
+            John-->>Alice: Great!
+            John->>Bob: How about you?
+            Bob-->>John: Jolly good!
+        ```
+        ````
+
+    === "Rendu"
+        ```mermaid
+            sequenceDiagram
+                participant Alice
+                participant Bob
+                Alice->>John: Hello John, how are you?
+                loop Healthcheck
+                    John->>John: Fight against hypochondria
+                end
+                John-->>Alice: Great!
+                John->>Bob: How about you?
+                Bob-->>John: Jolly good!
+        ```
+
+
+### Gantt diagram
+
+!!! example "Gantt diagram"
+
+    === "Code"
+        ````
+        ```mermaid
+        gantt
+            title A Gantt Diagram
+            dateFormat  YYYY-MM-DD
+            section Section
+            A task           :a1, 2014-01-01, 30d
+            Another task     :after a1  , 20d
+            section Another
+            Task in sec      :2014-01-12  , 12d
+            another task      : 24d
+        ```
+        ````
+
+    === "Rendu"
+        ```mermaid
+            gantt
+                title A Gantt Diagram
+                dateFormat  YYYY-MM-DD
+                section Section
+                A task           :a1, 2014-01-01, 30d
+                Another task     :after a1  , 20d
+                section Another
+                Task in sec      :2014-01-12  , 12d
+                another task      : 24d
+        ```
+
+### Class diagram
+
+!!! example "Class diagram"
+
+    === "Code"
+        ````
+        ```mermaid
+        classDiagram
+              Animal <|-- Duck
+              Animal <|-- Fish
+              Animal <|-- Zebra
+              Animal : +int age
+              Animal : +String gender
+              Animal: +isMammal()
+              Animal: +mate()
+              class Duck{
+                  +String beakColor
+                  +swim()
+                  +quack()
+              }
+              class Fish{
+                  -int sizeInFeet
+                  -canEat()
+              }
+              class Zebra{
+                  +bool is_wild
+                  +run()
+              }
+        ```
+        ````
+
+    === "Rendu"
+        ```mermaid
+            classDiagram
+                  Animal <|-- Duck
+                  Animal <|-- Fish
+                  Animal <|-- Zebra
+                  Animal : +int age
+                  Animal : +String gender
+                  Animal: +isMammal()
+                  Animal: +mate()
+                  class Duck{
+                      +String beakColor
+                      +swim()
+                      +quack()
+                  }
+                  class Fish{
+                      -int sizeInFeet
+                      -canEat()
+                  }
+                  class Zebra{
+                      +bool is_wild
+                      +run()
+                  }
+        ```
+
+
+### Git graph
+
+!!! example "Git graph"
+
+    === "Code"
+        ````
+        ```mermaid
+        gitGraph:
+        options
+        {
+            "nodeSpacing": 150,
+            "nodeRadius": 10
+        }
+        end
+        commit
+        branch newbranch
+        checkout newbranch
+        commit
+        commit
+        checkout master
+        commit
+        commit
+        merge newbranch
+        ```
+        ````
+
+    === "Rendu"
+        ```mermaid
+        gitGraph:
+        options
+        {
+            "nodeSpacing": 150,
+            "nodeRadius": 10
+        }
+        end
+        commit
+        branch newbranch
+        checkout newbranch
+        commit
+        commit
+        checkout master
+        commit
+        commit
+        merge newbranch
+        ```
+
+
+### Entity Relationship Diagram
+
+!!! example "Entity Relationship Diagram"
+
+    === "Code"
+        ````
+        ```mermaid
+        erDiagram
+            CUSTOMER ||--o{ ORDER : places
+            ORDER ||--|{ LINE-ITEM : contains
+            CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+        ```
+        ````
+
+    === "Rendu"
+        ```mermaid
+            erDiagram
+                CUSTOMER ||--o{ ORDER : places
+                ORDER ||--|{ LINE-ITEM : contains
+                CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+        ```
+
+
+### User Journey Diagram
+
+!!! example "User Journey Diagram"
+
+    === "Code"
+        ````
+        ```mermaid
+        journey
+            title My working day
+            section Go to work
+              Make tea: 5: Me
+              Go upstairs: 3: Me
+              Do work: 1: Me, Cat
+            section Go home
+              Go downstairs: 5: Me
+              Sit down: 5: Me
+        ```
+        ````
+
+    === "Rendu"
+        ```mermaid
+            journey
+                title My working day
+                section Go to work
+                  Make tea: 5: Me
+                  Go upstairs: 3: Me
+                  Do work: 1: Me, Cat
+                section Go home
+                  Go downstairs: 5: Me
+                  Sit down: 5: Me
+        ```
+
+## SuperFences
+
+!!! example "SuperFences"
+
+    === "Code"
+        ```
+        !!! example "SuperFences"
+                    === "Bash"
+                        ```bash
+                        #!/bin/bash
+                        echo "Hello world!"
+                        ```
+                    === "C"
+                        ```c
+                        #include <stdio.h>
+                        int main(void) {
+                          printf("Hello world!\n");
+                        }
+                        ```
+                    === "C++"
+                        ```cpp
+                        #include <iostream>
+                        int main() {
+                          std::cout << "Hello world!" << std::endl;
+                          return 0;
+                        }
+                        ```
+                    === "C#"
+                        ```cs
+                        using System;
+                        class Program {
+                          static void Main(string[] args) {
+                            Console.WriteLine("Hello world!");
+                          }
+                        }
+                        ```
+        ```
+
+    === "Rendu"
+        !!! example "SuperFences"
+            === "Bash"
+                ```bash
+                #!/bin/bash
+                echo "Hello world!"
+                ```
+            === "C"
+                ```c
+                #include <stdio.h>
+                int main(void) {
+                  printf("Hello world!\n");
+                }
+                ```
+            === "C++"
+                ```cpp
+                #include <iostream>
+                int main() {
+                  std::cout << "Hello world!" << std::endl;
+                  return 0;
+                }
+                ```
+            === "C#"
+                ```cs
+                using System;
+                class Program {
+                  static void Main(string[] args) {
+                    Console.WriteLine("Hello world!");
+                  }
+                }
+                ```
 
 
 ## Tasklist

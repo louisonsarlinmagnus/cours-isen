@@ -309,3 +309,11 @@ On part d'un jeu de solutions possibles, on sélectionne 2 solutions possible qu
   </figure>
 </center>
 
+### Fonction de fitness
+
+Fonction de fitness: La fitness mesure la qualité de l'individu exprimée sous forme d'un nombre ou d'un vecteur. On dit qu'un individu i est meilleur que l'individu j quand i est plus proche de la solution que j.
+
+Trouver la bonne métrique est parfois difficiles. Parfois changer la fonction de fitness après un moment. Elle doit être suffisamment sélective sans l'être trop.
+
+La sélection probabiliste des individus est très importante.
+
