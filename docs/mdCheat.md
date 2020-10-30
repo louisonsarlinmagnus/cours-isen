@@ -1,22 +1,21 @@
 # <center>Markdown Cheat Sheet</center>
 
 [util](http://markdowntable.com/)
+https://www.markdownguide.org/basic-syntax/
+http://www-lmpa.univ-littoral.fr/~marion/docs-and-tips/cheatsheet/
 
 ## Résumé
-| Effet                | Md              | HTML                            |
-|--:-------------------|--:--------------|--:------------------------------|
-| Titre                | `#` (jusqu'a 6) | `<h1>` (jusqu'a `<h6>`)         |
-| **Gras**             | `**text**`      | `<b>text<b>`                    |
-| <ins>Souligner</ins> | ....            | `<ins>text</ins>`               |
-| *Italique*           | `*text*`        | `<i>text</i>`                   |
-| ***Gras italique***  | `***text***`    | `<b><i>text</i></b>`            |
-| `code`               | \`text\`        | `<code>code</code>`             |
-| [Link]               | `[Link]`        | `<a href=www.truc.com>Link</a>` |
+| Effet                | Md              | HTML                             |
+|--:-------------------|--:--------------|--:-------------------------------|
+| Titre                | `#` (jusqu'a 6) | `<h1>` (jusqu'a `<h6>`)          |
+| **Gras**             | `**text**`      | `<b>text<b>`                     |
+| <ins>Souligner</ins> | ....            | `<ins>text</ins>`                |
+| *Italique*           | `*text*`        | `<i>text</i>`                    |
+| ***Gras italique***  | `***text***`    | `<b><i>text</i></b>`             |
+| `code`               | \`text\`        | `<code>code</code>`              |
+| [Link]               | `[Link]`        | `<a href=www.truc.com>Link</a>`  |
 |  Quote               | `> text`        | `<<blockquote>text</blockquote>` |
-|  ~~Rayer~~           | `~~text~~`      | `<s>text</s>`                   |
-|                      |                 |                                 |
-|                      |                 |                                 |
-|                      |                 |                                 |
+|  ~~Rayer~~           | `~~text~~`      | `<s>text</s>`                    |
 
 
 
@@ -113,13 +112,43 @@ Version HTML:
 
 ## Tips
 
-!!! tips
-    Ceci est un tips
+```
+!!! keyword "titre du bloc facultatif (keyword ou keyword)"
+    blabla
+```
 
-!!! Attention
+!!! note "note ou seealso"
+    blabla
+
+!!! tip "tip ou hint ou important"
+    Ceci est un tip
+
+!!! info "info ou todo"
+    Ceci est une info
+
+!!! help "question ou help ou faq"
+    Ceci est une question
+
+!!! summary "summary"
     Ceci est un exemple
 
+!!! warning "warning ou caution ou attention"
+    Ceci est un exemple
 
+!!! failure "failure ou fail ou missing"
+    Ceci est un exemple
+
+!!! done "check ou done"
+    Ceci est un exemple
+
+!!! danger "danger ou error"
+    Ceci est un exemple
+
+!!! bug "bug"
+    Ceci est un exemple
+
+!!! quote "quote"
+    Ceci est un exemple
 
 
 

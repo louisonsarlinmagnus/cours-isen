@@ -9,6 +9,7 @@ nav:
   - Tech:
     - Cyber Sécurité: tech-cybersecurite.md
     - Developpement Opérationnel: tech-DevOps.md
+    - Intelligence Artificielle: tech-ia.md
     - Linux Embarqué: tech-linuxEmbarque.md
     - Opto-électronique: tech-optoElectronique.md
     - Réseaux électriques: tech-reseauxElectriques.md
@@ -54,7 +55,6 @@ markdown_extensions:
 
 extra_javascript: 
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-
 
 
 copyright: '&copy; 2020 Louison SARLIN--MAGNUS'
