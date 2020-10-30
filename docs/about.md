@@ -1,5 +1,7 @@
 # READ ME
 
+[Images](https://lsarlinmagnus.imgur.com/all)
+
 ## Rédaction (mkdocs)
 Pour réaliser cette doc nous avons utiliser [**mkdocs**](https://www.mkdocs.org/)  
 

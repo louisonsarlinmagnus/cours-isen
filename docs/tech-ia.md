@@ -1,4 +1,4 @@
-# Intelligence Artificielle
+# <center>Intelligence Artificielle</center>
 
 ## Préliminaires
 
@@ -105,7 +105,7 @@ Peut-être pourrait on tirer parti de l’expérience passée
 
 **Comment apprendre?**
 
-> L'apprentissage supervisé (supervised learning en anglais) est une tâche d'apprentissage automatique consistant à apprendre une fonction de prédiction à partir d'exemples annotés.  
+> L'apprentissage supervisé est une tâche d'apprentissage automatique consistant à apprendre une fonction de prédiction à partir d'exemples annotés.  
 > Source: [Wikipédia](https://fr.wikipedia.org/wiki/Apprentissage_supervis%C3%A9)
 <center>
   <figure>
@@ -190,10 +190,14 @@ Cette méthode permet d'obtenir une fonction d'utilité qui nous guidera sur la 
 On qualifie cette fonction:  
 
 Avec une somme finie:
+<font size="2">
 $utility(state_t, action)=E(reward(state_t, action)+max \sum{future\_reward})$
+</font>  
 
 Avec une somme infinie:
+<font size="2">
 $utility(state_t, action)=E(reward(state_t, action)+max \sum_{i=1}^{\infty}{attenuate^i.future\_reward_i})$
+</font>  
 
 **Meilleure estimateur: fonction d'utilité !**
 
@@ -251,3 +255,57 @@ On va pouvoir changer la probabilité de faire une action dans un état donnée.
     <figcaption><i>Figure 8: Tableau d'action/état du moustique</i></figcaption>
   </figure>
 </center>
+
+
+On va tester le programme fourni dans une VM, est nécessaire d'installer la librairie freeglut3-dev: `sudo apt install freeglut3-dev`.
+
+Pour lancer la simulation il suffit de make le projet puis `./reinflearn`
+
+en tapant 0, 1, 2, 3 ,4 ,5 ,6 on peut choisir le facteur d'apprentissage du moustique.
+
+On remarque qu'a 0 il se comporte comme un "marcheur ivre".
+
+En tapant "a" il est possible de faire varier la position de la zone de confort du moustique.
+
+### Exemple du Jeu de Nim
+
+En résolvant ce jeu on peut "expliquer" comment jouer a un automate.
+
+<center>
+  <figure>
+    <img src="https://i.imgur.com/65AMVdY.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 9: Tableau de résolution du jeu de Nim</i></figcaption>
+  </figure>
+</center>
+
+## Algorithme génétiques
+
+**Comment une machine peut-elle optimiser un jeu de paramètres?**
+
+> Les algorithmes génétiques appartiennent à la famille des algorithmes évolutionnistes. Leur but est d'obtenir une solution approchée à un problème d'optimisation, lorsqu'il n'existe pas de méthode exacte (ou que la solution est inconnue) pour le résoudre en un temps raisonnable. Les algorithmes génétiques utilisent la notion de sélection naturelle et l'appliquent à une population de solutions potentielles au problème donné. La solution est approchée par « bonds » successifs, comme dans une procédure de séparation et évaluation (branch & bound), à ceci près que ce sont des formules qui sont recherchées et non plus directement des valeurs.  
+> Source: [Wikipédia](https://fr.wikipedia.org/wiki/Algorithme_g%C3%A9n%C3%A9tique)
+
+Exemple d'utilisation: 
+
+- Générer des paramètres pour choisir la meilleure configuration d'automates logiciels;
+- Résoudre l'optimisation de conditions de frittage dans un espace de solutions de dimension 17;
+- Résoudre un "problème inverse mal posé" sur la reconstruction de volumes à partir d'images 2D.
+
+
+On part d'un jeu de solutions possibles, on sélectionne 2 solutions possible que l'on va croiser. On décide de garder ou non cette solution, et on recommence en ajoutant ou non cette solution dans les solutions possibles.
+
+<center>
+  <figure>
+    <img src="https://i.imgur.com/FO6swgB.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 10: Système de croisement de solutions</i></figcaption>
+  </figure>
+</center>
+
