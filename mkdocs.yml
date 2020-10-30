@@ -17,6 +17,7 @@ nav:
     - Smart-Card: tech-smartCard.md
     - Système d'exploitation: tech-OS.md
   - Sciences molles:
+    - Droit du numérique: molle-droitNum.md
     - Gestion de la qualité: molle-qualite.md
     - Stratégie internationale: molle-strategieInternationale.md
   - Recherches:

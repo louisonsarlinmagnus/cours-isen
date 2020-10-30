@@ -2,25 +2,26 @@
 
 Un ingénieur français est trop cher et trop peu compétitif pour faire des taches de base, c'est pourquoi il va de plus en plus réaliser des tâches de management en plus du travail technique.
 
-Le luxe ca rapporte **sa mère**
+Le luxe est un des secteur qui rapporte le plus.
 
-Classement:
+Classement de secteurs les plus juteux:
 
   - Luxe
   - Auto
   - Aérospacial
 
-CA(Auto) + CA(Aérospacial) < CA(Luxe)
-
+$CA(Auto) + CA(Aérospacial) < CA(Luxe)$
+CA = Chiffre d'affaire
 
 ### C'est quoi la qualité?
 
   - Garantie ...bah non
   - SAV ...bah non
 
-*Les chinois copient beaucoup* ...**c'est faux**
+!!! warning
+    Les chinois ne copient plus autant qu'avant et créent des produits innovants.
 
-**ON PEUT FAIRE DE LA QUALITÉ SUR UN SERVICE !!!**
+**IL EST POSSIBLE DE FAIRE DE LA QUALITÉ SUR UN SERVICE !!!**
 
 
 ### Selon vous, qu'est ce que la qualité?
@@ -101,7 +102,7 @@ ISO 9001 2015:
 
 Respecter ISO9001 et ISO9004 correspond au SMQ.
 
-***
+
 
 ## Principe de management de la qualité
 
@@ -147,6 +148,7 @@ Il est **prévisible** : Il permet l'atteinte des résultats prévus par un suiv
 
 ## FICHE DE PROCESSUS
 
+<pre><code>
 Nom du processus     :Traiter
 
 Type de processus    :Technique
@@ -195,9 +197,9 @@ Quels sont les indicateurs de votre processus?
 
   - 
 
-OSEF
+</code></pre>
 
-***
+
 
 ## RAPPEL
 ### Définitions
@@ -233,7 +235,7 @@ OSEF
           - Anticiper les risques
           - Cohérence entre la stratégie et la SMQ
 
-###**Pourquoi un audit?**####
+### Pourquoi un audit?
 Les audit on pour but de vérifier que toutes les règles imposées sont
     - Interne
     - Externe
@@ -245,7 +247,7 @@ On dit qu'on **déclanche** un audit.
 ## Outil Qualité
 
 
-###**QQOQCCP :**####
+### QQOQCCP
 
 **Quoi?** : *De quoi s'agit-il ? (objet, opération,nature,..)*
 
@@ -261,9 +263,9 @@ On dit qu'on **déclanche** un audit.
 
 **Pourquoi?** : *Pourquoi cela se passe-t-il ainsi ?*
 
-***
 
-####**SMART :**####
+
+#### SMART
 
 **Specific** : *Spécifique*
 
@@ -275,15 +277,14 @@ On dit qu'on **déclanche** un audit.
 
 **Time-based** : *Défini dans le temps*
 
-***
 
-####**BRAINSTORMING :**####
+#### BRAINSTORMING
  
 Méthode collective de recueil d'idées sur un problème donné afin de faciliter la recherche de ses causes et/ou des solutions. 
 
-***
 
-####**ANALYSE CAUSALE :**####
+
+#### ANALYSE CAUSALE
  
 Détermine de façon rigoureuse les causes à l'origine d'un problème.
 Par conséquent de déterminer une solution adaptée et efficace.
@@ -291,9 +292,9 @@ Par conséquent de déterminer une solution adaptée et efficace.
 Les deux méthodes d'analyse causale les plus employées sont les  "5 pourquoi" et "l'arbre des causes".
 
 
-***
 
-####**AMDEC :**####
+
+#### AMDEC
 
 **A**nalyse des **M**odes de **D**éfaillance, de leurs **E**ffets, et de leur **C**riticité
  
