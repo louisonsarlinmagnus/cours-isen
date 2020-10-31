@@ -7,23 +7,40 @@ repo_url: https://github.com/louisonsarlinmagnus/cours-isen
 nav:
   - Accueil: index.md
   - Tech:
-    - Cyber Sécurité: tech-cybersecurite.md
-    - Developpement Opérationnel: tech-DevOps.md
-    - Intelligence Artificielle: tech-ia.md
-    - Linux Embarqué: tech-linuxEmbarque.md
-    - Opto-électronique: tech-optoElectronique.md
-    - Réseaux électriques: tech-reseauxElectriques.md
-    - Réseaux informatiques: tech-reseau.md
-    - Smart-Card: tech-smartCard.md
-    - Système d'exploitation: tech-OS.md
+    - Cyber Sécurité: tech/cybersecurite.md
+    - Developpement Opérationnel: tech/devOps.md
+    - Intelligence Artificielle: tech/ia.md
+    - Linux Embarqué: tech/linuxEmbarque.md
+    - Opto-électronique: tech/optoElectronique.md
+    - Réseaux électriques: tech/reseauxElectriques.md
+    - Réseaux informatiques: tech/reseau.md
+    - Smart-Card: tech/smartCard.md
+    - Système d'exploitation: tech/os.md
   - Sciences molles:
-    - Droit du numérique: molle-droitNum.md
-    - Gestion de la qualité: molle-qualite.md
-    - Stratégie internationale: molle-strategieInternationale.md
+    - Droit du numérique: molle/droitNum.md
+    - Gestion de la qualité: molle/qualite.md
+    - Stratégie internationale: molle/strategieInternationale.md
   - Recherches:
-    - Les réseaux électriques: recherche-reseauxElec.md
-    - Transition énergétique: recherche-transitionEnergetique.md
-  - CheatSheet: mdCheat.md
+    - Les réseaux électriques: rech/reseauxElec.md
+    - Transition énergétique: rech/transitionEnergetique.md
+  - CheatSheet: 
+    - Résumé: cheat/resume.md
+    - Titres: cheat/titres.md
+    - Listes: cheat/listes.md
+    - Liens: cheat/liens.md
+    - Images: cheat/images.md
+    - Code: cheat/code.md
+    - LaTex: cheat/latex.md
+    - Tableaux: cheat/tableaux.md
+    - Diagrammes: cheat/diagrammes.md
+    - Tabs: cheat/tabs.md
+    - SuperFences: cheat/superfences.md
+    - Citation: cheat/citation.md
+    - Règles: cheat/regles.md
+    - Smileys: cheat/smileys.md
+    - Vidéos: cheat/videos.md
+    - Blocs d'alerte: cheat/blocs.md
+    - CheatSheet: cheat/cheatSheet.md
   - A propos: about.md
 
 

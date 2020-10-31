@@ -62,7 +62,7 @@ Historique:
 
 [Vidéo ScienceEtonnante](https://www.youtube.com/watch?v=xuBzQ38DNhE)
 
-!!! tip "Blague"
+!!! tip ":laughing: Blague"
     **Quelle est la différence entre l'automatisation et l'intelligence artificielle?**  
     Automatisation: ce qu'on sait faire avec une machine  
     Intelligence artificielle: ce qu'on voudrait faire avec une machine
@@ -266,6 +266,16 @@ en tapant 0, 1, 2, 3 ,4 ,5 ,6 on peut choisir le facteur d'apprentissage du mous
 On remarque qu'a 0 il se comporte comme un "marcheur ivre".
 
 En tapant "a" il est possible de faire varier la position de la zone de confort du moustique.
+<center>
+  <figure>
+    <img src="https://i.imgur.com/Xi9K8wu.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 9: Tableau d'action/état du moustique</i></figcaption>
+  </figure>
+</center>
 
 ### Exemple du Jeu de Nim
 
@@ -278,7 +288,7 @@ En résolvant ce jeu on peut "expliquer" comment jouer a un automate.
     width="500"
     height="500"
     >
-    <figcaption><i>Figure 9: Tableau de résolution du jeu de Nim</i></figcaption>
+    <figcaption><i>Figure 10: Programme du moustique</i></figcaption>
   </figure>
 </center>
 
@@ -305,7 +315,7 @@ On part d'un jeu de solutions possibles, on sélectionne 2 solutions possible qu
     width="500"
     height="500"
     >
-    <figcaption><i>Figure 10: Système de croisement de solutions</i></figcaption>
+    <figcaption><i>Figure 11: Système de croisement de solutions</i></figcaption>
   </figure>
 </center>
 
@@ -317,3 +327,101 @@ Trouver la bonne métrique est parfois difficiles. Parfois changer la fonction d
 
 La sélection probabiliste des individus est très importante.
 
+### Exemple
+Cet exemple se penche sur un programme permettant de trouver le max d'un sinus.
+
+Pour lancer la simulation il suffit de make le projet puis `./genalgo`.
+
+On peut choisir le spectre a étudier, 179° ou 719°. On remarque que pour 2 max sont possible. On peut donc se demander comment va réagir le programme.
+
+<center>
+  <figure>
+    <img src="https://i.imgur.com/oBIEhNX.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 12: Programme de recherche de max de cosinus</i></figcaption>
+  </figure>
+</center>
+
+
+### Robustesse de l’algorithme génétique
+
+Si notre pire élément est remplacé par un élément meilleur que lui, notre population tend vers une meilleure forme.  
+Si notre pire élément est remplacé par un élément moins bon que lui, il sera remplacé le tour suivant par un autre élément. La probabilité qu'ils soient toujours remplacé par un plus mauvais est infime.  
+Donc la populations s'améliorera dans tous les cas.
+
+
+## Réseaux de neurones
+
+Le neurone est la brique de base.  
+Un neurone artificiel plus ou moins inspiré du neurone biologique (variante d'implémentation).  
+Il n'a réellement d’intérêt qu'intégré a un réseau.
+
+Un humain a environ 100 milliards de neurones biologiques.
+
+
+<center>
+  <figure>
+    <img src="https://i.imgur.com/J4TxUk3.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 13: Cheminement dans un neurone artificiel</i></figcaption>
+  </figure>
+</center>
+
+
+<center>
+  <figure>
+    <img src="https://i.imgur.com/6GBI31l.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 14: Représentation mathématique d'un neurone artificiel</i></figcaption>
+  </figure>
+</center>
+
+On peut déduire la probabilité: $y= \frac{1}{1+\exp(-x)}$
+
+Les neurones se répartissent en couche:
+
+- La couche d'entrée qu'on assimile a des capteurs
+- Les couches cachées
+- La couche de sortie (en oui/non ou en signal)
+
+L'apprentissage se fait de la manière décrite dans la partie [Renforcement d'apprentissage](#generalites).
+
+<center>
+  <figure>
+    <img src="https://i.imgur.com/l6WTYsM.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 15: Comment apprendre de manière supervisée?</i></figcaption>
+  </figure>
+</center>
+
+
+<center>
+  <figure>
+    <img src="https://i.imgur.com/0RmNVUI.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 15: Comment apprendre de manière non-supervisée?</i></figcaption>
+  </figure>
+</center>
+
+Forger un neurone reviens a adapter ses poids synaptiques.
+Pour être considéré robuste, un neurone doit être capable d'apprendre en résistant au bruit.
+
+On parle de "deep-learning" au delà de 3 couches cachées.
+
+Lorsque l'on va de la couche d'entrée vers celle de sortie, on parle d'"inférence".
+Lorsque l'on va de la couche de sortie vers celle d'entrée, on parle d’"apprentissage".
