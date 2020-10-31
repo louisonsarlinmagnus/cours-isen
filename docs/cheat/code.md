@@ -1,6 +1,22 @@
 # Code
 
-!!! example "Example"
+## Ligne de code
+
+Il est possible de définir une ligne de code dans une phrase en l'encadrant avec des ` .
+
+!!! example "Ligne de code"
+
+    Il est possible de coloriser du code dans un ligne en précédant le code par `#!<language>`:
+    === "Markdown"
+        <pre><code>La fonction \`#!python range()\` permet de générer un séquence de nombres.</code></pre>
+    === "Rendu"
+        La fonction `#!python range()` permet de générer un séquence de nombres.
+
+
+
+## Bloc de code
+
+!!! example "Bloc de code"
 
     === "Markdown"
         ````md

@@ -355,6 +355,8 @@ Donc la populations s'améliorera dans tous les cas.
 
 ## Réseaux de neurones
 
+### Introduction
+
 Le neurone est la brique de base.  
 Un neurone artificiel plus ou moins inspiré du neurone biologique (variante d'implémentation).  
 Il n'a réellement d’intérêt qu'intégré a un réseau.
@@ -414,7 +416,7 @@ L'apprentissage se fait de la manière décrite dans la partie [Renforcement d'a
     width="500"
     height="500"
     >
-    <figcaption><i>Figure 15: Comment apprendre de manière non-supervisée?</i></figcaption>
+    <figcaption><i>Figure 16: Comment apprendre de manière non-supervisée?</i></figcaption>
   </figure>
 </center>
 
@@ -425,3 +427,60 @@ On parle de "deep-learning" au delà de 3 couches cachées.
 
 Lorsque l'on va de la couche d'entrée vers celle de sortie, on parle d'"inférence".
 Lorsque l'on va de la couche de sortie vers celle d'entrée, on parle d’"apprentissage".
+
+
+Il existe plusieurs modes:
+
+- [Feed Forward](https://en.wikipedia.org/wiki/Feedforward_neural_network)
+- [Réseau Neuronal à Convolution](https://fr.wikipedia.org/wiki/R%C3%A9seau_neuronal_convolutif) (CNN)
+- [Réseau récurents](https://en.wikipedia.org/wiki/Recurrent_neural_network) (RNN)
+- [Réseau entièrement connecté](https://missinglink.ai/guides/convolutional-neural-networks/fully-connected-layers-convolutional-neural-networks-complete-guide/)
+
+### Apprentissage
+
+Le [**Percetron**](https://fr.wikipedia.org/wiki/Perceptron) simple: basé sur un seul neurone.
+
+<center>
+  <figure>
+    <img src="https://i.imgur.com/MXIqQAV.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 17: Fonctionnement du Perceptron</i></figcaption>
+  </figure>
+</center>
+
+### Exemple du Perceptron
+
+dans l'archive `neurone.tgz` on récupère 2 fichiers: `neurone.c` et `neurone.java`. Ces programmes sont identiques mais nous nous concentrerons sur le programe en Java.  
+Pour l'exécuter:
+```bash
+javac neurone.java #création de neurone.class
+jar cvf neurone.jar neurone.class #création de neurone.jar
+touch MANIFEST.MF #création du manifest
+echo "Main-Class: neurone" > MANIFEST.MF #définition de la main-class
+jar cvmf MANIFEST.MF neurone.jar neurone.class #ajout de MANIFEST.MF a neurone.jar
+java -jar neurone.jar #exécution du programme
+```
+
+## Mini-projet
+
+### Sujet
+
+En se basant sur l'exemple en langage C fourni en cours, faire une implémentation du [jeu de Nim](#exemple-du-jeu-de-nim) (en C, C++, Java ou Python), où l'intelligence artificielle de jeu apprendra à jouer en s'affrontant elle-même.
+
+Règles du jeu de Nim:
+
+- On dispose d'un **tas de 20 allumettes**.
+
+- A tour de rôle les 2 joueurs vont **prendre 1, 2, ou 3** allumettes.
+
+- Celui **qui prend la dernière allumette perd**.
+
+- Stratégie est de laisser  un nombre d'objets multiple de 4
+
+
+
+
+

@@ -1,8 +1,8 @@
-# Tableaux
+## Tableaux simple
 
 [Table formatter util](http://markdowntable.com/)  
 
-!!! example "Example"
+!!! example "Tableau simple"
 
     === "Markdown"
         ```md
@@ -36,5 +36,62 @@
     === "Rendu"
         | Firstname | Lastname | Age |
         |-----------|----------|-----|
+        | Jill      | Smith    | 50  |
+        | Eve       | Jackson  | 94  |
+
+## Configuration
+
+!!! info "Centrage des éléments du tableau"
+
+    La position des ':' dans le tableau définira le centrage appliqué aux éléments du tableau.
+
+    === "Gauche"
+        Code:
+
+        ```md
+        | Firstname | Lastname | Age |
+        |:----------|:---------|:----|
+        | Jill      | Smith    | 50  |
+        | Eve       | Jackson  | 94  |
+        ```
+
+        Rendu:
+        
+        | Firstname | Lastname | Age |
+        |:----------|:---------|:----|
+        | Jill      | Smith    | 50  |
+        | Eve       | Jackson  | 94  |
+
+    === "Centre"
+        Code:
+
+        ```md
+        | Firstname | Lastname | Age |
+        |:---------:|:--------:|:---:|
+        | Jill      | Smith    | 50  |
+        | Eve       | Jackson  | 94  |
+        ```
+
+        Rendu:
+        
+        | Firstname | Lastname | Age |
+        |:---------:|:--------:|:---:|
+        | Jill      | Smith    | 50  |
+        | Eve       | Jackson  | 94  |
+
+    === "Droite"
+        Code:
+
+        ```md
+        | Firstname | Lastname | Age |
+        |----------:|---------:|----:|
+        | Jill      | Smith    | 50  |
+        | Eve       | Jackson  | 94  |
+        ```
+
+        Rendu:
+        
+        | Firstname | Lastname | Age |
+        |----------:|---------:|----:|
         | Jill      | Smith    | 50  |
         | Eve       | Jackson  | 94  |
