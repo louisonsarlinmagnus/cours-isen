@@ -1,0 +1,1569 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Linux Embarqué - Mes cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-embarque" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mes cours" class="md-header__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mes cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux Embarqué
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mes cours" class="md-nav__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mes cours
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cybersecurite/" class="md-nav__link">
+        Cyber Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devOps/" class="md-nav__link">
+        Developpement Opérationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ia/" class="md-nav__link">
+        Intelligence Artificielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linux Embarqué
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Linux Embarqué
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jour-1" class="md-nav__link">
+    Jour 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Jour 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    INTRODUCTION
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jour-2" class="md-nav__link">
+    Jour 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Jour 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tp0-preparation" class="md-nav__link">
+    TP0: préparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp1-hello-world" class="md-nav__link">
+    TP1: Hello World
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp2-gestion-de-ventilateur" class="md-nav__link">
+    TP2: Gestion de ventilateur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp3-utilisation-de-git" class="md-nav__link">
+    TP3: Utilisation de Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp4-script-bash" class="md-nav__link">
+    TP4: Script Bash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp5-compiler-le-kernel" class="md-nav__link">
+    TP5: Compiler le Kernel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jour-3" class="md-nav__link">
+    Jour 3
+  </a>
+  
+    <nav class="md-nav" aria-label="Jour 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tp6-bootloader-en-nfs" class="md-nav__link">
+    TP6: Bootloader en NFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp7-gestion-des-leds" class="md-nav__link">
+    TP7: Gestion des LEDS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp8-compilation-statique" class="md-nav__link">
+    TP8 : Compilation statique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp9-creation-dun-rootfs" class="md-nav__link">
+    TP9 : Création d'un rootfs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp10-creation-du-initramfs" class="md-nav__link">
+    TP10 : Création du initramfs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp11-compilation-de-busybox" class="md-nav__link">
+    TP11 : Compilation de busybox
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jour-4" class="md-nav__link">
+    Jour 4
+  </a>
+  
+    <nav class="md-nav" aria-label="Jour 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tp12-libc" class="md-nav__link">
+    TP12 : libc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp13-linit" class="md-nav__link">
+    TP13 : L'Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp14-le-process-dinit" class="md-nav__link">
+    TP14 : Le Process d'Init
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optoElectronique/" class="md-nav__link">
+        Opto-électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseauxElectriques/" class="md-nav__link">
+        Réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseau/" class="md-nav__link">
+        Réseaux informatiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smartCard/" class="md-nav__link">
+        Smart-Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        Système d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sciences molles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sciences molles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sciences molles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/droitNum/" class="md-nav__link">
+        Droit du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/qualite/" class="md-nav__link">
+        Gestion de la qualité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/marketing/" class="md-nav__link">
+        Marketing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/strategieInternationale/" class="md-nav__link">
+        Stratégie internationale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Recherches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recherches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recherches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/reseauxElec/" class="md-nav__link">
+        Les réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/transitionEnergetique/" class="md-nav__link">
+        Transition énergétique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          CheatSheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CheatSheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CheatSheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/resume/" class="md-nav__link">
+        Résumé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/titres/" class="md-nav__link">
+        Titres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/latex/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tableaux/" class="md-nav__link">
+        Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/diagrammes/" class="md-nav__link">
+        Diagrammes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tabs/" class="md-nav__link">
+        Tabs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/superfences/" class="md-nav__link">
+        SuperFences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/citation/" class="md-nav__link">
+        Citation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/regles/" class="md-nav__link">
+        Règles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/smileys/" class="md-nav__link">
+        Smileys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/videos/" class="md-nav__link">
+        Vidéos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/blocs/" class="md-nav__link">
+        Blocs d'alerte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatSheet/" class="md-nav__link">
+        CheatSheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jour-1" class="md-nav__link">
+    Jour 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Jour 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    INTRODUCTION
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jour-2" class="md-nav__link">
+    Jour 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Jour 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tp0-preparation" class="md-nav__link">
+    TP0: préparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp1-hello-world" class="md-nav__link">
+    TP1: Hello World
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp2-gestion-de-ventilateur" class="md-nav__link">
+    TP2: Gestion de ventilateur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp3-utilisation-de-git" class="md-nav__link">
+    TP3: Utilisation de Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp4-script-bash" class="md-nav__link">
+    TP4: Script Bash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp5-compiler-le-kernel" class="md-nav__link">
+    TP5: Compiler le Kernel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jour-3" class="md-nav__link">
+    Jour 3
+  </a>
+  
+    <nav class="md-nav" aria-label="Jour 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tp6-bootloader-en-nfs" class="md-nav__link">
+    TP6: Bootloader en NFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp7-gestion-des-leds" class="md-nav__link">
+    TP7: Gestion des LEDS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp8-compilation-statique" class="md-nav__link">
+    TP8 : Compilation statique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp9-creation-dun-rootfs" class="md-nav__link">
+    TP9 : Création d'un rootfs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp10-creation-du-initramfs" class="md-nav__link">
+    TP10 : Création du initramfs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp11-compilation-de-busybox" class="md-nav__link">
+    TP11 : Compilation de busybox
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jour-4" class="md-nav__link">
+    Jour 4
+  </a>
+  
+    <nav class="md-nav" aria-label="Jour 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tp12-libc" class="md-nav__link">
+    TP12 : libc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp13-linit" class="md-nav__link">
+    TP13 : L'Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp14-le-process-dinit" class="md-nav__link">
+    TP14 : Le Process d'Init
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/louisonsarlinmagnus/cours-isen/edit/master/docs/tech/linuxEmbarque.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="linux-embarque"><center>Linux Embarqué</center></h1>
+<p><font size="2"><center><span style="color:grey">Laurent MASSON</span></center></font></p>
+<p><center><img src="https://www.techspot.com/images2/downloads/topdownload/2014/05/linux.png" alt="drawing" width="200"/></center></p>
+<h2 id="jour-1"><center>Jour 1</center></h2>
+<hr />
+<h3 id="introduction">INTRODUCTION</h3>
+<p><strong>Organisation du cours:</strong></p>
+<p>La matière sera évalué avec:</p>
+<ul>
+<li>Un présentation orale en anglais (2-3 points)</li>
+<li>Une interro: 50% Cours / 50% Autres (8-9 points)</li>
+<li>Des TPs (8-9 points)</li>
+</ul>
+<p>Pas de stresse, c'est pas un cours universitaire. Plutôt une formation d'entreprise.</p>
+<p>Dans l'idée on va bosser <a href="https://fr.wikipedia.org/wiki/Linux">Linux</a> ! </p>
+<p>Soyez cool et participez !</p>
+<p><em>8h30, petit tour de table, présentation, etc.</em></p>
+<hr />
+<p>Etape exploratoire
+Prérequis: toolchain(cross compil, binoutils, flasher)
+Conception (choix du bootloader, choix du noyau, config du bootloader, rootfs, busybox, bibiliotèques)</p>
+<hr />
+<h2 id="jour-2"><center>Jour 2</center></h2>
+<hr />
+<h3 id="tp0-preparation">TP0: préparation</h3>
+<p>On commence par noter l'adresse physique du Pc qui servira aux manips pour l'identifier sur le réseau via le <a href="https://fr.wikipedia.org/wiki/DHCP">DHCP</a> du prof.</p>
+<p>Pour sécuriser la connexion <a href="https://fr.wikipedia.org/wiki/Secure_Shell">SSH</a> entre notre groupe et le serveur (ordi du prof) on créer une paire de clé <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA">rsa</a> avec PuTTyGEN.</p>
+<p>On lance Putty, dans connection/Data, mettre le nom du groupe dans Auto-login
+Puis dans ssh/Auth/"Private key file" et sélectionner la clé privé sauvegarder avant.</p>
+<p>On configure le SSH:</p>
+<p>Dans session: Host name : <code>192.168.1.10</code>, puis on save session :sshlinux et cliquer sur save.</p>
+<p>On a utiliser Filezilla pour récupérer des documents sur le serveur via le protocole <a href="https://fr.wikipedia.org/wiki/SSH_File_Transfer_Protocol">SFTP</a>.</p>
+<p>A présent on set-up la connexion série entre la box et le pc de manip.</p>
+<p>La variable exécutée au démarrage est: <code>bootcmd</code>
+Son équivalent pour un démarrage pour disque dur est: <code>run boot_hda_hda</code>
+Sauvegarder les variables même après poweroff: <strong>saveenv</strong>
+Modifier la variable de démarrage pour démarrer sur un disque dur: <code>setenv bootcmd "run boot_hda_hda"</code></p>
+<hr />
+<h3 id="tp1-hello-world">TP1: Hello World</h3>
+<p>On a créer un fichier .c faisant Hello World.
+via FileZilla on le transfert sur le serveur. Via gcc ça fonctionne
+Via sh4... ça marche pas mais c'est fait exprès</p>
+<p>On voit grâce au readelf que le programme compiler pour l’ordinateur est en architecture 64bit contrairement a celui dédié a la box qui est en 32bit.</p>
+<p>On essaye de monter la clé usb wtf</p>
+<p>Pour monter la clé usb:</p>
+<div class="highlight"><pre><span></span><code>- mkdir montage
+- mount /dev/sdb1 /wymedia/montage/
+</code></pre></div>
+<p><strong>TADA</strong></p>
+<hr />
+<h3 id="tp2-gestion-de-ventilateur">TP2: Gestion de ventilateur</h3>
+<p>Pour gérer la vitesse du ventilateur on a chercher le fichier dans lequel est stocker la valeur du pwm du moteur.</p>
+<p>Ce fichier est: <code>/sys/devices/platform/stm-pwm/pwm1</code></p>
+<p>Pour pouvoir modifier la valeur il faut désactiver la gestion automatique du ventilateur en tapant: <code>ngc -d wyclimd</code></p>
+<hr />
+<h3 id="tp3-utilisation-de-git">TP3: Utilisation de Git</h3>
+<div class="highlight"><pre><span></span><code>mkdir TP3
+cp TP2 TP3
+<span class="nb">cd</span> /TP3
+git init
+git add .
+git commit -m Vitesse 
+git branch smooth
+git checkout smooth
+git commit -m Smooth 
+</code></pre></div>
+<hr />
+<h3 id="tp4-script-bash">TP4: Script Bash</h3>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;sh4&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/STM/STLinux-2.3/devkit/sh4/bin/sh4-linux-gcc
+    <span class="nb">echo</span> <span class="s2">&quot;édité&quot;</span>
+
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;x86&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;Le PATH original&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;édité&quot;</span>
+
+<span class="k">else</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Erreur, met le paramètre abruti&quot;</span>
+<span class="k">fi</span>
+</code></pre></div>
+<hr />
+<h3 id="tp5-compiler-le-kernel">TP5: Compiler le Kernel</h3>
+<div class="highlight"><pre><span></span><code>tar -xjf kernel-wyplay.tar.bz2
+</code></pre></div>
+<p>Dans le Makefile un commentaire indique que pour spécifier l'archtecture on peut le mettre en argument du make <code>make ARCH=ia64</code>, ou en ajoutant un variable d'environnement correspondante</p>
+<p>On modifie donc le script:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;sh4&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">export</span> <span class="nv">ARCH</span><span class="o">=</span>sh
+    <span class="nb">export</span> <span class="nv">CROSS_COMPILE</span><span class="o">=</span>sh4-linux-
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/STM/STLinux-2.3/devkit/sh4/bin/
+
+    <span class="nb">echo</span> <span class="s2">&quot;édité&quot;</span>
+
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;x86&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">export</span> <span class="nv">ARCH</span><span class="o">=</span>
+    <span class="nb">export</span> <span class="nv">CROSS_COMPILE</span><span class="o">=</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span> <span class="s2">&quot;Le PATH original&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;édité&quot;</span>
+
+<span class="k">else</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Erreur, met le paramètre abruti&quot;</span>
+<span class="k">fi</span>
+</code></pre></div>
+<p>PARTIE 2</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> script.sh sh4
+<span class="nb">cd</span> Cours/soucres/TP05-kernel/kernel-wyplay
+make <span class="nb">help</span>
+make wymdbox01_defconfig
+make uImage -j
+</code></pre></div>
+<h2 id="jour-3"><center>Jour 3</center></h2>
+<hr />
+<h3 id="tp6-bootloader-en-nfs">TP6: Bootloader en NFS</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> Cours/soucres/TP05-kernel/kernel-wyplay/arch/sh/boot
+cp uImage ~/boot/
+</code></pre></div>
+<p>NFS     Appropriate NFS support is enabled.</p>
+<p>SERIAL  Serial support is enabled.</p>
+<p>Recherches:</p>
+<blockquote>
+<p><code>nfsaddrs=</code> [NFS] :Deprecated.  Use ip= instead. See Documentation/filesystems/nfs/nfsroot.txt.</p>
+<p><code>nfsroot=</code> [NFS] :nfs root filesystem for disk-less boxes.See Documentation/filesystems/nfs/nfsroot.txt.</p>
+<p><code>nfs.enable_ino64=</code> [NFS] :enable 64-bit inode numbers. If zero, the NFS client will fake up a 32-bit inode number for the readdir() and stat() syscalls instead of returning the full 64-bit number. The default is to return 64-bit inode numbers.</p>
+<p><code>acpi_no_auto_serialize</code>  [HW,ACPI] :Disable auto-serialization of AML methods AML control methods that contain the opcodes to create named objects will be marked as "Serialized" by the auto-serialization feature. This feature is enabled by default. This option allows to turn off the feature.</p>
+</blockquote>
+<p>Dans le boot loader on modifie certain paramètre comme suivant:</p>
+<div class="highlight"><pre><span></span><code>setenv bootcmd <span class="s2">&quot;run boot_nfs_nfs&quot;</span>
+saveenv
+</code></pre></div>
+<hr />
+<h3 id="tp7-gestion-des-leds">TP7: Gestion des LEDS</h3>
+<p>On repère dans le schéma éléctrique que les led sont appeller:</p>
+<blockquote>
+<p>PIO1_3/SC1CG_CLK/DSSMCD_CLK
+PIO1_4/NRSSA_CLKOUT/ASC1_CTS
+PIO1_5/NRSSA_DATAIN/ASC1_RTS</p>
+</blockquote>
+<p>On a ajouter des lignes dans
+<div class="highlight"><pre><span></span><code>/home/groupe5/Cours/TP05-kernel/kernel-wyplay/arch/sh/boards/st/wymdbox01/gpio.c
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="n">pio_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stpio_request_set_pin</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LED3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STPIO_OUT</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">pio_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stpio_request_set_pin</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LED2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STPIO_OUT</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">pio_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stpio_request_set_pin</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LED1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STPIO_OUT</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Puis on a recompiler le kernel
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> TP/TP4/
+<span class="nb">source</span> script.sh sh4
+<span class="nb">cd</span> Cours/soucres/TP05-kernel/kernel-wyplay
+make <span class="nb">help</span>
+make wymdbox01_defconfig
+make uImage -j
+
+cp Cours/soucres/TP05-kernel/kernel-wyplay/arch/sh/boot/uImage ~/boot/
+</code></pre></div></p>
+<p><strong>TADAM on a les leds qui brillent</strong></p>
+<hr />
+<h3 id="tp8-compilation-statique">TP8 : Compilation statique</h3>
+<hr />
+<h3 id="tp9-creation-dun-rootfs">TP9 : Création d'un rootfs</h3>
+<p>Pour la création de l'architecture
+<div class="highlight"><pre><span></span><code>mkdir -p <span class="o">{</span>boot,dev,etc,lib,usr,bin,sbin,usr/bin,proc,sys,var,root,home,mnt,opt,tmp,media<span class="o">}</span>
+</code></pre></div>
+On attend le prof pour le MAKEDEV*</p>
+<p>On <em>make</em> les modules via:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> TP/TP4/
+<span class="nb">source</span> script.sh sh4
+<span class="nb">cd</span> Cours/soucres/TP05-kernel/kernel-wyplay
+make <span class="nb">help</span>
+make modules
+<span class="nb">export</span> <span class="nv">INSTALL_MOD_PATH</span><span class="o">=</span>~/rootfs/
+make modules_install
+</code></pre></div>
+<hr />
+<h3 id="tp10-creation-du-initramfs">TP10 : Création du initramfs</h3>
+<p><strong>On le fait pas</strong></p>
+<hr />
+<h3 id="tp11-compilation-de-busybox">TP11 : Compilation de busybox</h3>
+<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/Cours/sources/TP11-busybox/busybox
+tar -xjf busybox.tar.bz2
+make menuconfig
+</code></pre></div>
+On choisi plein de trucs...c'est chiant</p>
+<p>Pour le cross-compile de busybox on fait <code>make busybox</code></p>
+<p>On positionne dans menuconfig: <code>/home/groupeX/rootfs</code></p>
+<p><code>make install</code></p>
+<p><code>setenv stlinux /home/groupe5/rootfs/</code></p>
+<p><code>setenv bootfile ../boot/uImage</code> </p>
+<h2 id="jour-4"><center>Jour 4</center></h2>
+<hr />
+<h3 id="tp12-libc">TP12 : libc</h3>
+<p>On va dans <em>~/Cours/sources</em>, on copie libc.tar.bz2 dans <em>~/rootfs</em>
+On décompresse via <code>tar -xjf libc.tar.bz2</code></p>
+<p>On lance le programme</p>
+<p><strong>TADAM ça marche !!</strong></p>
+<hr />
+<h3 id="tp13-linit">TP13 : L'Init</h3>
+<p>On créer un script qui monte ce qu'il faut correctement</p>
+<p>Pour se faire on a d'abord modifier une variable systeme de uImage, il s'agit de la variable <em>arg_kgdb</em>, on y met dedans <code>init=/sbin/script.sh</code>. Cette modification permet de lancer notre programme init.</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">&quot;Debut montage&quot;</span>
+/bin/mount proc /proc/ -t proc
+/bin/mount sys /sys/ -t sysfs
+<span class="nb">echo</span> <span class="s2">&quot;Fin montage&quot;</span>
+</code></pre></div>
+<hr />
+<h3 id="tp14-le-process-dinit">TP14 : Le Process d'Init</h3>
+<p><code>setenv arg_kgdb init=/sbin/init.sh</code>
+<code>saveenv</code></p>
+<p>On cherche le module a charger en RAM
+Il faut ensuite le charger</p>
+<p><code>depmod -ae</code>
+<code>modprobe stm-pwm</code></p>
+<p>On modifie notre script <strong>init.sh</strong>:
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Debut montage&quot;</span>
+/bin/mount proc /proc/ -t proc
+/bin/mount sys /sys/ -t sysfs
+<span class="nb">echo</span> <span class="s2">&quot;Fin montage&quot;</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;On va bientot allumer le ventilo&quot;</span>
+<span class="nb">source</span> /sbin/fan start
+<span class="nb">echo</span> <span class="s2">&quot;Le ventilo doit tourner&quot;</span>
+
+/bin/bash
+</code></pre></div></p>
+<p>Et on créer un script <strong>fan.sh</strong> qui permettra via un paramètre de lancer ou arreter le ventilateur:
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+depmod -ae
+modprobe stm-pwm
+<span class="nb">echo</span> <span class="s2">&quot;Module chargé&quot;</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;start&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;On allume le ventilateur&quot;</span>
+    <span class="nb">echo</span> <span class="m">255</span> &gt; /sys/devices/platform/stm-pwm/pwm1
+
+    <span class="nb">echo</span> <span class="s2">&quot;Ventilateur allumé&quot;</span>
+
+
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;stop&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;On eteint le ventilateur&quot;</span>
+    <span class="nb">echo</span> <span class="m">0</span> &gt; /sys/devices/platform/stm-pwm/pwm1
+
+    <span class="nb">echo</span> <span class="s2">&quot;Ventilateur eteint&quot;</span>
+
+
+<span class="k">else</span>
+    <span class="nb">echo</span> <span class="s2">&quot;met le paramètre abruti&quot;</span>
+
+<span class="k">fi</span>
+</code></pre></div></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ia/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intelligence Artificielle" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Intelligence Artificielle
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../optoElectronique/" class="md-footer__link md-footer__link--next" aria-label="Next: Opto-électronique" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Opto-électronique
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Louison SARLIN--MAGNUS
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

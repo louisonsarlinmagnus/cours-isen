@@ -1,0 +1,1796 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Réseaux informatiques - Mes cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reseaux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mes cours" class="md-header__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mes cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Réseaux informatiques
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mes cours" class="md-nav__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mes cours
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cybersecurite/" class="md-nav__link">
+        Cyber Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devOps/" class="md-nav__link">
+        Developpement Opérationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ia/" class="md-nav__link">
+        Intelligence Artificielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linuxEmbarque/" class="md-nav__link">
+        Linux Embarqué
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optoElectronique/" class="md-nav__link">
+        Opto-électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseauxElectriques/" class="md-nav__link">
+        Réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Réseaux informatiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Réseaux informatiques
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapitre-1-tips" class="md-nav__link">
+    Chapitre 1: Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapitre 1: Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#faire-une-table-de-routage" class="md-nav__link">
+    Faire une table de routage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplifier-une-adresse" class="md-nav__link">
+    Simplifier une adresse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapitre-2-fast-ethernet" class="md-nav__link">
+    Chapitre 2: Fast Ethernet
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapitre 2: Fast Ethernet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topologie-reseau" class="md-nav__link">
+    Topologie réseau
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapitre-3-protocole-tcpip" class="md-nav__link">
+    Chapitre 3: Protocole TCP/IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    Exercice
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smartCard/" class="md-nav__link">
+        Smart-Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        Système d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sciences molles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sciences molles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sciences molles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/droitNum/" class="md-nav__link">
+        Droit du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/qualite/" class="md-nav__link">
+        Gestion de la qualité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/marketing/" class="md-nav__link">
+        Marketing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/strategieInternationale/" class="md-nav__link">
+        Stratégie internationale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Recherches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recherches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recherches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/reseauxElec/" class="md-nav__link">
+        Les réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/transitionEnergetique/" class="md-nav__link">
+        Transition énergétique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          CheatSheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CheatSheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CheatSheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/resume/" class="md-nav__link">
+        Résumé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/titres/" class="md-nav__link">
+        Titres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/latex/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tableaux/" class="md-nav__link">
+        Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/diagrammes/" class="md-nav__link">
+        Diagrammes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tabs/" class="md-nav__link">
+        Tabs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/superfences/" class="md-nav__link">
+        SuperFences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/citation/" class="md-nav__link">
+        Citation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/regles/" class="md-nav__link">
+        Règles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/smileys/" class="md-nav__link">
+        Smileys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/videos/" class="md-nav__link">
+        Vidéos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/blocs/" class="md-nav__link">
+        Blocs d'alerte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatSheet/" class="md-nav__link">
+        CheatSheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapitre-1-tips" class="md-nav__link">
+    Chapitre 1: Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapitre 1: Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#faire-une-table-de-routage" class="md-nav__link">
+    Faire une table de routage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplifier-une-adresse" class="md-nav__link">
+    Simplifier une adresse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapitre-2-fast-ethernet" class="md-nav__link">
+    Chapitre 2: Fast Ethernet
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapitre 2: Fast Ethernet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topologie-reseau" class="md-nav__link">
+    Topologie réseau
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapitre-3-protocole-tcpip" class="md-nav__link">
+    Chapitre 3: Protocole TCP/IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    Exercice
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/louisonsarlinmagnus/cours-isen/edit/master/docs/tech/reseau.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="reseaux"><center>Réseaux</center></h1>
+<h2 id="chapitre-1-tips">Chapitre 1: Tips</h2>
+<h4 id="faire-une-table-de-routage">Faire une table de routage</h4>
+<p>J'identifie tous les Réseaux et sous réseau que je voudrais atteindre
+Ensuite j'optimise</p>
+<h4 id="simplifier-une-adresse">Simplifier une adresse</h4>
+<p>192.168.1.0/24<br />
+192.168.2.0/24<br />
+192.168.3.0/24<br />
+192.168.4.0/24  </p>
+<p>On peut simplifier les 4 adresses par 192.168.0.0/22</p>
+<table>
+<thead>
+<tr>
+<th align="left">128</th>
+<th align="left">64</th>
+<th align="left">32</th>
+<th align="left">16</th>
+<th align="left">8</th>
+<th align="left">4</th>
+<th align="left">2</th>
+<th align="right">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>On remarque que les 6 premières colonnes sont identiques, on peut donc simplifier en enlevant les 2 bit (qui correspondent aux 2 dernières colonnes) au / (netid) qui suit l'adresse.</p>
+<h2 id="chapitre-2-fast-ethernet">Chapitre 2: Fast Ethernet</h2>
+<p>Pour les utilisateur un réseau est un ensemble de machine, de câble et de boîtier RJ45.</p>
+<p>En réalité dans un entreprise il y a plusieurs réseau.</p>
+<h4 id="topologie-reseau">Topologie réseau</h4>
+<p>On a le:
+- <strong>bus</strong> : On est tous sur un câble coaxial
+- <strong>étoile</strong>: dérivé du bus
+- <strong>anneau</strong>: intéressante</p>
+<p>Plusieurs médias:</p>
+<ul>
+<li>En filaire: </li>
+<li>cuivre torsadé (on s'en fout que ça soit torsadé!! 5 minutes sur ça pour rien...), blindé ou non, avec des catégories évoluantes avec la vitesse et la qualité du câble.</li>
+<li>fibre optique, mono-mode ou multi-mode</li>
+</ul>
+<p>Les réseaux:</p>
+<ul>
+<li>
+<p>Déterminisme: chacun son temps de parole. Le signal ne sera jamais brouiller car on parle que quand personne parle. Nuance il faut attendre que la parole me revienne.</p>
+<ul>
+<li>Avantages: Pas de superposition de message</li>
+<li>Inconvénient: Attendre que la parole revienne</li>
+</ul>
+</li>
+<li>
+<p>A compétition: Tu parle quand tu veux. Si personne ne parle je parle, le risque de parler en même temps est faible.</p>
+<ul>
+<li>Avantages: Rapidité</li>
+<li>Inconvénient: Bruit</li>
+</ul>
+</li>
+</ul>
+<p>Pour le système déterministe on a un <em>jeton</em> qui tourne entre les machines. On peut configurer un priorité.</p>
+<h2 id="chapitre-3-protocole-tcpip">Chapitre 3: Protocole TCP/IP</h2>
+<p>Pouvoir communiquer a un ordinateur peut importe le chemin</p>
+<p>On ne garanti pas que l'info arrive de l'autre coté et dans l'ordre du coté IP.</p>
+<p>Il faudra donc avoir des mécanismes qui s’affranchisse des problèmes ci-dessus.</p>
+<p>On parle de data-gramme IP.</p>
+<p>On a un adressage uniforme de 4 octet pour IPv4.</p>
+<p>Son but a été aussi de masquer la nature physique des réseaux qu'on emprunte.</p>
+<p>Quand je vais envoyer un paquet la machine doit mettre en œuvre le phénomène de routage.</p>
+<p>Sur les 3 premiers octets (premier, 2 premiers ou 3 premiers) de l'adresse IP on identifie le réseau.
+Sur les 3 derniers octets (premier, 2 premiers ou 3 premiers) de l'adresse IP on identifie la machine.</p>
+<p>On divise en 4 sous réseaux</p>
+<table>
+<thead>
+<tr>
+<th align="left">128</th>
+<th align="left">64</th>
+<th align="left">32</th>
+<th align="left">16</th>
+<th align="left">8</th>
+<th align="left">4</th>
+<th align="left">2</th>
+<th align="right">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Réseaux</th>
+<th align="left">Adresse IP</th>
+<th align="center">Adresse de broadcast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Réseaux 1</td>
+<td align="left">193.49.48.0</td>
+<td align="center">193.49.48.63</td>
+</tr>
+<tr>
+<td align="left">Réseaux 2</td>
+<td align="left">193.49.48.64</td>
+<td align="center">193.49.48.127</td>
+</tr>
+<tr>
+<td align="left">Réseaux 3</td>
+<td align="left">193.49.48.128</td>
+<td align="center">193.49.48.191</td>
+</tr>
+<tr>
+<td align="left">Réseaux 4</td>
+<td align="left">193.49.48.192</td>
+<td align="center">193.49.48.255</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercice">Exercice</h2>
+<p><font size="5"><strong>Énoncé:</strong><br />
+Un réseau de classe C 193.49.48 est divisé (« subnetté ») en 8 sous-réseaux nommés sous-réseau 0, sous-réseau 1, ..., sous-réseau 7.</font><br />
+<br>
+<br>
+<b><font size="4">1) Donner pour chaque sous-réseau, l’adresse IP correspondante, l’adresse de broadcast, ainsi que le masque de sous-réseau en notation décimale pointée et en notation CIDR (/XX).
+Sur le sous-réseau 1, sont installées les machines A, B et C d’adresses respectives (hostid) 2, 3 et 4.<br />
+Sur le sous-réseau 2, sont installées les machines D, E et F d’adresses respectives 2, 3 et 4.<br />
+Sur le sous-réseau 5, sont installées les machines G et H d’adresses respectives 2, et 3.<br />
+Sur le sous-réseau 7, sont installées les machines I et J d’adresses respectives 7, et 12.<br />
+Sur le sous-réseau 0, sont installées les machines K, L et M d’adresses respectives 4, 17 et 20.  </font></b></p>
+<p>On divise en 8 sous réseau</p>
+<table>
+<thead>
+<tr>
+<th align="left">128</th>
+<th align="left">64</th>
+<th align="left">32</th>
+<th align="left">16</th>
+<th align="left">8</th>
+<th align="left">4</th>
+<th align="left">2</th>
+<th align="right">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Réseaux</th>
+<th align="left">Adresse IP</th>
+<th align="center">Masque</th>
+<th align="center">Adresse de broadcast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Réseau 0</td>
+<td align="left">193.49.48.0/27</td>
+<td align="center">255.255.255.224</td>
+<td align="center">193.49.48.31</td>
+</tr>
+<tr>
+<td align="left">Réseau 1</td>
+<td align="left">193.49.48.32/27</td>
+<td align="center">255.255.255.224</td>
+<td align="center">193.49.48.63</td>
+</tr>
+<tr>
+<td align="left">Réseau 2</td>
+<td align="left">193.49.48.64/27</td>
+<td align="center">255.255.255.224</td>
+<td align="center">193.49.48.95</td>
+</tr>
+<tr>
+<td align="left">Réseau 3</td>
+<td align="left">193.49.48.96/27</td>
+<td align="center">255.255.255.224</td>
+<td align="center">193.49.48.127</td>
+</tr>
+<tr>
+<td align="left">Réseau 4</td>
+<td align="left">193.49.48.128/27</td>
+<td align="center">255.255.255.224</td>
+<td align="center">193.49.48.159</td>
+</tr>
+<tr>
+<td align="left">Réseau 5</td>
+<td align="left">193.49.48.160/27</td>
+<td align="center">255.255.255.224</td>
+<td align="center">193.49.48.191</td>
+</tr>
+<tr>
+<td align="left">Réseau 6</td>
+<td align="left">193.49.48.192/27</td>
+<td align="center">255.255.255.224</td>
+<td align="center">193.49.48.223</td>
+</tr>
+<tr>
+<td align="left">Réseau 7</td>
+<td align="left">193.49.48.224/27</td>
+<td align="center">255.255.255.224</td>
+<td align="center">193.49.48.255</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><br>
+<br>
+<b><font size="4">2) Donner les adresses IP de toutes les machines en notation décimale pointée.<br />
+  Un routeur R1 relie les sous-réseaux 1 et 2; l’adresse du routeur (partie hostid) sur chaque sous-réseau est 1.<br />
+  Un routeur R2 relie les sous-réseaux 2 et 5; l’adresse du routeur est 5 sur chaque sous-réseau.<br />
+  Un routeur R3 relie les sous-réseaux 2 et 7; l’adresse du routeur est 6 sur le sous réseau 2 et 9 sur le sous-réseau 7.<br />
+  Un routeur R4 relie les sous-réseaux 0 et 7; l’adresse du routeur est 1 sur chaque sous-réseau.<br />
+Le routeur R4 a également une interface vers un routeur multi-protocole IP/X25 (nommé RMP) permettant l’accès à Internet. Cette interface est le sous-réseau 6, l’adresse de R4 sur ce sous-réseau est 1, celle de RMP est 2.  </font></b></p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Réseaux</strong></th>
+<th align="right"><strong>MACHINE</strong></th>
+<th align="left"><strong>ADRESSE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="right">A</td>
+<td align="left">193.49.48.34</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="right">B</td>
+<td align="left">193.49.48.35</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="right">C</td>
+<td align="left">193.49.48.36</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="right">D</td>
+<td align="left">193.49.48.66</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="right">E</td>
+<td align="left">193.49.48.67</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="right">F</td>
+<td align="left">193.49.48.68</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="right">G</td>
+<td align="left">193.49.48.162</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="right">H</td>
+<td align="left">193.49.48.163</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="right">I</td>
+<td align="left">193.49.48.231</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="right">J</td>
+<td align="left">193.49.48.236</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="right">K</td>
+<td align="left">193.49.48.4</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="right">L</td>
+<td align="left">193.49.48.17</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="right">M</td>
+<td align="left">193.49.48.20</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><br>
+<br>
+<b><font size="4">3) Donner toutes les adresses IP des routeurs R1, R2, R3, R4 et RMP sur tous leurs interfaces.  </font></b></p>
+<p>Routeur R1:<br />
+193.49.48.33 sur le sous-Réseaux 1<br />
+193.49.48.65 sur le sous-Réseaux 2  </p>
+<p>Routeur R2:<br />
+193.49.48.69 sur le sous-Réseaux 2<br />
+193.49.48.165 sur le sous-Réseaux 5  </p>
+<p>Routeur R3:<br />
+193.49.48.70 sur le sous-Réseaux 2<br />
+193.49.48.133 sur le sous-Réseaux 7  </p>
+<p>Routeur R4:
+193.49.48.1 sur le sous-Réseaux 0<br />
+193.49.48.193 sur le sous-Réseaux 6<br />
+193.49.48.225 sur le sous-Réseaux 7  </p>
+<p>RMP:<br />
+193.49.48.194 sur le sous-Réseaux 6  </p>
+<hr />
+<p><br>
+<br>
+<b><font size="4">4) Donner une représentation schématique du réseau.  </font></b></p>
+<p><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/p1080x2048/87055251_192330161974339_3312437550731231232_n.jpg?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=fUS-hjzRLssAX8GsJjj&_nc_ht=scontent-cdt1-1.xx&_nc_tp=6&oh=3bf5f76f2427c6f219a16092dadeb0a4&oe=5E920DE6" alt="!! Image Not Found !!"/></p>
+<hr />
+<p><br>
+<br>
+<b><font size="4">5) Donner les interfaces ainsi que les tables de routage de chaque machine et chaque routeur (excepté RMP), sachant que toute machine du réseau peut accéder à toute autre machine du réseau et que seules les machines B, E, G, I et M ont accès à Internet.  </font></b></p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.34/27</strong></th>
+<th align="right">A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.0/27</td>
+<td align="right">193.49.48.33/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.32/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">193.49.48.64/27</td>
+<td align="right">193.49.48.33/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.160/27</td>
+<td align="right">193.49.48.33/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.224/27</td>
+<td align="right">193.49.48.33/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.0/24</td>
+<td align="right">193.49.48.33</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.34/27</strong></th>
+<th align="right">A alternatif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.32/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">193.49.48.0/24</td>
+<td align="right">193.49.48.33</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.35/27</strong></th>
+<th align="right">B+Internet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.32/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">Défaut</td>
+<td align="right">193.49.48.33/27</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.66/27</strong></th>
+<th align="right">D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.0/27</td>
+<td align="right">193.49.48.70/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.32/27</td>
+<td align="right">193.49.48.65/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.64/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">193.49.48.160/27</td>
+<td align="right">193.49.48.69/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.224/27</td>
+<td align="right">193.49.48.70/27</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.66/27</strong></th>
+<th align="right">D alternatif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.32/27</td>
+<td align="right">193.49.48.65/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.64/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">193.49.48.160/27</td>
+<td align="right">193.49.48.69/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.0/24</td>
+<td align="right">193.49.48.70</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.67/27</strong></th>
+<th align="right">E+Internet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.32/27/27</td>
+<td align="right">193.49.48.65/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.64/27/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">193.49.48.160/27/27</td>
+<td align="right">193.49.48.69/27</td>
+</tr>
+<tr>
+<td align="left">Défaut</td>
+<td align="right">193.49.48.70/27</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.17/27</strong></th>
+<th align="right">L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.0/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">193.49.48.32/27</td>
+<td align="right">193.49.48.1/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.64/27</td>
+<td align="right">193.49.48.1/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.160/27</td>
+<td align="right">193.49.48.1/27</td>
+</tr>
+<tr>
+<td align="left">193.49.48.224/27</td>
+<td align="right">193.49.48.1/27</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.17/27</strong></th>
+<th align="right">L alternatif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.0/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">193.49.48.0/24</td>
+<td align="right">193.49.48.1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>193.49.48.20/27</strong></th>
+<th align="right">M+Internet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">193.49.48.0/27</td>
+<td align="right">Direct</td>
+</tr>
+<tr>
+<td align="left">Défaut</td>
+<td align="right">193.49.48.1/27</td>
+</tr>
+</tbody>
+</table>
+<p>Liens utiles:</p>
+<p><a href="https://www.sebastienadam.be/ipcalculator/">sebastienadam</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../reseauxElectriques/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Réseaux électriques" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Réseaux électriques
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../smartCard/" class="md-footer__link md-footer__link--next" aria-label="Next: Smart-Card" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Smart-Card
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Louison SARLIN--MAGNUS
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Réseaux électriques - Mes cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-embarque" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mes cours" class="md-header__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mes cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Réseaux électriques
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mes cours" class="md-nav__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mes cours
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cybersecurite/" class="md-nav__link">
+        Cyber Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devOps/" class="md-nav__link">
+        Developpement Opérationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ia/" class="md-nav__link">
+        Intelligence Artificielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linuxEmbarque/" class="md-nav__link">
+        Linux Embarqué
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optoElectronique/" class="md-nav__link">
+        Opto-électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Réseaux électriques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Réseaux électriques
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-4" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-5" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-6" class="md-nav__link">
+    Exercice 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-7" class="md-nav__link">
+    Exercice 7
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-a" class="md-nav__link">
+    Partie A
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-b" class="md-nav__link">
+    Partie B
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-8" class="md-nav__link">
+    Exercice 8
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseau/" class="md-nav__link">
+        Réseaux informatiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smartCard/" class="md-nav__link">
+        Smart-Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        Système d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sciences molles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sciences molles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sciences molles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/droitNum/" class="md-nav__link">
+        Droit du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/qualite/" class="md-nav__link">
+        Gestion de la qualité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/marketing/" class="md-nav__link">
+        Marketing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/strategieInternationale/" class="md-nav__link">
+        Stratégie internationale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Recherches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recherches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recherches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/reseauxElec/" class="md-nav__link">
+        Les réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/transitionEnergetique/" class="md-nav__link">
+        Transition énergétique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          CheatSheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CheatSheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CheatSheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/resume/" class="md-nav__link">
+        Résumé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/titres/" class="md-nav__link">
+        Titres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/latex/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tableaux/" class="md-nav__link">
+        Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/diagrammes/" class="md-nav__link">
+        Diagrammes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tabs/" class="md-nav__link">
+        Tabs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/superfences/" class="md-nav__link">
+        SuperFences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/citation/" class="md-nav__link">
+        Citation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/regles/" class="md-nav__link">
+        Règles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/smileys/" class="md-nav__link">
+        Smileys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/videos/" class="md-nav__link">
+        Vidéos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/blocs/" class="md-nav__link">
+        Blocs d'alerte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatSheet/" class="md-nav__link">
+        CheatSheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-4" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-5" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-6" class="md-nav__link">
+    Exercice 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-7" class="md-nav__link">
+    Exercice 7
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercice 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-a" class="md-nav__link">
+    Partie A
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-b" class="md-nav__link">
+    Partie B
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-8" class="md-nav__link">
+    Exercice 8
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/louisonsarlinmagnus/cours-isen/edit/master/docs/tech/reseauxElectriques.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="linux-embarque"><center>Linux Embarqué</center></h1>
+<p><font size="1"><center><em>pouloulou</em></center></font></p>
+<h2 id="exercice-1">Exercice 1</h2>
+<p>Intérêt du transport de l'électricité à haute tension.
+On cherche à quantifier les pertes Joule occasionnées lors du transport d’une puissance électrique de 100MW sur une distance de 100km en triphasé.
+Le facteur de puissance de la ligne est de 0, 95.</p>
+<p><strong>1. Déterminer le courant de ligne pour une tension de 400 kV puis 100 kV.</strong><br />
+<span class="arithmatex"><span class="MathJax_Preview">P =\sqrt{3} \times U \times Ixcos(\varphi)</span><script type="math/tex">P =\sqrt{3} \times U \times Ixcos(\varphi)</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">I = \frac{P}{\sqrt{3} \times U \times cos(\varphi)}</span><script type="math/tex">I = \frac{P}{\sqrt{3} \times U \times cos(\varphi)}</script></span>  </p>
+<p>Donc <span class="arithmatex"><span class="MathJax_Preview">I = 152 A</span><script type="math/tex">I = 152 A</script></span> (pour U=400kV)<br />
+Donc <span class="arithmatex"><span class="MathJax_Preview">I = 607,7 A</span><script type="math/tex">I = 607,7 A</script></span> (pour U=100kV)  </p>
+<p><strong>2. La densité de courant dans les câbles de transport d’électricité est J = 0,7A=mm2.</strong><br />
+<strong>Déterminer la section nécessaire des conducteurs pour un transport en 400 kV.</strong><br />
+<span class="arithmatex"><span class="MathJax_Preview">S=\frac{I}{J}</span><script type="math/tex">S=\frac{I}{J}</script></span><br />
+donc<br />
+<span class="arithmatex"><span class="MathJax_Preview">S=\frac{152}{0,72}=212 mm^2</span><script type="math/tex">S=\frac{152}{0,72}=212 mm^2</script></span></p>
+<p><strong>3. Le matériau utilisé pour les câbles de transport est un alliage d’aluminium (préféré au cuivre pour sa légèreté et son coût). La résistivité de ce matériau est ρ = 26.10−3Ωmm2/m.</strong> <br />
+<strong>Déterminer alors la résistance électrique de chaque ligne de transport.</strong><br />
+<span class="arithmatex"><span class="MathJax_Preview">R = \frac{\rho.L}{S}</span><script type="math/tex">R = \frac{\rho.L}{S}</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">R=\frac{0,026 \times 100000]}{212} = 12,3 \Omega</span><script type="math/tex">R=\frac{0,026 \times 100000]}{212} = 12,3 \Omega</script></span></p>
+<p><strong>4. Pour les 2 tensions envisagées, déterminer les pertes Joule en ligne.</strong><br />
+<strong>Calculer alors le rendement du transport d’électricité.</strong><br />
+<span class="arithmatex"><span class="MathJax_Preview">Pj=3RI²</span><script type="math/tex">Pj=3RI²</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Pj=3 \times 12,3 \times 152^2=852,5 kW</span><script type="math/tex">Pj=3 \times 12,3 \times 152^2=852,5 kW</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">r = \frac{P-Pj}{P}</span><script type="math/tex">r = \frac{P-Pj}{P}</script></span> </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">r=\frac{1.10^{8} - 852.10^{3}}{1.10^{8}}=0,991</span><script type="math/tex">r=\frac{1.10^{8} - 852.10^{3}}{1.10^{8}}=0,991</script></span></p>
+<hr />
+<h2 id="exercice-2">Exercice 2</h2>
+<p><font size="5">Stabilité en fréquence du réseau électrique</font><br />
+Un turbo-alternateur de centrale nucléaire a les spécifications suivantes: 1140 MVA/27 kV.
+Il délivre de l’énergie au réseau comme l’indique le schéma ci-après:
+<center>
+  <img src="https://i.imgur.com/zuwWxzH.png" width="300"/>
+</center></p>
+<p><strong>1.  Quelle est la puissance mécanique développée sur l’arbre ?</strong><br />
+<span class="arithmatex"><span class="MathJax_Preview">P = Couple.\Omega</span><script type="math/tex">P = Couple.\Omega</script></span></p>
+<p><strong>2.  Dans  une  machine  synchrone,  quelle  est  la  relation  existant entre  fréquence  du  réseau électrique et vitesse de rotation mécanique ?</strong><br />
+<span class="arithmatex"><span class="MathJax_Preview">f_{Reseauélec} = \frac{N.p}{60}</span><script type="math/tex">f_{Reseauélec} = \frac{N.p}{60}</script></span> <br />
+avec N en tr/min et p le nombre de paire de pôles</p>
+<p><strong>3.  Appliquer le PFD sur l’arbre en rotation. Expliquer pourquoi un équilibre entre productionet consommation est indispensable pour obtenir un réseau électrique stable en fréquence</strong>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">J\frac{d\omega(t)}{dt} = C_m(t) + C_r(t)</span><script type="math/tex">J\frac{d\omega(t)}{dt} = C_m(t) + C_r(t)</script></span></p>
+<p>Avec Cr le couple résistif, correspondant a la consommation d'énergie sur le réseau.<br />
+Avec Cm le couple produit par la turbine.  </p>
+<p>Le réglage de la fréquence réseau se fait par le biais de la puissance active. </p>
+<hr />
+<p><font size="5">Pas d'exercice 3...</font></p>
+<hr />
+<h2 id="exercice-4">Exercice 4</h2>
+<p><font size="5">Stabilité en tension du réseau électrique - réglage de la puissance réactive</font><br />
+On cherche à dimensionner le gradin de condensateurs du schéma ci-dessous pour compensertotalement la puissance réactive de la charge. Il s’agit d’un réseau triphasé 230V/400V.<br />
+<strong>1.  Déterminer la valeur de C à mettre en place.</strong><br />
+On sait que : </p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">V=230V</span><script type="math/tex">V=230V</script></span> </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">f=50Hz</span><script type="math/tex">f=50Hz</script></span> </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">W=2 \times pi \times f =314 rad \times s^-1</span><script type="math/tex">W=2 \times pi \times f =314 rad \times s^-1</script></span> </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">Q=P \times tan(phi)</span><script type="math/tex">Q=P \times tan(phi)</script></span>  </li>
+</ul>
+<p>Alors on calcule la valeur de la charge principale : 
+<span class="arithmatex"><span class="MathJax_Preview">Q_{charge}=40 .10^3 \times \tan{46} ~= 40.8kVAR</span><script type="math/tex">Q_{charge}=40 .10^3 \times \tan{46} ~= 40.8kVAR</script></span>
+Car : <span class="arithmatex"><span class="MathJax_Preview">\cos(\phi) = 0.7</span><script type="math/tex">\cos(\phi) = 0.7</script></span> &lt;=&gt; <span class="arithmatex"><span class="MathJax_Preview">\phi=\arccos{0.7} ~= 46°</span><script type="math/tex">\phi=\arccos{0.7} ~= 46°</script></span></p>
+<p>Pour 1 condensateur (ici on va prendre un phi=-90°), on sait que
+<span class="arithmatex"><span class="MathJax_Preview">P_{abs}=V \times I \times \cos(\phi)</span><script type="math/tex">P_{abs}=V \times I \times \cos(\phi)</script></span></p>
+<p>Or on sait que  <span class="arithmatex"><span class="MathJax_Preview">P_{abs} = 0W</span><script type="math/tex">P_{abs} = 0W</script></span> pour un condensateur. </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">P_{reac}=V \times I \times \sin(\phi)= V \times I \times sin(-90) = -V \times I W</span><script type="math/tex">P_{reac}=V \times I \times \sin(\phi)= V \times I \times sin(-90) = -V \times I W</script></span> </p>
+<p>Or le module de <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span> est: <span class="arithmatex"><span class="MathJax_Preview">\mid I\mid = CwV</span><script type="math/tex">\mid I\mid = CwV</script></span></p>
+<p>Donc: <span class="arithmatex"><span class="MathJax_Preview">Q_{1 condensateur} = -V^2wC</span><script type="math/tex">Q_{1 condensateur} = -V^2wC</script></span> </p>
+<p>Ainsi pour 3 condensateurs on obtient : <span class="arithmatex"><span class="MathJax_Preview">Q_{3 condensateur} = -3V^2wC</span><script type="math/tex">Q_{3 condensateur} = -3V^2wC</script></span> </p>
+<p>Or on souhaite annuler toutes les puissances réactives cad :<br />
+<span class="arithmatex"><span class="MathJax_Preview">Q_{3 condensateur} + Q_{charge} = 0</span><script type="math/tex">Q_{3 condensateur} + Q_{charge} = 0</script></span> 
+<span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>  <span class="arithmatex"><span class="MathJax_Preview">-3V^2wC +40.8 .10^3 = 0</span><script type="math/tex">-3V^2wC +40.8 .10^3 = 0</script></span> 
+<span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>  <span class="arithmatex"><span class="MathJax_Preview">C = Q_{charge}/3 \times V² \times w = \frac{ 40.8 .10^3}{3 \times 230² \times 2 \times pi \times 50}</span><script type="math/tex">C = Q_{charge}/3 \times V² \times w = \frac{ 40.8 .10^3}{3 \times 230² \times 2 \times pi \times 50}</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">C = 0.8 mF</span><script type="math/tex">C = 0.8 mF</script></span></p>
+<p><strong>2.  Le distributeur d’électricité ne facturant l’énergie réactive qu’à partir d’un tan(φm a x)=0, 4,calculer la valeur de C qui suffirait.</strong><br />
+Tout pareil qu'au dessus sauf qu'on souhaite annuler toutes les puissances réactives cad : </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Q_{3condensateur} + Q_{charge} = Q_{total}</span><script type="math/tex">Q_{3condensateur} + Q_{charge} = Q_{total}</script></span> </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>  <span class="arithmatex"><span class="MathJax_Preview">-3V²wC +40.8 .10^3 = 16 .10^3</span><script type="math/tex">-3V²wC +40.8 .10^3 = 16 .10^3</script></span> </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>  <span class="arithmatex"><span class="MathJax_Preview">-3V²wC = (16-40.8) .10^3</span><script type="math/tex">-3V²wC = (16-40.8) .10^3</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>  <span class="arithmatex"><span class="MathJax_Preview">C = \frac{(16-40.8) .10^3}{3 \times V² \times w} = \frac{24.8 .10^3}{3 \times 230² \times 2 \times pi \times 50}</span><script type="math/tex">C = \frac{(16-40.8) .10^3}{3 \times V² \times w} = \frac{24.8 .10^3}{3 \times 230² \times 2 \times pi \times 50}</script></span><br />
+Finalement : <span class="arithmatex"><span class="MathJax_Preview">C = 0.49mF</span><script type="math/tex">C = 0.49mF</script></span>  </p>
+<p><strong>3.  Le  déclenchement  de  nouvelles  charges  modifie  la  charge  :  <span class="arithmatex"><span class="MathJax_Preview">P=60  kW</span><script type="math/tex">P=60  kW</script></span>  et  <span class="arithmatex"><span class="MathJax_Preview">\cos(φ)=0, 72</span><script type="math/tex">\cos(φ)=0, 72</script></span>.Déterminer la nouvelle puissance réactive échangée avec le réseau sans modifier la valeurde C calculée à la question 2.</strong><br />
+<strong>Conclure.</strong>  </p>
+<p>Alors on commence par calculer la valeur de la charge principale : <br />
+<span class="arithmatex"><span class="MathJax_Preview">Q_{charge}=60 .10^3 \times \tan(44) ~= 57.9kVAR</span><script type="math/tex">Q_{charge}=60 .10^3 \times \tan(44) ~= 57.9kVAR</script></span><br />
+Car:<br />
+<span class="arithmatex"><span class="MathJax_Preview">\cos(\phi) = 0.72 \iff \phi=\arccos(0.72) ~= 44°</span><script type="math/tex">\cos(\phi) = 0.72 \iff \phi=\arccos(0.72) ~= 44°</script></span> </p>
+<p>Pour 1 condensateur (ici on va prendre un <span class="arithmatex"><span class="MathJax_Preview">\phi=-90°</span><script type="math/tex">\phi=-90°</script></span>), on sait que : 
+<span class="arithmatex"><span class="MathJax_Preview">P_{abs}=V \times I \times cos(phi)</span><script type="math/tex">P_{abs}=V \times I \times cos(phi)</script></span></p>
+<p>Or on sait que  <span class="arithmatex"><span class="MathJax_Preview">P_{abs} = 0W</span><script type="math/tex">P_{abs} = 0W</script></span> pour un condensateur. 
+<span class="arithmatex"><span class="MathJax_Preview">P_{reac}=V \times I \times \sin(\phi)= V \times I \times \sin(-90) = -V \times I W</span><script type="math/tex">P_{reac}=V \times I \times \sin(\phi)= V \times I \times \sin(-90) = -V \times I W</script></span>  </p>
+<p>Or le module de I est: <span class="arithmatex"><span class="MathJax_Preview">\mid I\mid = CwV</span><script type="math/tex">\mid I\mid = CwV</script></span>  </p>
+<p>Donc: <span class="arithmatex"><span class="MathJax_Preview">Q_{1condensateur} = -V²wC</span><script type="math/tex">Q_{1condensateur} = -V²wC</script></span> </p>
+<p>Ainsi pour 3 condensateurs on obtient : <span class="arithmatex"><span class="MathJax_Preview">Q_{3condensateur} = -3V^2wC</span><script type="math/tex">Q_{3condensateur} = -3V^2wC</script></span> </p>
+<p>Donc : 
+<span class="arithmatex"><span class="MathJax_Preview">Q_{total} = Q_{3condensateur} + Q_{charge}</span><script type="math/tex">Q_{total} = Q_{3condensateur} + Q_{charge}</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>  <span class="arithmatex"><span class="MathJax_Preview">-3V²wC +57.9 .10^3</span><script type="math/tex">-3V²wC +57.9 .10^3</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>  <span class="arithmatex"><span class="MathJax_Preview">(-3 \times 230² \times 2 \times pi \times 50 \times 0.49 \times 10^-3) + 57.9 .10^3</span><script type="math/tex">(-3 \times 230² \times 2 \times pi \times 50 \times 0.49 \times 10^-3) + 57.9 .10^3</script></span> 
+Finalement : <span class="arithmatex"><span class="MathJax_Preview">Q_{total} = 33.47kVAR</span><script type="math/tex">Q_{total} = 33.47kVAR</script></span> </p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695512780085919774/695594396476899328/unknown.png" width="600"/>
+</center></p>
+<hr />
+<h2 id="exercice-5">Exercice 5</h2>
+<p><font size="5">Stabilité en tension du réseau électrique</font><br />
+Le caractère inductif et résistif des lignes de transport électrique ont pour conséquence de faire chuter la tension du réseau. En vous basant sur le modèle monophasé de ligne proposé ci-dessous, nous allons déterminercette chute de tension.</p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695512780085919774/695594926343192676/unknown.png" width="600"/>
+</center></p>
+<p><strong>1.  Exprimer les puissances active et réactive de la charge en fonction de la tension efficace <span class="arithmatex"><span class="MathJax_Preview">V_c</span><script type="math/tex">V_c</script></span>.</strong><br />
+<span class="arithmatex"><span class="MathJax_Preview">Pa=V_c \times i \times cos(\varphi)</span><script type="math/tex">Pa=V_c \times i \times cos(\varphi)</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">Pr=V_c \times i \times sin(\varphi)</span><script type="math/tex">Pr=V_c \times i \times sin(\varphi)</script></span>  </p>
+<p><strong>2.  Tracer le diagramme de Fresnel (<span class="arithmatex"><span class="MathJax_Preview">V_c</span><script type="math/tex">V_c</script></span>,<span class="arithmatex"><span class="MathJax_Preview">V_p</span><script type="math/tex">V_p</script></span>,<span class="arithmatex"><span class="MathJax_Preview">\Delta V</span><script type="math/tex">\Delta V</script></span> et <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>) du circuit en prenant la tension <span class="arithmatex"><span class="MathJax_Preview">V_c</span><script type="math/tex">V_c</script></span>commeréférence.</strong>  </p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695917872723263559/695918177263157268/unknown.png" alt="Image not found" width="600"/>
+</center></p>
+<p>Avec <span class="arithmatex"><span class="MathJax_Preview">Vp = R \times I+jLw \times I+Vc</span><script type="math/tex">Vp = R \times I+jLw \times I+Vc</script></span></p>
+<p><strong>3.  Si l’on suppose que la ligne n’est pas trop chargée, l’angle entre <span class="arithmatex"><span class="MathJax_Preview">V_c</span><script type="math/tex">V_c</script></span> et <span class="arithmatex"><span class="MathJax_Preview">V_p</span><script type="math/tex">V_p</script></span> peut être négligé.Déterminer alors l’expression de <span class="arithmatex"><span class="MathJax_Preview">\Delta V</span><script type="math/tex">\Delta V</script></span> en fonction de<span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>,<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>,<span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>,<span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> et <span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>.</strong>  </p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695917872723263559/695918249086287983/unknown.png" alt="Image not found" width="600"/>
+</center></p>
+<p>One voit que :<br />
+<span class="arithmatex"><span class="MathJax_Preview">X = L \times \omega \times I \times \sin(\phi)</span><script type="math/tex">X = L \times \omega \times I \times \sin(\phi)</script></span> <br />
+<span class="arithmatex"><span class="MathJax_Preview">Y = RI \times \cos(\phi)</span><script type="math/tex">Y = RI \times \cos(\phi)</script></span>  </p>
+<p>Alors : <span class="arithmatex"><span class="MathJax_Preview">\Delta V = X+Y = (L \times \omega \times I \times \sin(\phi)) + (RI \times \cos(\phi))</span><script type="math/tex">\Delta V = X+Y = (L \times \omega \times I \times \sin(\phi)) + (RI \times \cos(\phi))</script></span></p>
+<p><strong>4.  Exprimer alors la chute de tension <span class="arithmatex"><span class="MathJax_Preview">\Delta V</span><script type="math/tex">\Delta V</script></span> en fonction de <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> et <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>.</strong><br />
+<span class="arithmatex"><span class="MathJax_Preview">\Delta V = \frac{R*P+L*w*Q}{Vc}</span><script type="math/tex">\Delta V = \frac{R*P+L*w*Q}{Vc}</script></span>  </p>
+<p><strong>5.  Conclure.</strong><br />
+Il faut ajouter des condensateurs pour compenser Q.</p>
+<hr />
+<h2 id="exercice-6">Exercice 6</h2>
+<p><font size="5">Stabilité en tension</font><br />
+Une  ligne  aérienne  triphasée  alimente  un  récepteur  triphasé  équilibré  qui  consomme  unepuissance active <span class="arithmatex"><span class="MathJax_Preview">P1</span><script type="math/tex">P1</script></span> de <span class="arithmatex"><span class="MathJax_Preview">1,50 MW</span><script type="math/tex">1,50 MW</script></span> et impose un facteur de puissance <span class="arithmatex"><span class="MathJax_Preview">k1</span><script type="math/tex">k1</script></span> de <span class="arithmatex"><span class="MathJax_Preview">0,9</span><script type="math/tex">0,9</script></span>.<br />
+La valeur efficace de la tension entre phases à l’arrivée de la ligne est <span class="arithmatex"><span class="MathJax_Preview">U_A=20kV</span><script type="math/tex">U_A=20kV</script></span>, sa fréquence <span class="arithmatex"><span class="MathJax_Preview">f=50 Hz</span><script type="math/tex">f=50 Hz</script></span>.<br />
+Chaque fil de ligneaune résistance linéique de <span class="arithmatex"><span class="MathJax_Preview">220mΩ/k</span><script type="math/tex">220mΩ/k</script></span> met une inductance linéique de <span class="arithmatex"><span class="MathJax_Preview">1,2 mH/km</span><script type="math/tex">1,2 mH/km</script></span>. La ligne fait <span class="arithmatex"><span class="MathJax_Preview">50km</span><script type="math/tex">50km</script></span> de long.<br />
+Le but est de calculer la valeur efficace <span class="arithmatex"><span class="MathJax_Preview">U_D</span><script type="math/tex">U_D</script></span> de la tension composée au départ de la ligne.  </p>
+<p><strong>1.  Schématiser la situation.</strong>  </p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695512733163978782/695914570933600366/exo6.JPG" width="600"/>
+</center></p>
+<p><strong>2.  Déterminer la valeur efficace de l’intensité <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span> du courant dans un fil de ligne.</strong><br />
+On sait que : 
+<span class="arithmatex"><span class="MathJax_Preview">R =rl \times L=0.22 \times 50 .10^3=11000\Omega</span><script type="math/tex">R =rl \times L=0.22 \times 50 .10^3=11000\Omega</script></span> 
+<span class="arithmatex"><span class="MathJax_Preview">P_1=(\sqrt{3}) \times Ua \times I \times cos(phi)=(\sqrt{3}) \times I \times 20 .10^3 \times 0.9</span><script type="math/tex">P_1=(\sqrt{3}) \times Ua \times I \times cos(phi)=(\sqrt{3}) \times I \times 20 .10^3 \times 0.9</script></span> </p>
+<p>Alors : 
+<span class="arithmatex"><span class="MathJax_Preview">I=\frac{P_1}{\sqrt{3}} \times U_A(t) \times \cos(\phi)=\frac {1.5.10^6}{\sqrt{3} \times 20 .10^3 \times 0.9} =\frac {1.5 .10^6}{\sqrt{3} \times 20 \times 0.9}</span><script type="math/tex">I=\frac{P_1}{\sqrt{3}} \times U_A(t) \times \cos(\phi)=\frac {1.5.10^6}{\sqrt{3} \times 20 .10^3 \times 0.9} =\frac {1.5 .10^6}{\sqrt{3} \times 20 \times 0.9}</script></span><br />
+Donc : <span class="arithmatex"><span class="MathJax_Preview">I=48A</span><script type="math/tex">I=48A</script></span>  </p>
+<p><strong>3.  Déterminer la puissance réactive <span class="arithmatex"><span class="MathJax_Preview">Q1</span><script type="math/tex">Q1</script></span> absorbée par la charge.</strong>  </p>
+<p>On sait que : <br />
+<span class="arithmatex"><span class="MathJax_Preview">\cos(\phi) =0.9  &lt;=&gt;  \phi=\arccos(0.9) ~=26°</span><script type="math/tex">\cos(\phi) =0.9  <=>  \phi=\arccos(0.9) ~=26°</script></span> <br />
+<span class="arithmatex"><span class="MathJax_Preview">Q=\sqrt{3} \times Ua \times I \times \sin(\phi)</span><script type="math/tex">Q=\sqrt{3} \times Ua \times I \times \sin(\phi)</script></span> 
+Alors : <br />
+<span class="arithmatex"><span class="MathJax_Preview">Q1= \sqrt{3} \times 20 .10^3 \times 48 \times sin(26)</span><script type="math/tex">Q1= \sqrt{3} \times 20 .10^3 \times 48 \times sin(26)</script></span> <br />
+Donc : <span class="arithmatex"><span class="MathJax_Preview">Q1 = 729kVAR</span><script type="math/tex">Q1 = 729kVAR</script></span> </p>
+<p><strong>4.  Déterminer les puissance active <span class="arithmatex"><span class="MathJax_Preview">P2</span><script type="math/tex">P2</script></span> et réactive <span class="arithmatex"><span class="MathJax_Preview">Q2</span><script type="math/tex">Q2</script></span> consommées par la ligne.</strong>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">R = R_{ligne}\times L=0.22. 10^-3\times 50.10^3=0.22\times 50=11\Omega</span><script type="math/tex">R = R_{ligne}\times L=0.22. 10^-3\times 50.10^3=0.22\times 50=11\Omega</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">L = L_{ligne} \times l =1.2.10^{-3}\times50.10^3=1.2\times50=60mH</span><script type="math/tex">L = L_{ligne} \times l =1.2.10^{-3}\times50.10^3=1.2\times50=60mH</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">P_2 = P_{resistance} + P_{inductance}</span><script type="math/tex">P_2 = P_{resistance} + P_{inductance}</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">\Rightarrow</span><script type="math/tex">\Rightarrow</script></span> <span class="arithmatex"><span class="MathJax_Preview">P_{inductance} = 0 VAR</span><script type="math/tex">P_{inductance} = 0 VAR</script></span> car <span class="arithmatex"><span class="MathJax_Preview">\cos(90)=0</span><script type="math/tex">\cos(90)=0</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Q_2 = Q_{resitance} + Q_{inductance}</span><script type="math/tex">Q_2 = Q_{resitance} + Q_{inductance}</script></span> <br />
+<span class="arithmatex"><span class="MathJax_Preview">\Rightarrow</span><script type="math/tex">\Rightarrow</script></span> <span class="arithmatex"><span class="MathJax_Preview">Q_{resitance} = 0 VAR</span><script type="math/tex">Q_{resitance} = 0 VAR</script></span> car <span class="arithmatex"><span class="MathJax_Preview">\sin(0) = 0</span><script type="math/tex">\sin(0) = 0</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">P_2 = 3\times R\times I^2 = 3\times 11\times 48^2 ~= 76kVAR</span><script type="math/tex">P_2 = 3\times R\times I^2 = 3\times 11\times 48^2 ~= 76kVAR</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">Q_2 = 3\times L\times \omega \times I^2 = 3\times 60.10^{-3}\times 2\times \pi\times 50\times 48^2 ~= 130.3kVAR</span><script type="math/tex">Q_2 = 3\times L\times \omega \times I^2 = 3\times 60.10^{-3}\times 2\times \pi\times 50\times 48^2 ~= 130.3kVAR</script></span>  </p>
+<p><strong>5.  En déduire la valeur efficace de la tension entre phases au départ de la ligne <span class="arithmatex"><span class="MathJax_Preview">U_D</span><script type="math/tex">U_D</script></span> ainsi que la chute de tension relative <span class="arithmatex"><span class="MathJax_Preview">\frac{\Delta U}{U_D}</span><script type="math/tex">\frac{\Delta U}{U_D}</script></span></strong>  </p>
+<p>On applique le <strong>théorème de Boucherot</strong>:<br />
+<span class="arithmatex"><span class="MathJax_Preview">P_T = \sum_{i=1}^{n} P_i</span><script type="math/tex">P_T = \sum_{i=1}^{n} P_i</script></span>  et  <span class="arithmatex"><span class="MathJax_Preview">Q_T = \sum_{i=1}^{n} Q_i</span><script type="math/tex">Q_T = \sum_{i=1}^{n} Q_i</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">S_D=\sqrt {P_D^2+Q_D^2} = \sqrt{3}U_DI</span><script type="math/tex">S_D=\sqrt {P_D^2+Q_D^2} = \sqrt{3}U_DI</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Q_D = Q_1 + Q_2 =(729+130.3).10^3 = 859.3kVAR</span><script type="math/tex">Q_D = Q_1 + Q_2 =(729+130.3).10^3 = 859.3kVAR</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">P_D = P_1 +P_2 = 1.5.10^6 + 76.10^3 = 1576kW</span><script type="math/tex">P_D = P_1 +P_2 = 1.5.10^6 + 76.10^3 = 1576kW</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">S_D = \sqrt {(1576.10^3)^2 +(859.3.10^3)^2} ~= 1.795MVA</span><script type="math/tex">S_D = \sqrt {(1576.10^3)^2 +(859.3.10^3)^2} ~= 1.795MVA</script></span>  </p>
+<p>Donc:<br />
+<span class="arithmatex"><span class="MathJax_Preview">U_D =\frac{S_D}{\sqrt{3}.I} =\frac{1.795.10^6}{\sqrt{3}\times 48}=22kV</span><script type="math/tex">U_D =\frac{S_D}{\sqrt{3}.I} =\frac{1.795.10^6}{\sqrt{3}\times 48}=22kV</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">\Delta(U) = (U_D-U_A) = 2kV</span><script type="math/tex">\Delta(U) = (U_D-U_A) = 2kV</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">\frac{\Delta U}{U_D} = \frac{2}{22} = 0.09 = 9\%</span><script type="math/tex">\frac{\Delta U}{U_D} = \frac{2}{22} = 0.09 = 9\%</script></span>  </p>
+<hr />
+<h2 id="exercice-7">Exercice 7</h2>
+<p><font size="5">Nécessité d'interconnecter les centrales de production</font>  </p>
+<h3 id="partie-a">Partie A</h3>
+<p><font size="3">Impact de la distance au site de production</font>
+Nous prenons un modèle monophasé de ligne pour l’étude de la chute de tension dans leréseau électrique THT de tension composée <span class="arithmatex"><span class="MathJax_Preview">U_r=400kV</span><script type="math/tex">U_r=400kV</script></span>.
+La ligne a une inductance linéique <span class="arithmatex"><span class="MathJax_Preview">l=1,1mH/km</span><script type="math/tex">l=1,1mH/km</script></span>. La distance en kms séparant centrale de production et récepteur est notée <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>. Lerécepteur est de type inductif et présente un facteur de puissance de <span class="arithmatex"><span class="MathJax_Preview">0,90</span><script type="math/tex">0,90</script></span>.</p>
+<p><strong>1. Schématiser la situation.</strong>  </p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695512733163978782/695930563336470538/exo7.JPG" width="600"/>
+</center></p>
+<p><strong>2.A l’aide d’un diagramme de Fresnel, montrer que l’on peut approcher la tension simple disponible au niveau du récepteur par: <span class="arithmatex"><span class="MathJax_Preview">V_A=V_D−l.x.ω.I.\sin{\phi}</span><script type="math/tex">V_A=V_D−l.x.ω.I.\sin{\phi}</script></span></strong>  </p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695512733163978782/695935659868946432/unknown.png" width="600"/>
+</center></p>
+<p>L'angle entre <span class="arithmatex"><span class="MathJax_Preview">V_A</span><script type="math/tex">V_A</script></span> et <span class="arithmatex"><span class="MathJax_Preview">V_D</span><script type="math/tex">V_D</script></span> est néglieable ==&gt; <span class="arithmatex"><span class="MathJax_Preview">V_D</span><script type="math/tex">V_D</script></span> devient l'homothétie de <span class="arithmatex"><span class="MathJax_Preview">V_A</span><script type="math/tex">V_A</script></span>  </p>
+<p><strong>3.On donne <span class="arithmatex"><span class="MathJax_Preview">I=830 A</span><script type="math/tex">I=830 A</script></span>. Tracer alorsVAen fonction de <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> pour une ligne allant jusqu’à 100 kms.</strong>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\cos(\phi) =0.9 \iff \phi = \arccos(0.9) = 26°</span><script type="math/tex">\cos(\phi) =0.9 \iff \phi = \arccos(0.9) = 26°</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">V_D = \frac{U_D}{\sqrt{3}} = 231kV</span><script type="math/tex">V_D = \frac{U_D}{\sqrt{3}} = 231kV</script></span>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">V_A=V_D−l.x.ω.I.\sin{\phi} = (231.10^3)-(1.1\times 100\times 2\times \pi\times 50\times \sin(26)\times 830) = 218kV</span><script type="math/tex">V_A=V_D−l.x.ω.I.\sin{\phi} = (231.10^3)-(1.1\times 100\times 2\times \pi\times 50\times \sin(26)\times 830) = 218kV</script></span></p>
+<p><strong>4. Sur le réseau THT la tension composée ne doit pas descendre en dessous de <span class="arithmatex"><span class="MathJax_Preview">U_{min}=380kV</span><script type="math/tex">U_{min}=380kV</script></span>. A quelle distance cette contrainte n’est plus respectée?</strong>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">V_{min}= \frac{U_{min}}{\sqrt{3}} ~= 219kV</span><script type="math/tex">V_{min}= \frac{U_{min}}{\sqrt{3}} ~= 219kV</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">V_A = V_D-I.l.\omega.x.\sin(\phi)</span><script type="math/tex">V_A = V_D-I.l.\omega.x.\sin(\phi)</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\iff V_D-V_A = I.l.\omega.x.\sin(\phi)</span><script type="math/tex">\iff V_D-V_A = I.l.\omega.x.\sin(\phi)</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">x=\frac{V_D-V_A}{I.l.\omega.x.\sin(\phi)} = \frac{231-218}{830\times 1,1.10^{-3}\times 2\pi \times 50\times\sin(26)} =1034m</span><script type="math/tex">x=\frac{V_D-V_A}{I.l.\omega.x.\sin(\phi)} = \frac{231-218}{830\times 1,1.10^{-3}\times 2\pi \times 50\times\sin(26)} =1034m</script></span></p>
+<h3 id="partie-b">Partie B</h3>
+<p><font size="3">Interconnexion des centrales de production</font><br />
+Nous allons voir comment un réseau de production maillé permet de limiter la chute de tensionen ligne.
+Les 2 centrales sont espacées d’une distance <span class="arithmatex"><span class="MathJax_Preview">d=200kms</span><script type="math/tex">d=200kms</script></span>. Nous supposerons pour la suiteque les tensions de réseau aux deux extrémités de la ligne sont synchrones.</p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695512780085919774/695617315516973076/unknown.png
+" width="600"/>
+</center></p>
+<p><strong>1. DéterminerVAen fonction de la distance de lignex.</strong>  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\underline{U_{L1}} = \underline{U_{L2}}</span><script type="math/tex">\underline{U_{L1}} = \underline{U_{L2}}</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">\iff \underline{I_1}.j.L_1\omega = \underline{I_1}.j.L_2\omega</span><script type="math/tex">\iff \underline{I_1}.j.L_1\omega = \underline{I_1}.j.L_2\omega</script></span><br />
+<span class="arithmatex"><span class="MathJax_Preview">\iff \underline{I_1}.j.l.x\omega = \underline{I_1}.j.l.(d-x)\omega</span><script type="math/tex">\iff \underline{I_1}.j.l.x\omega = \underline{I_1}.j.l.(d-x)\omega</script></span><br />
+Or:<br />
+<span class="arithmatex"><span class="MathJax_Preview">\underline{I} = \underline{I_1} + \underline{I_2} \iff \underline{I_2} = \underline{I} - \underline{I_1}</span><script type="math/tex">\underline{I} = \underline{I_1} + \underline{I_2} \iff \underline{I_2} = \underline{I} - \underline{I_1}</script></span>  </p>
+<p>Donc:<br />
+<span class="arithmatex"><span class="MathJax_Preview">\underline{I_1}= \underline{I}.\frac{d-x}{d}</span><script type="math/tex">\underline{I_1}= \underline{I}.\frac{d-x}{d}</script></span>  </p>
+<p><img src="https://cdn.discordapp.com/attachments/695917872723263559/695981126451331142/unknown.png
+" width="400"/></p>
+<p><strong>2. En prenant <span class="arithmatex"><span class="MathJax_Preview">I=830 A</span><script type="math/tex">I=830 A</script></span> et <span class="arithmatex"><span class="MathJax_Preview">\cos{\phi}=0,9</span><script type="math/tex">\cos{\phi}=0,9</script></span>, tracer la tension <span class="arithmatex"><span class="MathJax_Preview">V_A</span><script type="math/tex">V_A</script></span> en fonction de <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>.</strong>  </p>
+<p><strong>3. Conclure.</strong>  </p>
+<hr />
+<h2 id="exercice-8">Exercice 8</h2>
+<p><font size="5">Optimisation du réseau électrique</font><br />
+Pour le circuit suivant, sachant que les charges sont alimentées en 230V, déterminer :  </p>
+<p><strong>1.  Le facteur de puissance des deux charges parallèles</strong>  </p>
+<p><strong>2.  L’amplitude du courant <span class="arithmatex"><span class="MathJax_Preview">I_s</span><script type="math/tex">I_s</script></span>, la puissance active perdue dans la ligne et la puissance apparentefournie par la source</strong>  </p>
+<p><strong>3.  Si la fréquence de la source est de <span class="arithmatex"><span class="MathJax_Preview">50Hz</span><script type="math/tex">50Hz</script></span>, calculer la valeur du condensateur nécessaire auniveau de la charge pour corriger le facteur de puissance à 0.95. Recalculer les valeurs de laquestion 2.</strong>  </p>
+<p><center>
+  <img src="https://cdn.discordapp.com/attachments/695512780085919774/695617914862305330/unknown.png" width="600"/>
+</center></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../optoElectronique/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Opto-électronique" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Opto-électronique
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../reseau/" class="md-footer__link md-footer__link--next" aria-label="Next: Réseaux informatiques" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Réseaux informatiques
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Louison SARLIN--MAGNUS
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

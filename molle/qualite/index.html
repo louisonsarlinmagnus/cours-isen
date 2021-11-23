@@ -1,0 +1,1603 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Gestion de la qualité - Mes cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mes cours" class="md-header__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mes cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gestion de la qualité
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mes cours" class="md-nav__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mes cours
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/cybersecurite/" class="md-nav__link">
+        Cyber Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/devOps/" class="md-nav__link">
+        Developpement Opérationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/ia/" class="md-nav__link">
+        Intelligence Artificielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/linuxEmbarque/" class="md-nav__link">
+        Linux Embarqué
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/optoElectronique/" class="md-nav__link">
+        Opto-électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/reseauxElectriques/" class="md-nav__link">
+        Réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/reseau/" class="md-nav__link">
+        Réseaux informatiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/smartCard/" class="md-nav__link">
+        Smart-Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/os/" class="md-nav__link">
+        Système d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sciences molles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sciences molles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sciences molles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../droitNum/" class="md-nav__link">
+        Droit du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Gestion de la qualité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Gestion de la qualité
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cest-quoi-la-qualite" class="md-nav__link">
+    C'est quoi la qualité?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selon-vous-quest-ce-que-la-qualite" class="md-nav__link">
+    Selon vous, qu'est ce que la qualité?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-lancer-une-demarche-qualite" class="md-nav__link">
+    Pourquoi lancer une démarche qualité?
+  </a>
+  
+    <nav class="md-nav" aria-label="Pourquoi lancer une démarche qualité?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iso" class="md-nav__link">
+    ISO
+  </a>
+  
+    <nav class="md-nav" aria-label="ISO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historique" class="md-nav__link">
+    Historique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principe-de-management-de-la-qualite" class="md-nav__link">
+    Principe de management de la qualité
+  </a>
+  
+    <nav class="md-nav" aria-label="Principe de management de la qualité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-cycle-pdca" class="md-nav__link">
+    Le cycle PDCA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lapproche-processus" class="md-nav__link">
+    L'approche processus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quest-ce-quun-processus" class="md-nav__link">
+    Qu'est ce qu'un processus
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiche-de-processus" class="md-nav__link">
+    FICHE DE PROCESSUS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rappel" class="md-nav__link">
+    RAPPEL
+  </a>
+  
+    <nav class="md-nav" aria-label="RAPPEL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Définitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pourquoi-un-audit" class="md-nav__link">
+    Pourquoi un audit?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outil-qualite" class="md-nav__link">
+    Outil Qualité
+  </a>
+  
+    <nav class="md-nav" aria-label="Outil Qualité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qqoqccp" class="md-nav__link">
+    QQOQCCP
+  </a>
+  
+    <nav class="md-nav" aria-label="QQOQCCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smart" class="md-nav__link">
+    SMART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brainstorming" class="md-nav__link">
+    BRAINSTORMING
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-causale" class="md-nav__link">
+    ANALYSE CAUSALE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amdec" class="md-nav__link">
+    AMDEC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marketing/" class="md-nav__link">
+        Marketing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strategieInternationale/" class="md-nav__link">
+        Stratégie internationale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Recherches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recherches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recherches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/reseauxElec/" class="md-nav__link">
+        Les réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/transitionEnergetique/" class="md-nav__link">
+        Transition énergétique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          CheatSheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CheatSheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CheatSheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/resume/" class="md-nav__link">
+        Résumé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/titres/" class="md-nav__link">
+        Titres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/latex/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tableaux/" class="md-nav__link">
+        Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/diagrammes/" class="md-nav__link">
+        Diagrammes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tabs/" class="md-nav__link">
+        Tabs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/superfences/" class="md-nav__link">
+        SuperFences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/citation/" class="md-nav__link">
+        Citation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/regles/" class="md-nav__link">
+        Règles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/smileys/" class="md-nav__link">
+        Smileys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/videos/" class="md-nav__link">
+        Vidéos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/blocs/" class="md-nav__link">
+        Blocs d'alerte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatSheet/" class="md-nav__link">
+        CheatSheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cest-quoi-la-qualite" class="md-nav__link">
+    C'est quoi la qualité?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selon-vous-quest-ce-que-la-qualite" class="md-nav__link">
+    Selon vous, qu'est ce que la qualité?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-lancer-une-demarche-qualite" class="md-nav__link">
+    Pourquoi lancer une démarche qualité?
+  </a>
+  
+    <nav class="md-nav" aria-label="Pourquoi lancer une démarche qualité?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iso" class="md-nav__link">
+    ISO
+  </a>
+  
+    <nav class="md-nav" aria-label="ISO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historique" class="md-nav__link">
+    Historique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principe-de-management-de-la-qualite" class="md-nav__link">
+    Principe de management de la qualité
+  </a>
+  
+    <nav class="md-nav" aria-label="Principe de management de la qualité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-cycle-pdca" class="md-nav__link">
+    Le cycle PDCA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lapproche-processus" class="md-nav__link">
+    L'approche processus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quest-ce-quun-processus" class="md-nav__link">
+    Qu'est ce qu'un processus
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiche-de-processus" class="md-nav__link">
+    FICHE DE PROCESSUS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rappel" class="md-nav__link">
+    RAPPEL
+  </a>
+  
+    <nav class="md-nav" aria-label="RAPPEL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Définitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pourquoi-un-audit" class="md-nav__link">
+    Pourquoi un audit?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outil-qualite" class="md-nav__link">
+    Outil Qualité
+  </a>
+  
+    <nav class="md-nav" aria-label="Outil Qualité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qqoqccp" class="md-nav__link">
+    QQOQCCP
+  </a>
+  
+    <nav class="md-nav" aria-label="QQOQCCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smart" class="md-nav__link">
+    SMART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brainstorming" class="md-nav__link">
+    BRAINSTORMING
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-causale" class="md-nav__link">
+    ANALYSE CAUSALE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amdec" class="md-nav__link">
+    AMDEC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/louisonsarlinmagnus/cours-isen/edit/master/docs/molle/qualite.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Gestion de la qualité</h1>
+                
+                <h2 id="introduction">Introduction</h2>
+<p>Un ingénieur français est trop cher et trop peu compétitif pour faire des taches de base, c'est pourquoi il va de plus en plus réaliser des tâches de management en plus du travail technique.</p>
+<p>Le luxe est un des secteur qui rapporte le plus.</p>
+<p>Classement de secteurs les plus juteux:</p>
+<ul>
+<li>Luxe</li>
+<li>Auto</li>
+<li>Aérospacial</li>
+</ul>
+<p><span class="arithmatex"><span class="MathJax_Preview">CA(Auto) + CA(Aérospacial) &lt; CA(Luxe)</span><script type="math/tex">CA(Auto) + CA(Aérospacial) < CA(Luxe)</script></span>
+CA = Chiffre d'affaire</p>
+<h3 id="cest-quoi-la-qualite">C'est quoi la qualité?</h3>
+<ul>
+<li>Garantie ...bah non</li>
+<li>SAV ...bah non</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Les chinois ne copient plus autant qu'avant et créent des produits innovants.</p>
+</div>
+<p><strong>IL EST POSSIBLE DE FAIRE DE LA QUALITÉ SUR UN SERVICE !!!</strong></p>
+<h3 id="selon-vous-quest-ce-que-la-qualite">Selon vous, qu'est ce que la qualité?</h3>
+<ul>
+<li>Indicateurs</li>
+<li>SAV</li>
+<li>Norme</li>
+<li>Circuit de relecture</li>
+<li>Suivi qualité des intervention</li>
+<li>Suivi d'anomalie</li>
+<li>Condition de travail</li>
+</ul>
+<p>Au sens de l'ISO: Ensemble des caracteristiques d'une entreprise qui lui donnent l'aptitude à satisfaire des besoins qui sont exprimés.</p>
+<p>Ou encore: La qualité d'un produit, d'un service, d'une prestation est caracterisée par son aptitude à satisfaire les besoins et exigences des clients.</p>
+<h2 id="pourquoi-lancer-une-demarche-qualite">Pourquoi lancer une démarche qualité?</h2>
+<p>Quels sont les enjeux externes?</p>
+<ul>
+<li>Comprendre les attentes</li>
+<li>Vendre plus de produits</li>
+<li>Satisfaire les clients</li>
+<li>Mieux maitriser les risques</li>
+<li>Séduire de nouveaux clients</li>
+</ul>
+<p>Quels sont les enjeux internes?</p>
+<ul>
+<li>Meilleur fonctionnement</li>
+<li>Mieux anticiper</li>
+<li>Optimiser la production</li>
+<li>Amélioré les conditions de travail</li>
+</ul>
+<p>Comment lancer une démarche qualité?</p>
+<ul>
+<li>Engagement de la direction: fixer les étapes clés</li>
+<li>Politique qualité:  - Document par lequel la direction fait part de sa vision de
+                l'organisationen fixant des objectifs qualité
+              - Qualité (satisfaction des exigences des clients)
+              - Efficience (utilisation des moyens alloués : RH, budget</li>
+</ul>
+<p>Quels sont les risques d'une démarche qualité?</p>
+<ul>
+<li>S'imposer des exigences que le client n'impose pas</li>
+<li>Complexifier les circuits des réalisation des prestations</li>
+<li>Rajouter des contrôles et des documents inutiles</li>
+<li>Non compréhension / appropriation des la démarche</li>
+</ul>
+<h3 id="iso">ISO</h3>
+<ul>
+<li>
+<p>ISO : Organisation internationazle de normalisation
+    (International Organisation for Standatdization)</p>
+</li>
+<li>
+<p>ISO 9000 est une série de normes internationales développées par des experts
+  en qualité du monde entier</p>
+</li>
+</ul>
+<h4 id="historique">Historique</h4>
+<p>ISO 9001 2000:</p>
+<ul>
+<li>Satisfaction client</li>
+<li>Amélioration continue</li>
+</ul>
+<p>ISO 9001 2008:</p>
+<ul>
+<li>Mise en place d'un SMQ (Système de Management de la Qualité)</li>
+<li>Approche <strong>processus</strong></li>
+</ul>
+<p>ISO 9001 2015:</p>
+<ul>
+<li>Anticiper les risques</li>
+<li>Cohérence entre la stratégie et la SMQ</li>
+</ul>
+<p>Respecter ISO9001 et ISO9004 correspond au SMQ.</p>
+<h2 id="principe-de-management-de-la-qualite">Principe de management de la qualité</h2>
+<ul>
+<li>Orientation client</li>
+<li>Leadership
+  -Implication du personnel</li>
+<li>Approche processus</li>
+<li>Amélioration</li>
+<li>Prise de décision fondée sur des preuves</li>
+<li>Management des relations avec les parties interessées</li>
+</ul>
+<h3 id="le-cycle-pdca">Le cycle PDCA</h3>
+<p>La roue de Deming = PDCA (Plan-Do-Check-Act)</p>
+<p>Au fur et a mesure que la roue évolue le SQ (système qualité) de l'entreprise doit suivre la roue pour eviter qu'elle retombe</p>
+<h3 id="lapproche-processus">L'approche processus</h3>
+<p>On définit une activité avec un début et une fin</p>
+<p>On a des éléments d'entrées, de sortie
+Et donc des soucres d'éléments d'entrée et des destinataires d'éléments de sortie</p>
+<h3 id="quest-ce-quun-processus">Qu'est ce qu'un processus</h3>
+<p>Ce n'est pas:</p>
+<ul>
+<li>Un produit ou un service en tant que tel</li>
+<li>Une simple série de tâches ou d'actions</li>
+<li>Une procédure ou un projet</li>
+<li>Un enchaînement séquentiel d'activités dans un service</li>
+</ul>
+<p>Il est <strong>identifiable</strong> : Il est caractérisé par un des éléments précis constituant une environnement (finalité, objectifs, périmètre, indicateur, pilote, client, fournisseur)</p>
+<p>Il est <strong>régulier</strong> : Il peut se répeter dans les mêmes conditions dans le temps
+            Il peut être suivi et compris par l'ensemble du personnel qui l'exploite et l'améliore</p>
+<p>Il est <strong>prévisible</strong> : Il permet l'atteinte des résultats prévus par un suivi des activités du processus en assurant ainsi sa stabilité.</p>
+<h2 id="fiche-de-processus">FICHE DE PROCESSUS</h2>
+<pre><code>
+Nom du processus     :Traiter
+
+Type de processus    :Technique
+
+Pilote               :Olivier CIPRIANI
+
+Processus amont      :Stocker
+
+Processus aval       :Qualifier
+
+Éléments d'entrée    :Donnée brut
+                     :Contrat qualité
+                     :Exigences d’IFREMER
+
+Sous processus       :Ordonner les données
+                     :Trier les données
+                     :Extraires les différentes données
+
+Éléments de sortie   :Rex
+
+Ressources           :Materiel informatique/Logiciel
+                     :Personnel
+                     :Temps
+
+Indicateurs          :Pourcentage % de satisfation/mission
+Clients              :Sous Processus “Qualifier”
+
+
+A quel processus contribuez vous?
+
+  - 
+
+Savez-vous qui est le pilote du processus?
+
+  - 
+
+Quels sont les clients de votre processus?
+
+  - 
+
+Quels sont les principales données d'entrées et sorties de votre processus?
+
+  - 
+
+Quels sont les indicateurs de votre processus?
+
+  - 
+
+</code></pre>
+
+<h2 id="rappel">RAPPEL</h2>
+<h3 id="definitions">Définitions</h3>
+<ul>
+<li>
+<p>Qualité:
+          - Ensemble des caracteristiques d'une entreprise qui lui donnent
+          l'aptitude à satisfaire des besoins qui sont exprimés</p>
+</li>
+<li>
+<p>Client:
+          - Personne qui reçoit d'une entreprise, contre paiement, des
+          fournitures commerciales ou des services</p>
+</li>
+<li>
+<p>Partie intéréssée:
+          - Un personne ou un organisme qui peut avoir une incidence ou être
+          affecté par une décision ou activité de l’organisme</p>
+</li>
+<li>
+<p>Management de la qualité: Ensemble des disposition prisent pas un
+  organisme dans le but de satisfaire ses clients
+          - Orientation client
+          - Leadership
+          -Implication du personnel
+          - Approche processus
+          - Amélioration
+          - Prise de décision fondée sur des preuves
+          - Management des relations avec les parties interessées</p>
+</li>
+<li>
+<p>ISO 9001: Norme internationnale qui défini les exigences en matiere de
+  systeme de management
+          - Satisfaction client
+          - Amélioration continue
+          - Mise en place d'un SMQ (Système de Management de la Qualité)
+          - Approche <strong>processus</strong>
+          - Anticiper les risques
+          - Cohérence entre la stratégie et la SMQ</p>
+</li>
+</ul>
+<h3 id="pourquoi-un-audit">Pourquoi un audit?</h3>
+<p>Les audit on pour but de vérifier que toutes les règles imposées sont
+    - Interne
+    - Externe
+    - Certification</p>
+<p>On dit qu'on <strong>déclanche</strong> un audit.</p>
+<h2 id="outil-qualite">Outil Qualité</h2>
+<h3 id="qqoqccp">QQOQCCP</h3>
+<p><strong>Quoi?</strong> : <em>De quoi s'agit-il ? (objet, opération,nature,..)</em></p>
+<p><strong>Qui?</strong> : <em>Qui est concerné ? (exécutants, qualification)</em></p>
+<p><strong>Où?</strong> : <em>Où cela se produit-il ?</em></p>
+<p><strong>Quand?</strong> : <em>Quand cela survient-il ? (durée, fréquence….)</em></p>
+<p><strong>Comment?</strong> : <em>Comment procède-t-on ? (matériel, matières,méthode…)</em></p>
+<p><strong>Combien?</strong> : <em>Combien de fois cela se produit-il ?</em></p>
+<p><strong>Pourquoi?</strong> : <em>Pourquoi cela se passe-t-il ainsi ?</em></p>
+<h4 id="smart">SMART</h4>
+<p><strong>Specific</strong> : <em>Spécifique</em></p>
+<p><strong>Measurable</strong> : <em>Mesurable</em></p>
+<p><strong>Attainable</strong> : <em>Atteignable</em></p>
+<p><strong>Relevant</strong> : <em>Pertinent</em></p>
+<p><strong>Time-based</strong> : <em>Défini dans le temps</em></p>
+<h4 id="brainstorming">BRAINSTORMING</h4>
+<p>Méthode collective de recueil d'idées sur un problème donné afin de faciliter la recherche de ses causes et/ou des solutions. </p>
+<h4 id="analyse-causale">ANALYSE CAUSALE</h4>
+<p>Détermine de façon rigoureuse les causes à l'origine d'un problème.
+Par conséquent de déterminer une solution adaptée et efficace.</p>
+<p>Les deux méthodes d'analyse causale les plus employées sont les  "5 pourquoi" et "l'arbre des causes".</p>
+<h4 id="amdec">AMDEC</h4>
+<p>**A**nalyse des **M**odes de **D**éfaillance, de leurs **E**ffets, et de leur **C**riticité</p>
+<p>Outil qualité d'analyse <strong>préventive</strong> permettant d'identifier et de traiter les causes potentielles de défaillance avant qu'ils ne surviennent.
+L'AMDEC est une méthode rigoureuse de travail en <strong>groupe</strong>.</p>
+<p>On peut faire :</p>
+<ul>
+<li>une AMDEC Produit, pour vérifier la conformité d'un produit développé par rapport aux exigences du client,</li>
+<li>une AMDEC Processus, pour valider la fiabilité du processus de fabrication,</li>
+<li>une AMDEC Moyen, pour vérifier la fiabilité d'un équipement.</li>
+</ul>
+<p>On recense toutes les causes de défaillance de chaque mode et d'évaluer la criticité:</p>
+<ul>
+<li>note "G" : Gravité du défaut,</li>
+<li>note "O" : Fréquence de défaillance,</li>
+<li>note "D" : Probabilité de non détection.</li>
+</ul>
+<p>L'indice de criticité est obtenu par le produit des trois notes : C : G x O x D
+Plus la criticité est importante, plus la défaillance considérée est préoccupante. Lorsque la criticité dépasse la limite prédéfinie par le groupe, ce dernier recherche les actions d'amélioration possibles pour la ramener à un niveau acceptable en jouant sur chaque cotation.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../droitNum/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Droit du numérique" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Droit du numérique
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../marketing/" class="md-footer__link md-footer__link--next" aria-label="Next: Marketing" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Marketing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Louison SARLIN--MAGNUS
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

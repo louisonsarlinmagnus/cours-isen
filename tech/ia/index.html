@@ -1,0 +1,1687 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Intelligence Artificielle - Mes cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intelligence-artificielle" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mes cours" class="md-header__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mes cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intelligence Artificielle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mes cours" class="md-nav__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mes cours
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cybersecurite/" class="md-nav__link">
+        Cyber Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devOps/" class="md-nav__link">
+        Developpement Opérationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Intelligence Artificielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Intelligence Artificielle
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preliminaires" class="md-nav__link">
+    Préliminaires
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renforcement-dapprentissage" class="md-nav__link">
+    Renforcement d'apprentissage
+  </a>
+  
+    <nav class="md-nav" aria-label="Renforcement d'apprentissage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalites" class="md-nav__link">
+    Généralités
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    Agent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-du-moustique" class="md-nav__link">
+    Exemple du moustique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-du-jeu-de-nim" class="md-nav__link">
+    Exemple du Jeu de Nim
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithme-genetiques" class="md-nav__link">
+    Algorithme génétiques
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithme génétiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonction-de-fitness" class="md-nav__link">
+    Fonction de fitness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robustesse-de-lalgorithme-genetique" class="md-nav__link">
+    Robustesse de l’algorithme génétique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reseaux-de-neurones" class="md-nav__link">
+    Réseaux de neurones
+  </a>
+  
+    <nav class="md-nav" aria-label="Réseaux de neurones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apprentissage" class="md-nav__link">
+    Apprentissage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-du-perceptron" class="md-nav__link">
+    Exemple du Perceptron
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-projet" class="md-nav__link">
+    Mini-projet
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini-projet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sujet" class="md-nav__link">
+    Sujet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linuxEmbarque/" class="md-nav__link">
+        Linux Embarqué
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optoElectronique/" class="md-nav__link">
+        Opto-électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseauxElectriques/" class="md-nav__link">
+        Réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseau/" class="md-nav__link">
+        Réseaux informatiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smartCard/" class="md-nav__link">
+        Smart-Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        Système d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sciences molles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sciences molles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sciences molles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/droitNum/" class="md-nav__link">
+        Droit du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/qualite/" class="md-nav__link">
+        Gestion de la qualité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/marketing/" class="md-nav__link">
+        Marketing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/strategieInternationale/" class="md-nav__link">
+        Stratégie internationale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Recherches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recherches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recherches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/reseauxElec/" class="md-nav__link">
+        Les réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/transitionEnergetique/" class="md-nav__link">
+        Transition énergétique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          CheatSheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CheatSheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CheatSheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/resume/" class="md-nav__link">
+        Résumé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/titres/" class="md-nav__link">
+        Titres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/latex/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tableaux/" class="md-nav__link">
+        Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/diagrammes/" class="md-nav__link">
+        Diagrammes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tabs/" class="md-nav__link">
+        Tabs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/superfences/" class="md-nav__link">
+        SuperFences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/citation/" class="md-nav__link">
+        Citation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/regles/" class="md-nav__link">
+        Règles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/smileys/" class="md-nav__link">
+        Smileys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/videos/" class="md-nav__link">
+        Vidéos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/blocs/" class="md-nav__link">
+        Blocs d'alerte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatSheet/" class="md-nav__link">
+        CheatSheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preliminaires" class="md-nav__link">
+    Préliminaires
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renforcement-dapprentissage" class="md-nav__link">
+    Renforcement d'apprentissage
+  </a>
+  
+    <nav class="md-nav" aria-label="Renforcement d'apprentissage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalites" class="md-nav__link">
+    Généralités
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    Agent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-du-moustique" class="md-nav__link">
+    Exemple du moustique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-du-jeu-de-nim" class="md-nav__link">
+    Exemple du Jeu de Nim
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithme-genetiques" class="md-nav__link">
+    Algorithme génétiques
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithme génétiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonction-de-fitness" class="md-nav__link">
+    Fonction de fitness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robustesse-de-lalgorithme-genetique" class="md-nav__link">
+    Robustesse de l’algorithme génétique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reseaux-de-neurones" class="md-nav__link">
+    Réseaux de neurones
+  </a>
+  
+    <nav class="md-nav" aria-label="Réseaux de neurones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apprentissage" class="md-nav__link">
+    Apprentissage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-du-perceptron" class="md-nav__link">
+    Exemple du Perceptron
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-projet" class="md-nav__link">
+    Mini-projet
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini-projet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sujet" class="md-nav__link">
+    Sujet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/louisonsarlinmagnus/cours-isen/edit/master/docs/tech/ia.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="intelligence-artificielle"><center>Intelligence Artificielle</center></h1>
+<h2 id="preliminaires">Préliminaires</h2>
+<p>Objectifs:</p>
+<ul>
+<li>Définir ce qu'est une intelligence (artificielle)</li>
+<li>Découvrir plusieurs pans de l'IA</li>
+<li>Apprendre quand utiliser ces algorithmes et comment les personnaliser</li>
+<li>Utiliser ces connaissances pour optimiser la performance et/ou la consommation de ressources =&gt; efficacité</li>
+</ul>
+<p><a href="ghislain.oudinet@yncrea.fr">Contact mail</a></p>
+<p><a href="https://educ.isen-mediterranee.fr/cours/my/">Lien vers le cours</a></p>
+<p>Objectifs:</p>
+<ul>
+<li>Définir ce qu'est une intelligence (artificielle)</li>
+<li>Découvrir plusieurs pans de l'IA</li>
+<li>Apprendre quand utiliser ces algorithmes et comment les personnaliser</li>
+<li>Utiliser ces connaissances pour optimiser la performance et/ou la consommation de ressources =&gt; efficacité</li>
+</ul>
+<p>Dans ce cours nous aborderons uniquement les pistes de départ de cette matière. Il faudrait des semaines de cours pour aborder plus solidement cette matière.</p>
+<p>Rendre le travail réaliser le 31/10/2020 au soir + test en ligne
+<em>Bonus: possible d'aller plus loin jusqu'au 16/11/2020 08h00 pour des points bonus.</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>Personnalités ayant marquer la matière: <a href="https://fr.wikipedia.org/wiki/John_McCarthy">John McCarthy</a>, <a href="https://fr.wikipedia.org/wiki/Marvin_Minsky">Marvin Minsky</a>, <a href="https://fr.wikipedia.org/wiki/Seymour_Papert">Symour Papert</a>, <a href="https://fr.wikipedia.org/wiki/Alan_Turing">Alan Turing</a>, etc. .</p>
+<p><strong>Qu'est ce que l'intelligence?</strong></p>
+<blockquote>
+<p>"La capacité à acquérir et appliquer des connaissances et des savoirs."<br />
+<a href="https://www.oxfordlearnersdictionaries.com/">Dictionnaire Oxford</a></p>
+</blockquote>
+<p><strong>Qu'est ce que l'intelligence artificielle?</strong></p>
+<blockquote>
+<p>Remplacer une tâche intellectuelle, faite par un être humain, par une faite par une machine.<br />
+Source manquante</p>
+</blockquote>
+<p><strong>Qu'est ce qu'apprendre?</strong></p>
+<blockquote>
+<p>"Améliorer sa performance par l'expérience."<br />
+<a href="https://fr.wikipedia.org/wiki/Herbert_Simon">Herbert Simon</a></p>
+</blockquote>
+<p><strong>Qu'est ce que le Machine-Learning?</strong></p>
+<blockquote>
+<p>"Des machines qui améliorent automatiquement leur performance par l’expérience."<br />
+<a href="https://fr.wikipedia.org/wiki/Herbert_Simon">Herbert Simon</a></p>
+</blockquote>
+<p>Historique:</p>
+<ul>
+<li>1996: <em>Jeu d'échecs</em>, <a href="https://fr.wikipedia.org/wiki/Garry_Kasparov">Kasparov</a>-<a href="https://fr.wikipedia.org/wiki/Deep_Blue">Deep Blue</a> 4-2 (Kasparov a quand même gagner)</li>
+<li>1997: <em>Jeu d'échecs</em>, Kasparov-Deeper Blue 2.5-3.5 (Deeper-Blue a gagner)</li>
+<li>2011: <em>Jeopardy!</em>, humains-Watson</li>
+<li>2016: <em>Jeu de Go</em>, Sedol-AlphaGo 1-4</li>
+<li>Plus récemment: <em>Jeu de Go</em>, AlphaGoZero-AlphaGo 100-0</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=xuBzQ38DNhE">Vidéo ScienceEtonnante</a></p>
+<div class="admonition tip">
+<p class="admonition-title"><img alt="😆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f606.svg" title=":laughing:" /> Blague</p>
+<p><strong>Quelle est la différence entre l'automatisation et l'intelligence artificielle?</strong><br />
+Automatisation: ce qu'on sait faire avec une machine<br />
+Intelligence artificielle: ce qu'on voudrait faire avec une machine</p>
+</div>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/YjyUYnK.png"
+    alt="Image introuvable"
+    width="400"
+    height="400"
+    >
+    <figcaption><i>Figure 1: L'intelligence artificielle</i></figcaption>
+  </figure></p>
+<p></center></p>
+<div class="admonition faq">
+<p class="admonition-title">Questions irrésolues:</p>
+<p><b>Comment une machine peut-elle:</p>
+<ul>
+<li>optimiser un jeu de paramètres?</li>
+<li>s'adapter a son environnement? </li>
+<li>choisir entre plusieurs option?</li>
+<li>fournir des solutions à des questions posées?</b></li>
+</ul>
+</div>
+<h2 id="renforcement-dapprentissage">Renforcement d'apprentissage</h2>
+<p>Renforcement d'apprentissage: une autre manière d'apprendre.</p>
+<h3 id="generalites">Généralités</h3>
+<div class="admonition faq">
+<p class="admonition-title">Questions</p>
+<p><strong>Comment peut on faire a meilleure action possible au bon moment?</strong><br />
+D'abord:<br />
+Qu'est ce que la meilleure action?<br />
+qu'est ce que le bon moment?</p>
+</div>
+<p>Notre environnent change en permanence donc l'algorithme et/ou les paramètres choisis peuvent devenir faux.<br />
+Peut-être pourrait on tirer parti de l’expérience passée</p>
+<p><strong>Comment apprendre?</strong></p>
+<blockquote>
+<p>L'apprentissage supervisé est une tâche d'apprentissage automatique consistant à apprendre une fonction de prédiction à partir d'exemples annotés.<br />
+Source: <a href="https://fr.wikipedia.org/wiki/Apprentissage_supervis%C3%A9">Wikipédia</a>
+<center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/Schz2rk.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 2: Apprentissage supervisé</i></figcaption>
+  </figure></p>
+</blockquote>
+<p></center></p>
+<blockquote>
+<p>Dans le domaine informatique et de l'intelligence artificielle, l'apprentissage non supervisé désigne la situation d'apprentissage automatique où les données ne sont pas étiquetées. Il s'agit donc de découvrir les structures sous-jacentes à ces données non étiquetées.<br />
+Source: <a href="https://fr.wikipedia.org/wiki/Apprentissage_non_supervis%C3%A9">Wikipédia</a>
+<center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/fwlEgZH.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 3: Apprentissage non supervisé</i></figcaption>
+  </figure></p>
+</blockquote>
+<p></center></p>
+<blockquote>
+<p>En intelligence artificielle, plus précisément en apprentissage automatique, l'apprentissage par renforcement consiste, pour un agent autonome (robot, etc.), à apprendre les actions à prendre, à partir d'expériences, de façon à optimiser une récompense quantitative au cours du temps. L'agent est plongé au sein d'un environnement, et prend ses décisions en fonction de son état courant. En retour, l'environnement procure à l'agent une récompense, qui peut être positive ou négative.<br />
+Source: <a href="https://fr.wikipedia.org/wiki/Apprentissage_par_renforcement">Wikipédia</a>
+<center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/l3c9Oty.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 4: Apprentissage par récompense</i></figcaption>
+  </figure></p>
+</blockquote>
+<p></center></p>
+<p><strong>Pourquoi un automate?</strong><br />
+- Pour fixer un but a atteindre pour l'agent<br />
+- ou bien pour appliquer des règles simples, sans but réel (comportement émergent)</p>
+<p>Il est essentiel de pouvoir valoriser un action qui nous fait passer d'un état a un autre.
+<center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/KRSFQAB.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 5: Valorisation d'action</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Pour la valorisation il est essentiel de se référer au gain a court terme et au gain a long terme. Il faut pouvoir prendre en compte plus que ce que je peux voir maintenant. Exemple: aux échecs le sacrifice de la reine car on sait que plus tard qu'on obtiendra un avantage ou une victoire. <strong>Il faudrait pouvoir prendre en compte toutes les conséquences de toutes les actions possibles.</strong></p>
+<ul>
+<li>Résoudre des <a href="https://en.wikipedia.org/wiki/Bellman_equation">équations de Bellman</a> (1957)</li>
+<li>Programmations dynamiques, <a href="https://fr.wikipedia.org/wiki/Processus_de_d%C3%A9cision_markovien">processus décisionnels de Markov</a></li>
+<li>En pratique c'est complexe et coûteux (en temps de calcul) pour des systèmes qui peuvent avoir des milliards d'états différents</li>
+<li>et peut-être que l'on ignore des éléments</li>
+<li>itérer pour approximer la solution optimale</li>
+</ul>
+<h3 id="agent">Agent</h3>
+<p>Agent: de la théorie à la pratique</p>
+<p>Pour décider l'action a réaliser on va s'appuyer sur des calculs probabilistes:
+<center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/dXL5AQo.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 6: Tableau de choix d'action</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Cette méthode permet d'obtenir une fonction d'utilité qui nous guidera sur la meilleure action à réaliser. Cette fonction nous donne la meilleure espérance de gain dans le futur. Dans notre cas c'est l'action 2 qui permettra le meilleure gain immédiat mais aussi dans le futur. Alors que l'action 3 nous donne peu de gain a court terme mais un gain conséquent a long terme.</p>
+<p>On qualifie cette fonction:  </p>
+<p>Avec une somme finie:
+<font size="2">
+<span class="arithmatex"><span class="MathJax_Preview">utility(state_t, action)=E(reward(state_t, action)+max \sum{future\_reward})</span><script type="math/tex">utility(state_t, action)=E(reward(state_t, action)+max \sum{future\_reward})</script></span>
+</font>  </p>
+<p>Avec une somme infinie:
+<font size="2">
+<span class="arithmatex"><span class="MathJax_Preview">utility(state_t, action)=E(reward(state_t, action)+max \sum_{i=1}^{\infty}{attenuate^i.future\_reward_i})</span><script type="math/tex">utility(state_t, action)=E(reward(state_t, action)+max \sum_{i=1}^{\infty}{attenuate^i.future\_reward_i})</script></span>
+</font>  </p>
+<p><strong>Meilleure estimateur: fonction d'utilité !</strong></p>
+<p>avec:</p>
+<ul>
+<li>E l'influence de l'environnement</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">attenuate</span><script type="math/tex">attenuate</script></span> le facteur d'atténuation
+On en déduit:</li>
+</ul>
+<p><font size="2">
+<span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^{\infty}{attenuate^i.future\_reward_i} = \sum_{i=1}^{1}{attenuate^0.future\_reward_i} + \sum_{i=2}^{\infty}{attenuate^{i-1}.future\_reward_i}</span><script type="math/tex">\sum_{i=1}^{\infty}{attenuate^i.future\_reward_i} = \sum_{i=1}^{1}{attenuate^0.future\_reward_i} + \sum_{i=2}^{\infty}{attenuate^{i-1}.future\_reward_i}</script></span>
+</font>  </p>
+<p>On peut encore réécrire:
+<font size="2">
+<span class="arithmatex"><span class="MathJax_Preview">utility(state_t, action)=E(reward(state_t, action)+attenuate.max_{action}utility(state_{t+1},action))</span><script type="math/tex">utility(state_t, action)=E(reward(state_t, action)+attenuate.max_{action}utility(state_{t+1},action))</script></span>
+</font>  </p>
+<p>On obtient ici une récursion inversée</p>
+<p><font size="2">
+<span class="arithmatex"><span class="MathJax_Preview">utility_{t+1}(state_t,action) = (1-step).utility_t(state_t,action)+step.(reward(state_t,action)+attenuate.max_{action}utility(state_{t+1},action))</span><script type="math/tex">utility_{t+1}(state_t,action) = (1-step).utility_t(state_t,action)+step.(reward(state_t,action)+attenuate.max_{action}utility(state_{t+1},action))</script></span>
+</font>  </p>
+<p>Le terme <span class="arithmatex"><span class="MathJax_Preview">utility_{t+1}(state_t,action)</span><script type="math/tex">utility_{t+1}(state_t,action)</script></span> représente la <strong>progression itérative</strong>  </p>
+<p>Le terme <span class="arithmatex"><span class="MathJax_Preview">step</span><script type="math/tex">step</script></span> représente le taux d'apprentissage<br />
+Le terme <span class="arithmatex"><span class="MathJax_Preview">attenuate.max_{action}utility(state_{t+1},action))</span><script type="math/tex">attenuate.max_{action}utility(state_{t+1},action))</script></span> représente la capacité de "deviner le futur"</p>
+<p>On va pouvoir changer la probabilité de faire une action dans un état donnée.</p>
+<h3 id="exemple-du-moustique">Exemple du moustique</h3>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/GTuaCqx.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 7: Relation action/état du moustique</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/Sy4GFO3.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 8: Tableau d'action/état du moustique</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>On va tester le programme fourni dans une VM, est nécessaire d'installer la librairie freeglut3-dev: <code>sudo apt install freeglut3-dev</code>.</p>
+<p>Pour lancer la simulation il suffit de make le projet puis <code>./reinflearn</code></p>
+<p>en tapant 0, 1, 2, 3 ,4 ,5 ,6 on peut choisir le facteur d'apprentissage du moustique.</p>
+<p>On remarque qu'a 0 il se comporte comme un "marcheur ivre".</p>
+<p>En tapant "a" il est possible de faire varier la position de la zone de confort du moustique.
+<center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/Xi9K8wu.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 9: Tableau d'action/état du moustique</i></figcaption>
+  </figure></p>
+<p></center></p>
+<h3 id="exemple-du-jeu-de-nim">Exemple du Jeu de Nim</h3>
+<p>En résolvant ce jeu on peut "expliquer" comment jouer a un automate.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/65AMVdY.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 10: Programme du moustique</i></figcaption>
+  </figure></p>
+<p></center></p>
+<h2 id="algorithme-genetiques">Algorithme génétiques</h2>
+<p><strong>Comment une machine peut-elle optimiser un jeu de paramètres?</strong></p>
+<blockquote>
+<p>Les algorithmes génétiques appartiennent à la famille des algorithmes évolutionnistes. Leur but est d'obtenir une solution approchée à un problème d'optimisation, lorsqu'il n'existe pas de méthode exacte (ou que la solution est inconnue) pour le résoudre en un temps raisonnable. Les algorithmes génétiques utilisent la notion de sélection naturelle et l'appliquent à une population de solutions potentielles au problème donné. La solution est approchée par « bonds » successifs, comme dans une procédure de séparation et évaluation (branch &amp; bound), à ceci près que ce sont des formules qui sont recherchées et non plus directement des valeurs.<br />
+Source: <a href="https://fr.wikipedia.org/wiki/Algorithme_g%C3%A9n%C3%A9tique">Wikipédia</a></p>
+</blockquote>
+<p>Exemple d'utilisation: </p>
+<ul>
+<li>Générer des paramètres pour choisir la meilleure configuration d'automates logiciels;</li>
+<li>Résoudre l'optimisation de conditions de frittage dans un espace de solutions de dimension 17;</li>
+<li>Résoudre un "problème inverse mal posé" sur la reconstruction de volumes à partir d'images 2D.</li>
+</ul>
+<p>On part d'un jeu de solutions possibles, on sélectionne 2 solutions possible que l'on va croiser. On décide de garder ou non cette solution, et on recommence en ajoutant ou non cette solution dans les solutions possibles.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/FO6swgB.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 11: Système de croisement de solutions</i></figcaption>
+  </figure></p>
+<p></center></p>
+<h3 id="fonction-de-fitness">Fonction de fitness</h3>
+<p>Fonction de fitness: La fitness mesure la qualité de l'individu exprimée sous forme d'un nombre ou d'un vecteur. On dit qu'un individu i est meilleur que l'individu j quand i est plus proche de la solution que j.</p>
+<p>Trouver la bonne métrique est parfois difficiles. Parfois changer la fonction de fitness après un moment. Elle doit être suffisamment sélective sans l'être trop.</p>
+<p>La sélection probabiliste des individus est très importante.</p>
+<h3 id="exemple">Exemple</h3>
+<p>Cet exemple se penche sur un programme permettant de trouver le max d'un sinus.</p>
+<p>Pour lancer la simulation il suffit de make le projet puis <code>./genalgo</code>.</p>
+<p>On peut choisir le spectre a étudier, 179° ou 719°. On remarque que pour 2 max sont possible. On peut donc se demander comment va réagir le programme.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/oBIEhNX.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 12: Programme de recherche de max de cosinus</i></figcaption>
+  </figure></p>
+<p></center></p>
+<h3 id="robustesse-de-lalgorithme-genetique">Robustesse de l’algorithme génétique</h3>
+<p>Si notre pire élément est remplacé par un élément meilleur que lui, notre population tend vers une meilleure forme.<br />
+Si notre pire élément est remplacé par un élément moins bon que lui, il sera remplacé le tour suivant par un autre élément. La probabilité qu'ils soient toujours remplacé par un plus mauvais est infime.<br />
+Donc la populations s'améliorera dans tous les cas.</p>
+<h2 id="reseaux-de-neurones">Réseaux de neurones</h2>
+<h3 id="introduction_1">Introduction</h3>
+<p>Le neurone est la brique de base.<br />
+Un neurone artificiel plus ou moins inspiré du neurone biologique (variante d'implémentation).<br />
+Il n'a réellement d’intérêt qu'intégré a un réseau.</p>
+<p>Un humain a environ 100 milliards de neurones biologiques.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/J4TxUk3.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 13: Cheminement dans un neurone artificiel</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/6GBI31l.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 14: Représentation mathématique d'un neurone artificiel</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>On peut déduire la probabilité: <span class="arithmatex"><span class="MathJax_Preview">y= \frac{1}{1+\exp(-x)}</span><script type="math/tex">y= \frac{1}{1+\exp(-x)}</script></span></p>
+<p>Les neurones se répartissent en couche:</p>
+<ul>
+<li>La couche d'entrée qu'on assimile a des capteurs</li>
+<li>Les couches cachées</li>
+<li>La couche de sortie (en oui/non ou en signal)</li>
+</ul>
+<p>L'apprentissage se fait de la manière décrite dans la partie <a href="#generalites">Renforcement d'apprentissage</a>.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/l6WTYsM.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 15: Comment apprendre de manière supervisée?</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/0RmNVUI.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 16: Comment apprendre de manière non-supervisée?</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Forger un neurone reviens a adapter ses poids synaptiques.
+Pour être considéré robuste, un neurone doit être capable d'apprendre en résistant au bruit.</p>
+<p>On parle de "deep-learning" au delà de 3 couches cachées.</p>
+<p>Lorsque l'on va de la couche d'entrée vers celle de sortie, on parle d'"inférence".
+Lorsque l'on va de la couche de sortie vers celle d'entrée, on parle d’"apprentissage".</p>
+<p>Il existe plusieurs modes:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Feedforward_neural_network">Feed Forward</a></li>
+<li><a href="https://fr.wikipedia.org/wiki/R%C3%A9seau_neuronal_convolutif">Réseau Neuronal à Convolution</a> (CNN)</li>
+<li><a href="https://en.wikipedia.org/wiki/Recurrent_neural_network">Réseau récurents</a> (RNN)</li>
+<li><a href="https://missinglink.ai/guides/convolutional-neural-networks/fully-connected-layers-convolutional-neural-networks-complete-guide/">Réseau entièrement connecté</a></li>
+</ul>
+<h3 id="apprentissage">Apprentissage</h3>
+<p>Le <a href="https://fr.wikipedia.org/wiki/Perceptron"><strong>Percetron</strong></a> simple: basé sur un seul neurone.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://i.imgur.com/MXIqQAV.png"
+    alt="Image introuvable"
+    width="500"
+    height="500"
+    >
+    <figcaption><i>Figure 17: Fonctionnement du Perceptron</i></figcaption>
+  </figure></p>
+<p></center></p>
+<h3 id="exemple-du-perceptron">Exemple du Perceptron</h3>
+<p>dans l'archive <code>neurone.tgz</code> on récupère 2 fichiers: <code>neurone.c</code> et <code>neurone.java</code>. Ces programmes sont identiques mais nous nous concentrerons sur le programe en Java.<br />
+Pour l'exécuter:
+<div class="highlight"><pre><span></span><code>javac neurone.java <span class="c1">#création de neurone.class</span>
+jar cvf neurone.jar neurone.class <span class="c1">#création de neurone.jar</span>
+touch MANIFEST.MF <span class="c1">#création du manifest</span>
+<span class="nb">echo</span> <span class="s2">&quot;Main-Class: neurone&quot;</span> &gt; MANIFEST.MF <span class="c1">#définition de la main-class</span>
+jar cvmf MANIFEST.MF neurone.jar neurone.class <span class="c1">#ajout de MANIFEST.MF a neurone.jar</span>
+java -jar neurone.jar <span class="c1">#exécution du programme</span>
+</code></pre></div></p>
+<h2 id="mini-projet">Mini-projet</h2>
+<h3 id="sujet">Sujet</h3>
+<p>En se basant sur l'exemple en langage C fourni en cours, faire une implémentation du <a href="#exemple-du-jeu-de-nim">jeu de Nim</a> (en C, C++, Java ou Python), où l'intelligence artificielle de jeu apprendra à jouer en s'affrontant elle-même.</p>
+<p>Règles du jeu de Nim:</p>
+<ul>
+<li>
+<p>On dispose d'un <strong>tas de 20 allumettes</strong>.</p>
+</li>
+<li>
+<p>A tour de rôle les 2 joueurs vont <strong>prendre 1, 2, ou 3</strong> allumettes.</p>
+</li>
+<li>
+<p>Celui <strong>qui prend la dernière allumette perd</strong>.</p>
+</li>
+<li>
+<p>Stratégie est de laisser  un nombre d'objets multiple de 4</p>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../devOps/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Developpement Opérationnel" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Developpement Opérationnel
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../linuxEmbarque/" class="md-footer__link md-footer__link--next" aria-label="Next: Linux Embarqué" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Linux Embarqué
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Louison SARLIN--MAGNUS
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1348 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Système d'exploitation - Mes cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-embarque" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mes cours" class="md-header__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mes cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Système d'exploitation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mes cours" class="md-nav__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mes cours
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cybersecurite/" class="md-nav__link">
+        Cyber Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devOps/" class="md-nav__link">
+        Developpement Opérationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ia/" class="md-nav__link">
+        Intelligence Artificielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linuxEmbarque/" class="md-nav__link">
+        Linux Embarqué
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optoElectronique/" class="md-nav__link">
+        Opto-électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseauxElectriques/" class="md-nav__link">
+        Réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseau/" class="md-nav__link">
+        Réseaux informatiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smartCard/" class="md-nav__link">
+        Smart-Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Système d'exploitation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Système d'exploitation
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-commandes-utiles" class="md-nav__link">
+    Quelques commandes utiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-operations-sur-les-fichiers" class="md-nav__link">
+    Les opérations sur les fichiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stockage-de-donnees" class="md-nav__link">
+    Stockage de données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulaire" class="md-nav__link">
+    Vocabulaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressions-regulieres" class="md-nav__link">
+    Expressions régulières
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sciences molles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sciences molles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sciences molles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/droitNum/" class="md-nav__link">
+        Droit du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/qualite/" class="md-nav__link">
+        Gestion de la qualité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/marketing/" class="md-nav__link">
+        Marketing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/strategieInternationale/" class="md-nav__link">
+        Stratégie internationale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Recherches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recherches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recherches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/reseauxElec/" class="md-nav__link">
+        Les réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rech/transitionEnergetique/" class="md-nav__link">
+        Transition énergétique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          CheatSheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CheatSheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CheatSheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/resume/" class="md-nav__link">
+        Résumé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/titres/" class="md-nav__link">
+        Titres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/latex/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tableaux/" class="md-nav__link">
+        Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/diagrammes/" class="md-nav__link">
+        Diagrammes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tabs/" class="md-nav__link">
+        Tabs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/superfences/" class="md-nav__link">
+        SuperFences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/citation/" class="md-nav__link">
+        Citation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/regles/" class="md-nav__link">
+        Règles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/smileys/" class="md-nav__link">
+        Smileys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/videos/" class="md-nav__link">
+        Vidéos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/blocs/" class="md-nav__link">
+        Blocs d'alerte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatSheet/" class="md-nav__link">
+        CheatSheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-commandes-utiles" class="md-nav__link">
+    Quelques commandes utiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-operations-sur-les-fichiers" class="md-nav__link">
+    Les opérations sur les fichiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stockage-de-donnees" class="md-nav__link">
+    Stockage de données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulaire" class="md-nav__link">
+    Vocabulaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressions-regulieres" class="md-nav__link">
+    Expressions régulières
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/louisonsarlinmagnus/cours-isen/edit/master/docs/tech/os.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="linux-embarque"><center>Linux Embarqué</center></h1>
+<h2 id="quelques-commandes-utiles">Quelques commandes utiles</h2>
+<p><code>cd</code> -&gt; change directory<br />
+<code>cd .</code> -&gt; on avance<br />
+<code>cd ..</code> -&gt; on recule<br />
+<code>cd</code> - on retourne a la racine<br />
+<code>ls</code> -&gt; y a quoi la?<br />
+<code>ls-la</code> -&gt; y a quoi la avec des details sur les fichiers<br />
+<code>cat</code> -&gt; on lit ce qui a écrit dans un fichier<br />
+<code>ln -s</code> -&gt; on créer un lien symbolique<br />
+<code>ln</code> pour lien<br />
+<code>-s</code> pour symbolic<br />
+<code>-h</code> pour hard link<br />
+<code>echo</code> -&gt; affiche ce que tu dis après <br />
+(<code>echo "dbsuicbqs" &gt; toto/fichier</code>) -&gt; on met des trucs dans un fichier sans l'ouvrir<br />
+<code>tree</code> -&gt; joli affichage en arbre  </p>
+<h2 id="les-operations-sur-les-fichiers">Les opérations sur les fichiers</h2>
+<p><code>CREATE</code><br />
+<code>DELETE</code><br />
+<code>OPEN</code><br />
+<code>CLOSE</code><br />
+<code>READ</code><br />
+<code>WRITE</code><br />
+<code>APPEND</code><br />
+<code>SEEK</code><br />
+<code>GET ATTRIBUTES</code><br />
+<code>SET ATTRIBUTES</code><br />
+<code>RENAME</code>  </p>
+<h2 id="stockage-de-donnees">Stockage de données</h2>
+<p>Contiguê = les uns a la suite des autres<br />
+Liste chainée = on indique le suivant<br />
+Liste chainée indexée = on créer une table avec les adresses des blocs  memoires qui se suivent  </p>
+<h2 id="vocabulaire">Vocabulaire</h2>
+<p>Processus Zombie = processus dont le parent meurt, il ne peut donc pas être supprimer par le processus initial, il va bouffer de la ressource</p>
+<h2 id="exercice-2">Exercice 2</h2>
+<p>5 processus A, B, C, D et E sont soumis à un calculateur dans cet ordre, mais quasi simultanément.
+Ces travaux ne font pas d'entrées-sorties. Leurs durées respectives sont 10, 6, 2, 4 et 8 secondes.</p>
+<p>Déterminer les temps de réponse de chacun des processus, ainsi que le temps de réponse moyen,
+pour les disciplines FIFO (First In First Out) et SJF (Shortest Job First)</p>
+<p>A = 10
+B = 16
+C = 18
+D = 22
+E = 30</p>
+<p>Temps de réponse moyen : (10+16+18+22+30)/5 = 19,2s</p>
+<p>Même question pour une discipline à priorité, avec P(A)=3, P (B)=5, P(C)=2, P(D)=1, P(E)=4 avec le
+plus petit chiffre égal à la priorité la plus forte.</p>
+<p>D = 4
+C = 6
+A = 16
+E = 24
+B = 30</p>
+<p>Temps de réponse moyen : (4+6+16+24+30)/5 = 16s</p>
+<h2 id="expressions-regulieres">Expressions régulières</h2>
+<p>Les expressions régulières caractérisent uniquement des chaînes de caractères et
+non pas des noms de fichiers.</p>
+<hr />
+<h2 id="exercice-1">Exercice 1</h2>
+<p>Afficher l’ensemble de vos variables d’environnement : printenv
+Donner la signification de:
+      PATH = lien de tous les executables executable partout
+      PS1 = info sur le prompt
+      HOME = Directory de base de l'utilisateur
+      TERM = Configuration du terminal</p>
+<p><code>env | grep "TERM"</code>
+<code>echo $TERM</code></p>
+<p>Quels sont les alias présents sur votre machine?</p>
+<p><code>alias &gt;&gt; maindell/Dropbox/Cours/OS/TP1.txt</code>  </p>
+<p><code>alias alert='notify-send --urgency=low -i "$([ $? = 0 ] &amp;&amp; echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&amp;|]\s*alert$//'\'')"'</code><br />
+<code>alias egrep='egrep --color=auto'</code><br />
+<code>alias fgrep='fgrep --color=auto'</code><br />
+<code>alias grep='grep --color=auto'</code><br />
+<code>alias l='ls -CF'</code><br />
+<code>alias la='ls -A'</code><br />
+<code>alias ll='ls -alF'</code><br />
+<code>alias ls='ls --color=auto'</code>  </p>
+<p>Créer un alias lu qui réalise la commande ls -lrt?
+<code>alias lu='ls -lrt'</code>  </p>
+<p>Le rendre permanant
+<code>echo "alias lu='ls -lrt'" &gt;&gt; ~/.bash_aliases</code></p>
+<p>Supprimer cet alias
+<code>unalias lu</code></p>
+<p>Créer, dans votre environnement de travail, l’arborescence suivante :
+<div class="highlight"><pre><span></span><code>SE    
+    /TP1  
+      /doc
+      /script
+      /delivery
+    /TP2  
+      /bin
+      /obj
+      /src
+      /inc
+</code></pre></div></p>
+<p><code>mkdir -p SE/{TP1/{doc,script,delivery},TP2/{bin,obj,src,inc}}</code></p>
+<p>Afficher son répertoire courant
+<code>pwd</code></p>
+<p>Créer le fichier bonjour.c sous SE/TP2/src contenant les lignes suivantes :
+<div class="highlight"><pre><span></span><code>// directive du préprocesseur
+#include &lt;stdio.h&gt;
+
+/* prototype des fonctions */
+/* programme principal */
+main(){
+printf(« Bonjour\n ») ;
+/*
+0100123456123
+0100123457123
+0100123458123
+0100123459123
+0100123450123
+0100123451123
+0100123451123
+*/
+}
+
+cd ~/Dropbox/Cours/OS/SE/TP2/src
+touch bonjour.c
+echo &quot;// directive du préprocesseur
+#include &lt;stdio.h&gt;
+/* prototype des fonctions */
+/* programme principal */
+main(){
+printf(« Bonjour\n ») ;
+/*
+0100123456123
+0100123457123
+0100123458123
+0100123459123
+0100123450123
+0100123451123
+0100123451123
+*/
+}&quot; &gt;&gt; bonjour.c
+</code></pre></div></p>
+<p>Déplacer vous sous votre home directory et créer le fichier vide config.txt<br />
+<code>cd ~</code><br />
+<code>touch config.txt</code>  </p>
+<p>Déplacer vous par un déplacement absolu sous le répertoire src et compiler le programme<br />
+bonjour.c en un programme exécutable bonjour. Le résultat de la compilation est déplacé sous bin.<br />
+<code>cd ~/Dropbox/Cours/OS/SE/TP2/src</code>
+<code>gcc bonjour.c -o ~/Dropbox/Cours/OS/SE/TP2/bin/bonjour</code></p>
+<p>Afficher les types des fichiers bonjour et bonjour.c
+<code>ls -lrt</code></p>
+<p>Déplacez vous par un déplacement relatif sous bin
+<code>cd ..</code><br />
+<code>cd bin/</code>  </p>
+<p>Modifier les droits du fichier bonjour afin qu’il soit:
+  - en lecture, écriture, exécution pour le owner
+  - en lecture, exécution pour le groupe
+  - et non accessible pour les autres.
+<code>chmod 750 coucou</code></p>
+<p>Déplacez vous sous votre home directory et modifiez de façon récursive l’ensemble des droits (directories + fichiers) de TP2<br />
+<code>cd ~</code><br />
+<code>find ./Dropbox/Cours/OS/SE/TP2 -type d -exec chmod 751 {} \;</code><br />
+<code>chmod -R 750 /Dropbox/Cours/OS/SE/TP2</code>  </p>
+<p>Copier le fichier bonjour.c en salut.c en local,<br />
+<code>cp bonjour.c salut.c</code>  </p>
+<p>Copier le répertoire TP2 en TP3 avec l’ensemble de ses fichiers,<br />
+<code>cp -R /Dropbox/Cours/OS/SE/TP2 /Dropbox/Cours/OS/SE/TP3</code></p>
+<p>Déplacer le fichier salut.c de TP3 dans SE/TP2/src en l’appelant salut1.c,<br />
+<code>mv /Dropbox/Cours/OS/SE/TP2/src/salut.c /Dropbox/Cours/OS/SE/TP3/src/salut1.c</code></p>
+<p>Effacer le fichier bonjour.c de TP3,<br />
+<code>rm /Dropbox/Cours/OS/SE/TP3/src/bonjour.c</code></p>
+<p>Effacer TP3<br />
+<code>rm -R /Dropbox/Cours/OS/SE/TP3</code></p>
+<p>Copier le répertoire TP2 en TP3 avec l’ensemble de ses fichiers<br />
+<code>cp -R /Dropbox/Cours/OS/SE/TP2 /Dropbox/Cours/OS/SE/TP3</code></p>
+<p>Changer les droits du fichier salut.c de TP3 en _rwxrwxrwx<br />
+<code>chmod 777 /Dropbox/Cours/OS/SE/TP3/src/salut.c</code></p>
+<p>Changer le owner de ce fichier par le nom de login de votre voisin(e), monitorer le résultat,<br />
+<code>chown root /Dropbox/Cours/OS/SE/TP3/src/salut.c</code></p>
+<p>Changer le groupe de ce fichier par un groupe connu sur la machine,<br />
+<code>chgrp root /Dropbox/Cours/OS/SE/TP3/src/salut.c</code></p>
+<p>Attribuer les droits rwxrwxrwx à TP3 et aux fichiers qu’il contient,<br />
+<code>chmod -R 777 /Dropbox/Cours/OS/SE/TP3</code></p>
+<p>Changer en une seule commande le owner et groupe de TP3 et des fichiers qu’il contient,<br />
+<code>chown root:root /Dropbox/Cours/OS/SE/TP3</code></p>
+<p>Se positionner sur son home directory et créer un lien symbolique vers le fichier salut.c de TP3.<br />
+<code>cd</code><br />
+<code>ln -s /Dropbox/Cours/OS/SE/TP3/salut.c</code></p>
+<p>Editer ce lien. Expliquer la différence entre un lien permanent et un lien symbolique.<br />
+<code>cat /Dropbox/Cours/OS/SE/TP3/salut.c</code></p>
+<p>Afficher de trois façons différentes le contenu du fichier bonjour.c<br />
+cat, nano, vi</p>
+<p>Afficher le contenu de votre PATH,<br />
+<code>$PATH(/home/maindell/bin:/home/maindell/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games)</code></p>
+<p>Modifier le contenu de la variable d’environnement PATH afin d’y ajouter le répertoire local.
+<code>export PATH=/Dropbox/Cours/OS/SE/TP2/bin:$PATH</code></p>
+<p>Vérifier que, situez sous SE/TP2/bin, vous pouvez lancer bonjour de la façon suivante :<br />
+bonjour
+Oui</p>
+<p>( Attention de ne pas effacer PATH)<br />
+Modifier votre profil utilisateur afin de modifier PATH comme précédemment.  </p>
+<p>Modifier votre prompt afin d’afficher [<votre_user>@<hostname> : <le repertoire_courant>] &gt;<br />
+<code>export ps1 mes couilles</code></p>
+<p>Déplacez vous sous SE/TP1/script et créer, en 1 seule commande, un fichier essai.bash contenant #!/bin/bash<br />
+<code>cd /home/maindell/Dropbox/Cours/OS/SE/TP1/script</code><br />
+<code>echo '#!/bin/bash' &gt;&gt; /home/maindell/Dropbox/Cours/OS/SE/TP1/script/essai.bash</code>  </p>
+<p>Ajouter à la fin de essai.bash la ligne « ls –lrt » (en une seule commande)<br />
+<code>echo 'ls -lrt' &gt;&gt; essai.bash</code></p>
+<p>Sur le shell 1, affichez la fin du fichier essai.bash avec mise à jour,<br />
+<code>tail -f essai.bash</code></p>
+<p>Rechercher l’occurrence « include » dans le fichier bonjour.c<br />
+<code>grep 'include' /home/maindell/Dropbox/Cours/OS/SE/TP2/src/bonjour.c</code></p>
+<p>Afficher l’ensemble des processus utiliser par root, puis par votre user,<br />
+<code>ps -U root</code></p>
+<p>Afficher l’ensemble des sockets utilisées par votre machine,<br />
+<code>netstat</code></p>
+<p>Afficher l’ensemble des sockets en état ‘ESTABLISHED’ sur votre machine.<br />
+<code>netstat | grep 'ESTABLISHED'</code></p>
+<p>Affichez le nombre de sockets en état ‘ESTABLISHED’<br />
+<code>netstat | grep 'ESTABLISHED' | wc -l</code><br />
+<code>netstat | grep -c 'ESTABLISHED'</code></p>
+<p>Changer votre password<br />
+<code>passwd</code></p>
+<p>Rechercher à partir de votre home directory l’ensemble des fichiers .c contenus dans ce répertoire et ses sous répertoires<br />
+<code>find / -name '*.c'</code></p>
+<p>Rechercher à partir de votre home directory l’ensemble des fichiers .c contenant le caractère ‘u’ dans leur nom,<br />
+<code>find / -name '*u.c'</code></p>
+<p>Rechercher à partir de votre home directory l’ensemble des occurrences de « printf » dans l’ensemble des fichiers .c contenus dans ce répertoire et ses sous répertoires,<br />
+<code>`find -name '*.c' -exec grep 'println' {} \; -print</code></p>
+<p>Rechercher à partir de votre home directory l’ensemble des fichiers qui ne sont pas d’extension.c<br />
+<code>find / -not -name '*.c'</code></p>
+<p>Modifier l’ensemble des fichiers contenu dans votre répertoire courant et ses sous-répertoires d’extension .bak en .c<br />
+<code>rename s/.bac/.c/ *.bac</code></p>
+<p>Afficher dans un fichier le contenu de l’ensemble des fichiers .c se trouvant sous ./SE/TP2/src.<br />
+<code>ls *.c |xargs cat &gt; /home/maindell/Dropbox/Cours/OS/SE/retour.txt</code></p>
+<p>Afficher qui est loggé sur votre machine ?<br />
+<code>who</code></p>
+<p>Afficher qui est loggé sur votre machine sur la sortie standard mais également dans un fichier log.txt (sans répétition de commande) ?<br />
+<code>who&gt;exo.log</code></p>
+<p>Afficher quel est le nom de votre machine ?<br />
+<code>uname -a</code></p>
+<p>Afficher quel est le nom de votre système ?<br />
+<code>uname</code></p>
+<p>Afficher quel est le nom du terminal associé à votre user ?<br />
+<code>tty</code></p>
+<p>Afficher les numéros utilisateurs et groupe<br />
+<code>id</code></p>
+<p>Monitorer de manière dynamique l’ensemble des process (rafraichissement de la commande 2 secondes),</p>
+<p>Lancer un process en background,<br />
+<code>firefox &amp;</code></p>
+<p>Monitorer le de 2 façon différentes,<br />
+<code>ps</code></p>
+<p>Tuer le violemment.<br />
+<code>kill 1</code></p>
+<p>Lancer un process, l’interrompre et le mettre en exécution en background,
+firefox<br />
+<code>CTRL+Z</code><br />
+<code>bg</code></p>
+<p>Monitorer le,<br />
+<code>ps</code></p>
+<p>Basculer ce process en foreground,<br />
+<code>jobs</code><br />
+<code>fg1</code></p>
+<p>Stopper le par un signal d’interruption.<br />
+<code>CTRL+C</code></p>
+<p>Transformer les commentaires // en /* */ – Affichage stdout<br />
+<code>sed -e 's/\/\/\(.*\)/\/* \1 *\//g' TP2/src/bonjour.c&gt;salut.C</code><br />
+<code>sed -e 's://\(.*\):/* \1 */:g' TP2/src/bonjour.c&gt;salut.C</code><br />
+g pour dire qu'on fait ça sur toutes les lignes</p>
+<p>Exo chiant
+<div class="highlight"><pre><span></span><code>awk &#39;BEGIN {FS=&quot;:&quot; ; OFS=&#39;@&#39;} {print &quot;Affichage de la ligne &quot;NR&quot; avant modification: &quot;$0} $7!=&quot;&quot; {print &quot;Shell trouve ligne &quot;NR&quot; : &quot;$7&quot; remplace par /bin/bash&quot; ; $7=&quot;/bin/bash&quot;} $6=&quot;&quot; {print &quot;Usenr directory trouve ligne &quot;NR&quot; : &quot;$6&quot; (User : &quot;$1&quot; &quot;} {print &quot;Ligne &quot;NR&quot; apres modification : &quot;$0&quot;} &#39; /etc/passwd
+</code></pre></div></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../smartCard/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Smart-Card" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Smart-Card
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../molle/droitNum/" class="md-footer__link md-footer__link--next" aria-label="Next: Droit du numérique" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Droit du numérique
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Louison SARLIN--MAGNUS
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

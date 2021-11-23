@@ -1,0 +1,2246 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Les réseaux électriques - Mes cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reseaux-electrique" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mes cours" class="md-header__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mes cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les réseaux électriques
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mes cours" class="md-nav__button md-logo" aria-label="Mes cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Mes cours
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/louisonsarlinmagnus/cours-isen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Edition
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/cybersecurite/" class="md-nav__link">
+        Cyber Sécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/devOps/" class="md-nav__link">
+        Developpement Opérationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/ia/" class="md-nav__link">
+        Intelligence Artificielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/linuxEmbarque/" class="md-nav__link">
+        Linux Embarqué
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/optoElectronique/" class="md-nav__link">
+        Opto-électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/reseauxElectriques/" class="md-nav__link">
+        Réseaux électriques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/reseau/" class="md-nav__link">
+        Réseaux informatiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/smartCard/" class="md-nav__link">
+        Smart-Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/os/" class="md-nav__link">
+        Système d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sciences molles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sciences molles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sciences molles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/droitNum/" class="md-nav__link">
+        Droit du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/qualite/" class="md-nav__link">
+        Gestion de la qualité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/marketing/" class="md-nav__link">
+        Marketing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../molle/strategieInternationale/" class="md-nav__link">
+        Stratégie internationale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Recherches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recherches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recherches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Les réseaux électriques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Les réseaux électriques
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rapport-de-recherches" class="md-nav__link">
+    Rapport de recherches
+  </a>
+  
+    <nav class="md-nav" aria-label="Rapport de recherches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-definition" class="md-nav__link">
+    1. Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-roles-dun-reseau-electrique" class="md-nav__link">
+    2. Rôles d'un réseau électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-architecture" class="md-nav__link">
+    3. Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reseau-de-transport" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 Réseau de transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-reseau-de-distribution" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 Réseau de distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-stabilite-du-reseau" class="md-nav__link">
+    4. Stabilité du réseau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-black-out" class="md-nav__link">
+    5. Black-Out
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Black-Out">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definition" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1 Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-exemple-de-black-out" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2 Exemple de black-out
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-reseau-electrique-a-bord-des-navires" class="md-nav__link">
+    6. Réseau électrique à bord des navires
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Réseau électrique à bord des navires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-configuration-mn" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1 Configuration MN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cas-des-sous-marins" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2 Cas des sous-marins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-le-systeme-de-conduite-centralise" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3 Le système de conduite centralisé
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-smart-grids" class="md-nav__link">
+    7. Smart-Grids
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Smart-Grids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-definition-des-smart-grids" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1 Définition des Smart Grids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-les-contraintes-du-reseau-electrique" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2 Les contraintes du réseau électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-les-avantages-pour-le-consommateur" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3 Les avantages pour le consommateur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-bilan-de-lutilisation-des-smart-grids" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4 Bilan de l'utilisation des Smart-Grids
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-voiture-electrique" class="md-nav__link">
+    8. Voiture électrique
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Voiture électrique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-une-volonte-politique" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1 Une volonté politique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-limites-de-la-voiture-electrique" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2 Limites de la voiture électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-impact-sur-les-reseaux-electriques" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3 Impact sur les réseaux électriques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-quel-futur-pour-la-voiture-electrique" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4 Quel futur pour la voiture électrique?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1definition" class="md-nav__link">
+    1.Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-roles-dun-reseau-electrique_1" class="md-nav__link">
+    2. Rôles d'un réseau électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-architecture_1" class="md-nav__link">
+    3. Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reseau-de-transport_1" class="md-nav__link">
+    3.1 Réseau de transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-reseau-de-distribution_1" class="md-nav__link">
+    3.2 Réseau de distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-stabilite-du-reseau_1" class="md-nav__link">
+    4. Stabilité du réseau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-black-out_1" class="md-nav__link">
+    5. Black-Out
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Black-Out">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definition_1" class="md-nav__link">
+    5.1 Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-exemple-de-black-out_1" class="md-nav__link">
+    5.2 Exemple de black-out
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-reseau-electrique-a-bord-des-navires_1" class="md-nav__link">
+    6. Réseau électrique à bord des navires
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Réseau électrique à bord des navires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-configuration-mn_1" class="md-nav__link">
+    6.1 Configuration MN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cas-des-sous-marins_1" class="md-nav__link">
+    6.2 Cas des sous-marins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-le-systeme-de-conduite-centralise_1" class="md-nav__link">
+    6.3 Le système de conduite centralisé
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-smart-grids_1" class="md-nav__link">
+    7. Smart-Grids
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Smart-Grids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-definition-des-smart-grids_1" class="md-nav__link">
+    7.1 Définition des Smart Grids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-les-contraintes-du-reseau-electrique_1" class="md-nav__link">
+    7.2 Les contraintes du réseau électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-les-avantages-pour-le-consommateur_1" class="md-nav__link">
+    7.3 Les avantages pour le consommateur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-bilan-de-lutilisation-des-smart-grids_1" class="md-nav__link">
+    7.4 Bilan de l'utilisation des Smart-Grids
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-voiture-electrique_1" class="md-nav__link">
+    8. Voiture électrique
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Voiture électrique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-une-volonte-politique_1" class="md-nav__link">
+    8.1 Une volonté politique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-limites-de-la-voiture-electrique_1" class="md-nav__link">
+    8.2 Limites de la voiture électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-impact-sur-les-reseaux-electriques_1" class="md-nav__link">
+    8.3 Impact sur les réseaux électriques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-quel-futur-pour-la-voiture-electrique_1" class="md-nav__link">
+    8.4 Quel futur pour la voiture électrique?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources_1" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transitionEnergetique/" class="md-nav__link">
+        Transition énergétique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          CheatSheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CheatSheet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          CheatSheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/resume/" class="md-nav__link">
+        Résumé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/titres/" class="md-nav__link">
+        Titres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/code/" class="md-nav__link">
+        Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/latex/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tableaux/" class="md-nav__link">
+        Tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/diagrammes/" class="md-nav__link">
+        Diagrammes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/tabs/" class="md-nav__link">
+        Tabs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/superfences/" class="md-nav__link">
+        SuperFences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/citation/" class="md-nav__link">
+        Citation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/regles/" class="md-nav__link">
+        Règles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/smileys/" class="md-nav__link">
+        Smileys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/videos/" class="md-nav__link">
+        Vidéos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat/blocs/" class="md-nav__link">
+        Blocs d'alerte
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatSheet/" class="md-nav__link">
+        CheatSheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rapport-de-recherches" class="md-nav__link">
+    Rapport de recherches
+  </a>
+  
+    <nav class="md-nav" aria-label="Rapport de recherches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-definition" class="md-nav__link">
+    1. Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-roles-dun-reseau-electrique" class="md-nav__link">
+    2. Rôles d'un réseau électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-architecture" class="md-nav__link">
+    3. Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reseau-de-transport" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 Réseau de transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-reseau-de-distribution" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 Réseau de distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-stabilite-du-reseau" class="md-nav__link">
+    4. Stabilité du réseau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-black-out" class="md-nav__link">
+    5. Black-Out
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Black-Out">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definition" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1 Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-exemple-de-black-out" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2 Exemple de black-out
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-reseau-electrique-a-bord-des-navires" class="md-nav__link">
+    6. Réseau électrique à bord des navires
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Réseau électrique à bord des navires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-configuration-mn" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1 Configuration MN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cas-des-sous-marins" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2 Cas des sous-marins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-le-systeme-de-conduite-centralise" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3 Le système de conduite centralisé
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-smart-grids" class="md-nav__link">
+    7. Smart-Grids
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Smart-Grids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-definition-des-smart-grids" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1 Définition des Smart Grids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-les-contraintes-du-reseau-electrique" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2 Les contraintes du réseau électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-les-avantages-pour-le-consommateur" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3 Les avantages pour le consommateur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-bilan-de-lutilisation-des-smart-grids" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4 Bilan de l'utilisation des Smart-Grids
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-voiture-electrique" class="md-nav__link">
+    8. Voiture électrique
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Voiture électrique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-une-volonte-politique" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1 Une volonté politique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-limites-de-la-voiture-electrique" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2 Limites de la voiture électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-impact-sur-les-reseaux-electriques" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3 Impact sur les réseaux électriques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-quel-futur-pour-la-voiture-electrique" class="md-nav__link">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4 Quel futur pour la voiture électrique?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1definition" class="md-nav__link">
+    1.Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-roles-dun-reseau-electrique_1" class="md-nav__link">
+    2. Rôles d'un réseau électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-architecture_1" class="md-nav__link">
+    3. Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reseau-de-transport_1" class="md-nav__link">
+    3.1 Réseau de transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-reseau-de-distribution_1" class="md-nav__link">
+    3.2 Réseau de distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-stabilite-du-reseau_1" class="md-nav__link">
+    4. Stabilité du réseau
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-black-out_1" class="md-nav__link">
+    5. Black-Out
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Black-Out">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definition_1" class="md-nav__link">
+    5.1 Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-exemple-de-black-out_1" class="md-nav__link">
+    5.2 Exemple de black-out
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-reseau-electrique-a-bord-des-navires_1" class="md-nav__link">
+    6. Réseau électrique à bord des navires
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Réseau électrique à bord des navires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-configuration-mn_1" class="md-nav__link">
+    6.1 Configuration MN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cas-des-sous-marins_1" class="md-nav__link">
+    6.2 Cas des sous-marins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-le-systeme-de-conduite-centralise_1" class="md-nav__link">
+    6.3 Le système de conduite centralisé
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-smart-grids_1" class="md-nav__link">
+    7. Smart-Grids
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Smart-Grids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-definition-des-smart-grids_1" class="md-nav__link">
+    7.1 Définition des Smart Grids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-les-contraintes-du-reseau-electrique_1" class="md-nav__link">
+    7.2 Les contraintes du réseau électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-les-avantages-pour-le-consommateur_1" class="md-nav__link">
+    7.3 Les avantages pour le consommateur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-bilan-de-lutilisation-des-smart-grids_1" class="md-nav__link">
+    7.4 Bilan de l'utilisation des Smart-Grids
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-voiture-electrique_1" class="md-nav__link">
+    8. Voiture électrique
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Voiture électrique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-une-volonte-politique_1" class="md-nav__link">
+    8.1 Une volonté politique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-limites-de-la-voiture-electrique_1" class="md-nav__link">
+    8.2 Limites de la voiture électrique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-impact-sur-les-reseaux-electriques_1" class="md-nav__link">
+    8.3 Impact sur les réseaux électriques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-quel-futur-pour-la-voiture-electrique_1" class="md-nav__link">
+    8.4 Quel futur pour la voiture électrique?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources_1" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/louisonsarlinmagnus/cours-isen/edit/master/docs/rech/reseauxElec.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="reseaux-electrique"><center>Réseaux électrique</center></h1>
+<h2 id="rapport-de-recherches"><center><span style="color:"black">Rapport de recherches</span></center></h2>
+<p><font size="2"><center>Guillaume DESSERME, Nicolas PETIT, <span title="Le meilleur du groupe!">Louison SARLIN--MAGNUS</span>, Florian SIGALAS, Clément SIRJEAN</center></font></p>
+<p><br>
+<center>
+<br />
+<figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ligne_haute-tension.jpg"
+    width="600"
+    >
+    <figcaption><i>Figure 1: Ligne Très Haute Tension (THT)</i></figcaption>
+  </figure></p>
+<p></center></p>
+<hr />
+<h4 id="1-definition"><a href="#def"><span style="color:black">1. Définition</span></a></h4>
+<h4 id="2-roles-dun-reseau-electrique"><a href="#role"><span style="color:black">2. Rôles d'un réseau électrique</span></a></h4>
+<h4 id="3-architecture"><a href="#architecture"><span style="color:black">3. Architecture</span></a></h4>
+<h5 id="31-reseau-de-transport"><a href="#transport"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 Réseau de transport</span></a></h5>
+<h5 id="32-reseau-de-distribution"><a href="#distribution"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 Réseau de distribution</span></a></h5>
+<h4 id="4-stabilite-du-reseau"><a href="#stabilité"><span style="color:black">4. Stabilité du réseau</span></a></h4>
+<h4 id="5-black-out"><a href="#black-out"><span style="color:black">5. Black-Out</span></a></h4>
+<h5 id="51-definition"><a href="#black-def"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1 Définition</span></a></h5>
+<h5 id="52-exemple-de-black-out"><a href="#black-exemple"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2 Exemple de black-out</span></a></h5>
+<h4 id="6-reseau-electrique-a-bord-des-navires"><a href="#bateau"><span style="color:black">6. Réseau électrique à bord des navires</span></a></h4>
+<h5 id="61-configuration-mn"><a href="#bateau-config"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1 Configuration MN</span></a></h5>
+<h5 id="62-cas-des-sous-marins"><a href="#bateau-sous"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2 Cas des sous-marins</span></a></h5>
+<h5 id="63-le-systeme-de-conduite-centralise"><a href="#bateau-conduite"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.3 Le système de conduite centralisé</span></a></h5>
+<h4 id="7-smart-grids"><a href="#smart-grids"><span style="color:black">7. Smart-Grids</span></a></h4>
+<h5 id="71-definition-des-smart-grids"><a href="#smart-def"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1 Définition des Smart Grids</span></a></h5>
+<h5 id="72-les-contraintes-du-reseau-electrique"><a href="#smart-contraintes"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2 Les contraintes du réseau électrique</span></a></h5>
+<h5 id="73-les-avantages-pour-le-consommateur"><a href="#smart-avantages"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3 Les avantages pour le consommateur</span></a></h5>
+<h5 id="74-bilan-de-lutilisation-des-smart-grids"><a href="#smart-bilan"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.4 Bilan de l'utilisation des Smart-Grids</span></a></h5>
+<h4 id="8-voiture-electrique"><a href="#voiture-electrique"><span style="color:black">8. Voiture électrique</span></h4>
+<h5 id="81-une-volonte-politique"><a href="#voiture-politique"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1 Une volonté politique</span></h5>
+<h5 id="82-limites-de-la-voiture-electrique"><a href="#voiture-limites"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2 Limites de la voiture électrique</span></h5>
+<h5 id="83-impact-sur-les-reseaux-electriques"><a href="#voiture-impact"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3 Impact sur les réseaux électriques</span></h5>
+<h5 id="84-quel-futur-pour-la-voiture-electrique"><a href="#voiture-bilan"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4 Quel futur pour la voiture électrique?</span></h5>
+<h4 id="sources"><a href="#sources"><span style="color:black">Sources</span></h4>
+<hr />
+<h3 id="1definition"><a id="def"><span style="color:black">1.Définition</span></a></h3>
+<p>Un réseau électrique est l'ensemble des infrastructures permettant d'acheminer l'énergie électrique des lieux de production jusqu'aux lieux de consommation.<br />
+Ce réseau doit aussi assurer la gestion dynamique de l'ensemble production-transport-consommation, mettant en œuvre des réglages ayant pour but d'assurer la stabilité de l'ensemble. Il est constitué de lignes électriques et de postes de transformation. </p>
+<p><center>
+<br />
+<figure>
+    <img src="https://img.aws.la-croix.com/2019/03/04/1201006339/Photo-dillustration-En-Allemagne-7-700-kilometres-cables-necessaires-1-750-seulement-effet-approuves-950-realises_0_729_487.jpg"
+    width="600"
+    >
+    <figcaption><i>Figure 2: Ligne Très Haute Tension (THT)</i></figcaption>
+  </figure></p>
+<p></center></p>
+<hr />
+<h3 id="2-roles-dun-reseau-electrique_1"><a id="role"><span style="color:black">2. Rôles d'un réseau électrique</span></a></h3>
+<p>Le rôle primaire du réseau électrique est d'acheminer de l'électricité a tous les français. Pour garantir cet accès on procède au calcul du "critère de défaillance unique". C’est-à-dire qu'on prévoit à tout moment une solution alternative en cas de défaillance d'une ligne de transport. </p>
+<p>Pour réussir sa tâche et garantir l'accès à l'électricité à tous le CNES (Centre National d'Exploitation du Système) fait face a 3 obstacles:</p>
+<ul>
+<li>Il faut produire en temps réel ce qu'on consomme. En effet on ne sait pas stocker l'énergie produite en période de faible utilisation pour la réinjecter dans le réseau plus tard.</li>
+<li>La consommation varie beaucoup. Elle dépend de nombre facteurs comme la température, la saison, l'ensoleillement, etc.</li>
+<li>Il faut acheminer l'électricité, des zones de productions aux zones de consommation, via les lignes sans les surcharger</li>
+</ul>
+<p>Rte met a disposition sur son site un outil, appelé <a href="https://www.rte-france.com/fr/eco2mix/eco2mix"><em>eco2mix</em></a> qui permet d'observer en temps réel plusieurs facteurs importants, comme la consommation et la production etc. le tout en temps quasi-réel (actualisé toutes les 15 minutes). </p>
+<p><center>
+<br />
+<figure>
+    <img src="https://media.castorama.fr/is/image/Castorama/NPC_HT_1710_comprendre_installation_electrique_2?wid=720&fmt=png"
+    width="600"
+    >
+    <figcaption><i>Figure 3: Schéma d'un réseau électrique</i></figcaption>
+  </figure></p>
+<p></center></p>
+<hr />
+<h3 id="3-architecture_1"><a id="architecture"><span style="color:black">3. Architecture</span></a></h3>
+<h4 id="31-reseau-de-transport_1"><a id="transport"><span style="color:black">3.1 Réseau de transport</span></a></h4>
+<p>Le territoire français est parcouru par plus de <span class="arithmatex"><span class="MathJax_Preview">100 000 km</span><script type="math/tex">100 000 km</script></span> de lignes électriques.<br />
+Les lignes qui assurent les longs trajets sont des lignes appelées "Très Haute Tension" ou THT et possèdent une tension de <span class="arithmatex"><span class="MathJax_Preview">400 000V</span><script type="math/tex">400 000V</script></span>. Ces lignes permettent de transporter une grande quantité d'énergie tout en limitant au maximum les pertes.</p>
+<p>Puis au fur et à mesure que l'on se rapproche des lieux de consommation on va abaisser progressivement la tension à <span class="arithmatex"><span class="MathJax_Preview">225 000V</span><script type="math/tex">225 000V</script></span> puis <span class="arithmatex"><span class="MathJax_Preview">90 000V</span><script type="math/tex">90 000V</script></span> puis <span class="arithmatex"><span class="MathJax_Preview">63 000V</span><script type="math/tex">63 000V</script></span>. Cette diminution progressive de la tension dans les lignes permet de répartir au mieux l'énergie tout en limitant au maximum les pertes.
+Dans certains cas particuliers comme les grosses industries il est possible de livrer des moyennes voire hautes tension (<span class="arithmatex"><span class="MathJax_Preview">225kV</span><script type="math/tex">225kV</script></span>, <span class="arithmatex"><span class="MathJax_Preview">90kV</span><script type="math/tex">90kV</script></span> ou <span class="arithmatex"><span class="MathJax_Preview">63kV</span><script type="math/tex">63kV</script></span>).</p>
+<p>Une ligne aérienne est généralement composée de 3 câbles électriques (ou 6 si on a 2 lignes sur le même pylône). On note souvent la présence d'un câble supplémentaire, il s'agit du "câble de garde" qui protège les lignes de la foudre en étant placé au dessus.
+En plus des <span class="arithmatex"><span class="MathJax_Preview">100 000 km</span><script type="math/tex">100 000 km</script></span> de ligne aérienne, le réseau français dispose de près de <span class="arithmatex"><span class="MathJax_Preview">6 000 km</span><script type="math/tex">6 000 km</script></span> de lignes enfouies (aussi appelées lignes souterraines).</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://www.edf.fr/sites/default/files/mediatheque/2018/transport/energie-a-az_reseau-tht_2018.png"
+    width="600"
+    >
+    <figcaption><i>Figure 4: Carte du réseau THT français</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Le réseau de transport est dirigé au niveau national par le Centre National d'exploitation du Système (CNES). Ce centre est responsable de l'équilibre du système entre la production et la consommation ainsi que les échanges avec nos voisins Européens. Il s'occupe des "autoroutes de l'électricité" c’est-à-dire des lignes de <span class="arithmatex"><span class="MathJax_Preview">400 000V</span><script type="math/tex">400 000V</script></span>.</p>
+<p>On a ensuite 7 centres régionaux qui s'occupent localement des lignes de plus faible tension. Ces centres gèrent donc des "Régions" et sont subdivisés comme suit:</p>
+<ul>
+<li>Région Sud-Est</li>
+<li>Région Grand Est</li>
+<li>Région Nord</li>
+<li>Région Sud-Ouest</li>
+<li>Région Parisienne et Normandie</li>
+<li>Région Ouest</li>
+<li>Région Rhône Alpes Auvergne</li>
+</ul>
+<p>Ces centres régionaux veillent en temps réel à l'équilibre consommation-production électrique dans les zones concernées.</p>
+<h4 id="32-reseau-de-distribution_1"><a id="distribution"><span style="color:black">3.2 Réseau de distribution</span></a></h4>
+<p>L'interface entre le réseau de transport et le réseau de distribution se fait par pas moins de 2 200 postes de transformation qui ont pour but d'abaisser les Hautes Tensions (90kV, 20kV) en tension utilisables par le consommateur (220V dans le cas d'un particulier).</p>
+<p>Le réseau de distribution est donc bien plus long. En effet, il mesure pas moins d'1,3 million de kilomètres.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://www.fournisseur-energie.com/wp-content/uploads/2017/06/.%C3%89lagage-pr%C3%A8s-des-lignes-%C3%A9lectriques.png"
+    width="600"
+    >
+    <figcaption><i>Figure 5: Différents types de lignes électriques</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Ce réseau n'est pas contrôlé par une unique entité, comme le réseau de transport, mais par près de 200 régies ou entreprises locales. On cite le plus souvent Enedis qui contrôle a lui seul <span class="arithmatex"><span class="MathJax_Preview">95\%</span><script type="math/tex">95\%</script></span> du réseau de distribution, mais on peut aussi citer SER (Strasbourg Électricité Réseau) qui est une entreprise privée qui fournit de l'électricité à près de 540 000 clients. 
+La Commission de Régulation de l’Énergie (CRE) régule les plus grands de ces gestionnaires de réseau de distribution.</p>
+<p>Le développement de la production d’énergie décentralisée (éolien, photovoltaïque, etc.) et de nouveaux usages (autoproduction, électro-mobilité, etc.) modifient le rôle des réseaux de distribution qui deviennent collecteurs de l'énergie produite par les plus petites installations de production.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://www.comwatt.com/wp-content/uploads/2018/08/logement-durable-panneaux-photovoltaiques-energie-solaire-1024x612.jpg"
+    width="600"
+    >
+    <figcaption><i>Figure 6: Exploitation photovoltaïque</i></figcaption>
+  </figure></p>
+<p></center></p>
+<hr />
+<h3 id="4-stabilite-du-reseau_1"><a id="stabilité"><span style="color:black">4. Stabilité du réseau</span></a></h3>
+<p>Elle est caractérisée par les fluctuations de puissances transitées dans le réseau et se mesure par les variations dans le temps des tensions et fréquences associées.  </p>
+<p>Il faut distinguer :</p>
+<ul>
+<li>La stabilité en régime statique : le réseau a un comportement stable, c’est-à-dire que, soumis à de petites perturbations, il revient à son point de fonctionnement initial ceci avec d’éventuelles oscillations amorties jusqu’au retour à l’équilibre.</li>
+<li>La stabilité en régime transitoire : lorsque l’on passe d’un état stable statique à un autre, suite à une perturbation durable voulue ou non, ce changement d’équilibre s’accompagne d’un régime variable oscillatoire amorti considéré comme acceptable eu égard à des fourchettes prédéfinies de <span class="arithmatex"><span class="MathJax_Preview">\Delta U</span><script type="math/tex">\Delta U</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\Delta f</span><script type="math/tex">\Delta f</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>.</li>
+<li>L’instabilité en régime transitoire est observée lorsque, suite à une perturbation importante, le régime oscillatoire est divergent . Il induit une perte d’alimentation ou un nouvel état stable inacceptable (ex : moteur qui « rampe »).</li>
+<li>La stabilité en régime dynamique : le réseau est apte à éviter tout régime oscillatoire divergent et à revenir à un état stable acceptable. Ceci inclut l’intervention éventuelle des protections et automatismes divers fonction des perturbations envisagées.</li>
+</ul>
+<p>Les études de stabilité dynamique consistent à :</p>
+<ul>
+<li>envisager les principaux scénarios critiques tels que court-circuit, perte d’énergie mécanique, perte de source électrique, variation de charge, contraintes de process.</li>
+<li>prédire le comportement du réseau face à ces perturbations.</li>
+<li>préconiser les mesures à prendre en exploitation, telles que type de protection, réglage de relais, délestages, configurations… pour éviter les modes de fonctionnement indésirables.  </li>
+</ul>
+<p><strong>Les machines asynchrones:</strong></p>
+<p>Par leur présence majoritaire dans les réseaux industriels (jusqu’à 80 % de la puissance consommée dans certaines installations), les moteurs asynchrones ont un rôle prépondérant dans les phénomènes de stabilité.
+La stabilité du moteur dépend des positions relatives des courbes de couple moteur et résistant. Si le moteur subit une coupure ou un fort creux de tension pendant quelques instants, il va ralentir et se retrouver à une vitesse réduite, par exemple 70% de la vitesse de synchronisme.
+La solution est souvent l’utilisation d’un automate de délestage et relestage progressif des charges. La stabilité peut donc être gérée en minimisant l’appel de courant et donc la chute de tension.  </p>
+<p>En résumé, les moteurs asynchrones sont des acteurs importants dans le cadre de la stabilité dynamique et peuvent rencontrer des difficultés de fonctionnement suite à un passage brusque sous tension réduite.</p>
+<p><strong>Les machines synchrones:</strong>  </p>
+<p>Les machines synchrones sont fréquentes dans les réseaux industriels. Elles peuvent être installées pour les besoins suivants :  </p>
+<ul>
+<li>récupération de l’énergie d’un processus exothermique ou cogénération</li>
+<li>besoin d’une source électrique complémentaire pour:<ul>
+<li>contrat Effacement Jours de Pointe (EJP)</li>
+<li>Secours</li>
+<li>Pointes</li>
+</ul>
+</li>
+<li>compensation d’énergie réactive
+Elles jouent un rôle prédominant dans les phénomènes de stabilité des réseaux.</li>
+</ul>
+<p><strong>La stabilité statique:</strong>  </p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/689414727109181477/699263067006959816/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 7: Représeantation d'une machine synchrone</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Avec :</p>
+<ul>
+<li>R : résistance statorique</li>
+<li>X : réactance directe statorique</li>
+<li>E : f.e.m. statorique créée par l’enroulement d’excitation rotorique</li>
+<li>U : tension aux bornes du stator en charge</li>
+</ul>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/689414727109181477/699263451503132692/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 8: Diagramme vectoriel d'une machine synchrone</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>L’angle interne <span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> de la machine est défini comme l’angle entre les vecteurs <span class="arithmatex"><span class="MathJax_Preview">\vec{U}</span><script type="math/tex">\vec{U}</script></span> et <span class="arithmatex"><span class="MathJax_Preview">\vec{U}</span><script type="math/tex">\vec{U}</script></span>. <br />
+Cet angle est égal à celui dont le rotor est décalé par rapport à sa position de fonctionnement à vide (si <span class="arithmatex"><span class="MathJax_Preview">I = 0</span><script type="math/tex">I = 0</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\delta = 0</span><script type="math/tex">\delta = 0</script></span>). En négligeant R, un calcul rapide montre que la puissance électrique active transmise au réseau se calcule par : <span class="arithmatex"><span class="MathJax_Preview">P = \frac{E.U.\sin{\delta}}{X}</span><script type="math/tex">P = \frac{E.U.\sin{\delta}}{X}</script></span>  </p>
+<p>Il est clair que la puissance électrique transmise au réseau est limitée à la valeur de : <span class="arithmatex"><span class="MathJax_Preview">\frac{E.U}{X}</span><script type="math/tex">\frac{E.U}{X}</script></span> , valeur qui est atteinte pour <span class="arithmatex"><span class="MathJax_Preview">\delta = 90°</span><script type="math/tex">\delta = 90°</script></span></p>
+<p><strong>La stabilité dynamique :</strong>  </p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/689414727109181477/699265689701056522/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 9</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/689414727109181477/699265484503253022/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 10</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">P_{active}=\frac{E.U_{charge}}{X_{total}}.\sin{\delta}</span><script type="math/tex">P_{active}=\frac{E.U_{charge}}{X_{total}}.\sin{\delta}</script></span></p>
+<p>Avec:
+<span class="arithmatex"><span class="MathJax_Preview">X_{total} = X_{generateur} + X_{transformateur} + X_{ligne}</span><script type="math/tex">X_{total} = X_{generateur} + X_{transformateur} + X_{ligne}</script></span></p>
+<p>Les problèmes de stabilité dynamique résultent du passage de la machine d’un état stable à un autre.
+En conséquence, l’angle interne maximal <span class="arithmatex"><span class="MathJax_Preview">\delta_{max}</span><script type="math/tex">\delta_{max}</script></span>, peut être supérieur à 90 ° de façon transitoire. La limite de stabilité dynamique est donc plus élevée que la limite de stabilité statique.</p>
+<p>Ainsi il en découle deux remarques importantes :</p>
+<ul>
+<li>les risques de pertes de stabilité dynamique sont liés à des changements d’états importants et brusques du réseau ou de la turbine</li>
+<li>les risques de pertes de stabilité dynamique sont d’autant plus importants que la puissance fournie par la machine synchrone est proche de la limite de stabilité statique.</li>
+</ul>
+<p><strong>Les conséquences :</strong>  </p>
+<p>Connaissant le temps d'élimination du défaut, il est possible de connaître l'angle interne maximal en opération pour éviter le risque de sur-vitesse en cas de court-circuit pour le générateur. 
+On le note : <span class="arithmatex"><span class="MathJax_Preview">\delta_{max,total}</span><script type="math/tex">\delta_{max,total}</script></span><br />
+Il est lié à l'impédance <span class="arithmatex"><span class="MathJax_Preview">X_{total}</span><script type="math/tex">X_{total}</script></span>, qu'on peut décomposer en plusieurs parties.  </p>
+<p>On peut donc de même décomposer l'angle en fonction de ses causes :  
+<span class="arithmatex"><span class="MathJax_Preview">\delta_{total} = \delta_{generateur} + \delta_{transformateur} + \delta_{ligne}</span><script type="math/tex">\delta_{total} = \delta_{generateur} + \delta_{transformateur} + \delta_{ligne}</script></span>  </p>
+<p>Le premier étant connu, le dernier est appelé angle de transport, il augmente avec la longueur de la ligne.
+On a donc : <span class="arithmatex"><span class="MathJax_Preview">\delta_{max,generateur} = \delta_{max,total} - \delta_{transformateur} - \alpha</span><script type="math/tex">\delta_{max,generateur} = \delta_{max,total} - \delta_{transformateur} - \alpha</script></span> , avec <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> l'angle de transport.</p>
+<p>Plus la ligne est longue, plus l'angle interne du générateur doit être faible, la marge de manœuvre est réduite. Si ce critère n'est pas respecté, il y a un risque en cas de défaut que le générateur perde son synchronisme. Autrement dit que la centrale électrique cesse d'alimenter le réseau.</p>
+<hr />
+<h3 id="5-black-out_1"><a id="black-out"><span style="color:black">5. Black-Out</span></a></h3>
+<h4 id="51-definition_1"><a id="black-def"><span style="color:black">5.1 Définition</span></a></h4>
+<p>Un black-out est un effondrement de la totalité du réseau électrique qui peut être la conséquence d’une pénurie s’étant aggravée ou d'un problème technique imprévu.  </p>
+<p>En cas de pénurie d'électricité, nous pouvons habituellement compter sur les pays voisins, qui peuvent envoyer une partie de leur surproduction vers notre réseau mais ce n'est pas toujours possible.  </p>
+<p>À ce moment-là, il se peut donc que la demande d'électricité dépasse l'offre. On parle alors d'un déséquilibre entre production et consommation qui provoque une baisse de la fréquence nominal.<br />
+Ce déséquilibre est dangereux, car il pourrait entraîner l'effondrement du réseau d'électricité voir même créer une réaction en chaîne pouvant entraîner un black-out sur l'Europe.   </p>
+<p>Pour éviter le black-out, on pratique délestage. 
+Cette réduction partielle et intentionnelle de la consommation d'électricité devrait alors permettre aux centrales électriques de rétablir l'équilibre.  </p>
+<h4 id="52-exemple-de-black-out_1"><a id="black-exemple"><span style="color:black">5.2 Exemple de black-out</span></a></h4>
+<p>Fin décembre 1999, deux tempêtes exceptionnelles par leurs intensités frappent de plein fouet l'Europe, en particulier la France, où pas moins de 3,6 millions de personnes se retrouvent sans courant.  </p>
+<p>Paris échappe de peu au black-out, grâce aux équipes d'EDF qui limitent les dégâts sur le réseau électrique français. Cependant, la violence des tempêtes met à terre pas moins de 23 000 poteaux électriques et pylônes à haute tension, et provoque l'arrêt de 3 centrales nucléaires, dont celle de Braud-et-Saint-Louis, près de Blaye, en Gironde qui est partiellement inondée.<br />
+À certains endroits, il faut 19 jours pour rétablir le réseau. Au vu de l'étendue des dégâts et des dommages causés, c'est la pire destruction qu'ait subi le réseau électrique français depuis sa création. </p>
+<p><center>
+<br />
+<figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Toronto_ON_2003_Blackout.jpg"
+    width="600"
+    >
+    <figcaption><i>Figure 11: Conséquence d'un black-out aux États-unis</i></figcaption>
+  </figure></p>
+<p></center></p>
+<hr />
+<h3 id="6-reseau-electrique-a-bord-des-navires_1"><a id="bateau"><span style="color:black">6. Réseau électrique à bord des navires</span></a></h3>
+<p>Les navires sont des gros consommateurs d'énergies, les besoins en énergies sont pour essentiellement:</p>
+<ul>
+<li>Les équipements servant à la manœuvrabilité.</li>
+<li>Les circuits de commandes et de surveillance.</li>
+<li>Les installations de sécurité.</li>
+<li>Les systèmes de vie à bord.</li>
+<li>Les équipements spécifiques.</li>
+</ul>
+<p>Puissance navire de 150 mètre entre <span class="arithmatex"><span class="MathJax_Preview">5000</span><script type="math/tex">5000</script></span> et <span class="arithmatex"><span class="MathJax_Preview">10000 KW</span><script type="math/tex">10000 KW</script></span>
+Tension du réseau classique d'un navire militaire <span class="arithmatex"><span class="MathJax_Preview">440V</span><script type="math/tex">440V</script></span> et <span class="arithmatex"><span class="MathJax_Preview">230V</span><script type="math/tex">230V</script></span> à partir des années 2010, <span class="arithmatex"><span class="MathJax_Preview">115 V</span><script type="math/tex">115 V</script></span> pour les navires d'anciennes génération.
+Tension continue à <span class="arithmatex"><span class="MathJax_Preview">380V</span><script type="math/tex">380V</script></span> en plus pour les sous-marins.
+Fréquence navire militaire à <span class="arithmatex"><span class="MathJax_Preview">60 Hz</span><script type="math/tex">60 Hz</script></span>.</p>
+<p>Il y a environ <span class="arithmatex"><span class="MathJax_Preview">300 Km</span><script type="math/tex">300 Km</script></span> de câble dans un navire de 150 mètres.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/695917872723263559/695984688908468254/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 12: Exemple de production-consommation d'énergie</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Pour l'ensemble des navires l'électricité est produite par des alternateurs, cependant la force mécanique permettant de faire tourner ces alternateur dépend du type de propulsion:  </p>
+<ul>
+<li>Moteur diesel accoupler à un arbre à l'alternateur.  </li>
+<li>Turbine à Gaz accoupler à un arbre à l'alternateur.  </li>
+</ul>
+<p>Cette installation peut ou non être en lien avec la partie propulsion suivant les navires.
+Plusieurs technologies de propulsion permettent différentes configuration électrique, à titre d'exemple la plupart des navires ne nécessitant pas un gros système de propulsion choisissent un moteur diesel relier à l'alternateur pour ensuite au travers d'un moteur électrique permette la rotation des hélices. Dans ce cas précis nous parlons de diesel alternateurs.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/695917872723263559/695984976843505694/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 13: Schéma de principe de production et stockage de l'électricité à bord d'un navire</i></figcaption>
+  </figure></p>
+<p></center></p>
+<h4 id="61-configuration-mn_1"><a id="bateau-config"><span style="color:black">6.1 Configuration MN</span></a></h4>
+<p>FREMM : La puissance électrique totale installée est de <span class="arithmatex"><span class="MathJax_Preview">8400 kw</span><script type="math/tex">8400 kw</script></span> et constituée de 4 DA MTU série 4000 de <span class="arithmatex"><span class="MathJax_Preview">2.1 MW</span><script type="math/tex">2.1 MW</script></span> débitant du courant sous <span class="arithmatex"><span class="MathJax_Preview">6600 V</span><script type="math/tex">6600 V</script></span> / <span class="arithmatex"><span class="MathJax_Preview">60 Hz</span><script type="math/tex">60 Hz</script></span> transformé en <span class="arithmatex"><span class="MathJax_Preview">440V/60Hz</span><script type="math/tex">440V/60Hz</script></span> via des transformateurs HT/BT.</p>
+<p>BPC navire tout électrique Puissance DIESEL installée ; 3 diesels principaux WÄRTSILA 16V32LNE de <span class="arithmatex"><span class="MathJax_Preview">6480 kw</span><script type="math/tex">6480 kw</script></span> à <span class="arithmatex"><span class="MathJax_Preview">720 tr/mn</span><script type="math/tex">720 tr/mn</script></span> + 1 diesel auxiliaire WÄRTSILA 18V200 de <span class="arithmatex"><span class="MathJax_Preview">3150 kw</span><script type="math/tex">3150 kw</script></span> à <span class="arithmatex"><span class="MathJax_Preview">1200 tr/mn</span><script type="math/tex">1200 tr/mn</script></span> soit une puissance totale de <span class="arithmatex"><span class="MathJax_Preview">22590 kw</span><script type="math/tex">22590 kw</script></span> Coté alternateur en courant de distribution HT ( <span class="arithmatex"><span class="MathJax_Preview">6600V</span><script type="math/tex">6600V</script></span>/<span class="arithmatex"><span class="MathJax_Preview">60Hz</span><script type="math/tex">60Hz</script></span>) çà donne 3 alternateurs principaux de <span class="arithmatex"><span class="MathJax_Preview">6250 Kw</span><script type="math/tex">6250 Kw</script></span> et 1 alternateur auxiliaire de <span class="arithmatex"><span class="MathJax_Preview">3000 kw</span><script type="math/tex">3000 kw</script></span> soit une puissance génératrice totale de <span class="arithmatex"><span class="MathJax_Preview">21750 kw</span><script type="math/tex">21750 kw</script></span>.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/695917872723263559/695986371692724274/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 14: Réseau principal de distribution</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Le principe de fonctionnement du réseau Force (réseau principal) est le même sur les navires et sous-marins, un grand nombre de batteries permettent de prendre le relais en cas de panne à bord pour le réseau secouru. La différence ce joue aux niveau du dimensionnement du réseau secondaire en fonction du nombre d'équipements secourus.  </p>
+<p>Le réseau secouru est en circuit alimenté en tension continu expliquer par l'utilisation de batteries en conserver l'énergie secours.</p>
+<h4 id="62-cas-des-sous-marins_1"><a id="bateau-sous"><span style="color:black">6.2 Cas des sous-marins</span></a></h4>
+<p>Il y a deux type de sous-marin, ceux dit à propulsion nucléaire et ceux dit à propulsion conventionnelle.
+Dans le cas d'un sous-marins nucléaire l'énergie électrique principale est produite par l'alternateur produite à son tour par les générateurs vapeur. (même principe que les centrales à terre mais miniaturisé).  </p>
+<p>Dans le cas du sous-marin à propulsion conventionnelle, l'énergie électrique principale est en continue fournit par les batteries, celles-ci sont rechargés lors du démarrage du diesel alternateur.  </p>
+<h4 id="63-le-systeme-de-conduite-centralise_1"><a id="bateau-conduite"><span style="color:black">6.3 Le système de conduite centralisé</span></a></h4>
+<p>Un power management système gère automatiquement toutes ces usines électriques en répartition de charge , couplage …etc . Le power management dit PMS porte un nom différent suivant le fabricant ou le type de navire, il peut aussi être appelé SMS (Ship Management System), le VMS (Vessel Management System), le SCCS ( Système de Conduite Centralisé et Supervision) etc...
+Les navires de dernière génération sont gérés en réseau, l'ensemble de la boucle réseau permet au PMS de recevoir des données et transmettre des ordres, que ce soit automatiquement en fonction de la configuration et des données reçu ou manuellement par les opérateurs.</p>
+<p>Exemple de sous-systèmes pris en charge par le PMS:</p>
+<ul>
+<li>Système d’acquisition et de traitement des données : mesures et alarmes, etc.</li>
+<li>Système de télécommande d’ensemble propulsifs : pas d’hélice, vitesse, etc…</li>
+<li>Gestion de la propulsion électrique : répartition, couplage, délestage, redémarrage des auxiliaires essentiels, démarrage automatique des diesels, etc.</li>
+<li>Contrôles, commandes automatique : pompes, vannes, télé-jaugeage, disjoncteurs, etc.</li>
+</ul>
+<p>Le principe de fonctionnement d'un navire est relativement proche de la gestion du parc électrique légèrement plus moderne peut être.         </p>
+<hr />
+<h3 id="7-smart-grids_1"><a id="smart-grids"><span style="color:black">7. Smart-Grids</span></a></h3>
+<h4 id="71-definition-des-smart-grids_1"><a id="smart-def"><span style="color:black">7.1 Définition des Smart Grids</span></a></h4>
+<p>Dans l'optique de moderniser les réseaux électriques pour correspondre à l'évolution des consommations, des technologies de Smart grids (réseaux intelligents) sont déployées. Cela consiste à intégrer des nouvelles technologies de l'information et de la communication au réseau pour le rendre "intelligent", afin d'optimiser le transport et la production d'énergie en temps réel.  </p>
+<p>Certaines contraintes seront mieux gérées grâce aux Smart grids telles que l'intermittence des énergies renouvelables et le développement de nouveaux usages comme le véhicule électrique.</p>
+<p><center>
+<br />
+<figure>
+    <img src="http://www.smartgrids-cre.fr/media/images/site_images/consommateurs/schema1.jpg"
+    width="600"
+    >
+    <figcaption><i>Figure 15: Projection d'évolution du nombre de véhicules légers électriques en France<i></figcaption>
+  </figure></p>
+<p></center></p>
+<h4 id="72-les-contraintes-du-reseau-electrique_1"><a id="smart-contraintes"><span style="color:black">7.2 Les contraintes du réseau électrique</span></a></h4>
+<p>Les nouvelles consommations:   </p>
+<p>La climatisation, les appareils audio et vidéo ou le chauffage électrique se développent et accroissent la consommation.<br />
+L’apparition de nouveaux usages de consommation, tels que la voiture électrique, amplifiera cette hausse. Face à cette augmentation prévisible, les réseaux électriques actuels ne seront plus suffisamment adaptés.<br />
+$Pour éviter de renforcer les réseaux (coûteux), il sera nécessaire de contrôler les périodes de charge des véhicules électriques.</p>
+<p>Les nouvelles énergies:  </p>
+<p>Depuis quelques années, de plus en plus de sources d’électricité d’origine renouvelable sont reliées au réseau électrique.  </p>
+<p>L’intermittence de cette production la rend très difficile à intégrer au réseau et ne correspond pas forcément aux périodes de consommation de pointe. L'électricité produite, ne pouvant être stockée, est alors perdue.  </p>
+<p>Le développement des énergies de sources renouvelables est ainsi souvent freiné par une inadéquation des moyens de production avec le fonctionnement du réseau actuel.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.pixabay.com/photo/2016/03/29/17/23/solarpark-1288842_960_720.jpg"
+    width="600"
+    >
+    <figcaption><i>Figure 16: Parc de production éolien et solaire</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Les objectifs fixés par l'Union Européenne:  </p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">20\%</span><script type="math/tex">20\%</script></span> de la consommation énergétique totale proviendra des énergies de sources renouvelables ;</li>
+<li>à production équivalente de biens et de services en 2020 par rapport à 1990, l'Union européenne s'est fixé l'objectif de consommer <span class="arithmatex"><span class="MathJax_Preview">20\%</span><script type="math/tex">20\%</script></span> d'énergies en moins ;</li>
+<li>réduction de <span class="arithmatex"><span class="MathJax_Preview">20\%</span><script type="math/tex">20\%</script></span>, voire de <span class="arithmatex"><span class="MathJax_Preview">30\%</span><script type="math/tex">30\%</script></span> en cas d’accord international, des émissions de gaz à effet de serre par rapport à 1990.</li>
+</ul>
+<p>Le réseau intelligent permettra d’intégrer les énergies renouvelables et de renseigner producteur, distributeur et consommateur sur l’utilisation de l’énergie.</p>
+<h4 id="73-les-avantages-pour-le-consommateur_1"><a id="smart-avantages"><span style="color:black">7.3 Les avantages pour le consommateur</span></a></h4>
+<p>Les consommateurs vont devenir des acteurs de leur consommation, voire de la production grâce à leurs installations photovoltaïques et/ou d'éoliennes.  </p>
+<p>Grâce aux compteurs intelligents, les consommateurs et les gestionnaires de réseaux connaîtront précisément la consommation d’un site ou d’un foyer. Les fournisseurs d’énergie pourront donc proposer aux consommateurs de nouvelles offres selon leur profil de consommation.  </p>
+<p>En améliorant la connaissance sur la consommation électrique à l’aide de compteurs évolués, il sera plus facile d’éviter les pics de consommation et les pannes dues à une surcharge. La consommation électrique sera gérée de manière intelligente. Par exemple, pendant les horaires où la consommation est réduite, on pourra profiter de l’électricité produite pour charger sa voiture électrique.  </p>
+<p>Le consommateur sera renseigné sur le meilleur horaire pour faire tourner une machine et il gérera alors de manière active sa consommation d'énergie.
+Les pannes sur le réseau seront détectées beaucoup plus facilement et les opérations de maintenance, de relève et de conduite se feront à distance.<br />
+Les centres de contrôle des gestionnaires des réseaux d’électricité seront également informés en temps réel des besoins en énergie des consommateurs : ils distribueront alors la juste quantité d’électricité sur le réseau.  </p>
+<p>En résumé, les réseaux électriques intelligents permettront au consommateur d’avoir :
+- une maison plus intelligente,
+- des factures plus précises,
+- des pannes mieux détectées et plus rapidement réparées,
+- des offres tarifaires plus diversifiées.</p>
+<h4 id="74-bilan-de-lutilisation-des-smart-grids_1"><a id="smart-bilan"><span style="color:black">7.4 Bilan de l'utilisation des Smart-Grids</span></a></h4>
+<p>En résumé, les réseaux électriques intelligents :</p>
+<ul>
+<li>faciliteront l’intégration de la production de sources renouvelables et décentralisée,</li>
+<li>rendront actif le consommateur au sein du système électrique,</li>
+<li>fourniront au consommateur la connaissance suffisante permettant un pilotage efficace de sa consommation,</li>
+<li>participeront à l’élaboration d’un système électrique décarboné.</li>
+</ul>
+<hr />
+<h3 id="8-voiture-electrique_1"><a id="voiture-electrique"><span style="color:black">8. Voiture électrique</span></a></h3>
+<p><strong>Préambule :</strong><br />
+Le secteur des transports émet aujourd'hui environ un tiers des gaz à effet de serre.
+La voiture électrique apparaît comme étant une solution pour atteindre la neutralité carbone d'ici 2050.  Et pourtant, des voix s’élèvent pour dénoncer les fausses promesses de ces véhicules qui ne seraient pas si écologiques.</p>
+<p><strong>Quelques chiffres :</strong><br />
+Le marché des véhicules électriques représente encore que <span class="arithmatex"><span class="MathJax_Preview">2,5\%</span><script type="math/tex">2,5\%</script></span> des ventes d’automobiles dans le monde en 2019 (<span class="arithmatex"><span class="MathJax_Preview">2\%</span><script type="math/tex">2\%</script></span> en France, <span class="arithmatex"><span class="MathJax_Preview">5\%</span><script type="math/tex">5\%</script></span> en Chine, <span class="arithmatex"><span class="MathJax_Preview">50\%</span><script type="math/tex">50\%</script></span> en Norvège) mais connaît néanmoins une forte progression : En 2018, les ventes ont bondi de plus de <span class="arithmatex"><span class="MathJax_Preview">60\%</span><script type="math/tex">60\%</script></span> (2 millions de véhicules vendus) par rapport à l’année précédente.</p>
+<h4 id="81-une-volonte-politique_1"><a id="voiture-politique"><span style="color:black">8.1 Une volonté politique</span></a></h4>
+<p>La France a pour objectif de vendre <span class="arithmatex"><span class="MathJax_Preview">35\%</span><script type="math/tex">35\%</script></span> de véhicules électriques d'ici 2030 et le gouvernement a annoncé dans le plan climat l'arrêt de la vente des véhicules thermiques et donc émetteurs de gaz à effet de serre à l'horizon 2040.<br />
+Les constructeurs ont dès aujourd'hui des objectifs de restriction d'émission de CO2 qui les forcent à mettre sur le marché des voitures électriques, cependant l'offre de ces véhicules reste encore limitée.<br />
+Aujourd'hui, les voitures électriques sont essentiellement fabriquées en Chine, qui détient plus de <span class="arithmatex"><span class="MathJax_Preview">50\%</span><script type="math/tex">50\%</script></span> du marché (plus d'un million de vente). En Europe, les constructeurs ont du retard car la vente de la voiture électrique leur revient plus chère.
+De plus, l'Europe, qui a actuellement un leadership mondial sur les véhicules thermiques, deviendrait dépendante de la Chine puisque <span class="arithmatex"><span class="MathJax_Preview">80\%</span><script type="math/tex">80\%</script></span> du cobalt nécessaire à la construction des batteries lithium-ion proviennent de Chine, et cela représenterai près de <strong>12 millions d'emplois</strong> qui pourraient être menacés.<br />
+En France, la loi des mobilités pourrait apporter certains avantages :</p>
+<ul>
+<li>Stationnement gratuit (comme c'est déjà le cas à Oslo en Norvège par exemple).</li>
+<li>Zones à mobilité restreintes où ces véhicules pourront évoluer sans problème.</li>
+<li>Faire en sorte que tout soit très clair et simple pour l'utilisateur du véhicule électrique.</li>
+</ul>
+<h4 id="82-limites-de-la-voiture-electrique_1"><a id="voiture-limites"><span style="color:black">8.2 Limites de la voiture électrique</span></a></h4>
+<p>La fabrication est globalement plus polluante et plus émettrice de carbone, notamment pour la fabrication des batteries lithium-ion dont le recyclage est complexe et coûteux, et dont la fabrication nécessite environ <span class="arithmatex"><span class="MathJax_Preview">400 kWh</span><script type="math/tex">400 kWh</script></span> d'énergie pour <span class="arithmatex"><span class="MathJax_Preview">1 kWh</span><script type="math/tex">1 kWh</script></span> de stockage.  </p>
+<p>Si on veut améliorer l'autonomie de la voiture, on doit augmenter le nombre/la taille des batteries, ce qui consomme d'autant plus d'énergie.<br />
+Enfin, selon certaines études, la voiture électrique devient moins émettrice de CO2 que la voiture thermique à partir de <span class="arithmatex"><span class="MathJax_Preview">50.000 km</span><script type="math/tex">50.000 km</script></span>, or la voiture électrique n'est aujourd'hui pas en mesure et pas conçue pour effectuer de longues distances.  </p>
+<p>Actuellement, aucune étude fiable démontre que le véhicule électrique réduira les émissions carbones, au contraire il pourrait exister un effet pervers selon les endroits où les batteries sont fabriquées.</p>
+<h4 id="83-impact-sur-les-reseaux-electriques_1"><a id="voiture-impact"><span style="color:black">8.3 Impact sur les réseaux électriques</span></a></h4>
+<p>Le déploiement d'infrastructures de charge de véhicules électriques sur l'ensemble du territoire est une condition sine qua non  du décollage des ventes de véhicules électriques.</p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/695917872723263559/695969420492668998/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 17: Schéma décrivant le principe de Smart-Grid</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>Ces infrastructures de recharge sont raccordées aux réseaux électriques. Elles auront donc un impact sur la gestion et la configuration du réseau aux échelons local, départemental et national.  </p>
+<p>Une modélisation de la charge a été réalisée par les gestionnaires de réseaux à partir des statistiques d’usage des véhicules électriques, du type de recharge des batteries (lent, semi-rapide, rapide) et des caractéristiques des véhicules (capacité de la batterie, autonomie, technologie VHR (hybrides) versus VEB(<span class="arithmatex"><span class="MathJax_Preview">100\%</span><script type="math/tex">100\%</script></span> électrique)).  </p>
+<p>Cette modélisation permet de définir des courbes de charge « naturelle » des véhicules électriques, sans gestion particulière de la recharge. Elles indiquent très nettement que le nouvel usage du véhicule électrique vient s’ajouter aux autres usages, souvent pendant les heures de forte consommation, et induit un accroissement notable de la consommation électrique à la pointe.  </p>
+<p><center>
+<br />
+<figure>
+    <img src="https://cdn.discordapp.com/attachments/695917872723263559/695970587163492362/unknown.png"
+    width="600"
+    >
+    <figcaption><i>Figure 18: Courbes de charge type pour un jour ouvré moyen pour  un million de véhicules électriques</i></figcaption>
+  </figure></p>
+<p></center></p>
+<p>L’appel de puissance lié à la recharge des véhicules électriques pourrait donc avoir des conséquences économiques (renforcements du réseau) et des conséquences environnementales (recharge en période de pointe et donc émissions de CO2) potentiellement très importantes.</p>
+<p><strong>Une autre question se pose : La France peut-elle alimenter l'ensemble de sa population en voiture électrique ?</strong></p>
+<p><a href="https://www.rte-france.com/sites/default/files/rte_-_mobilite_electrique_-_principaux_resultats_-_vf.pdf">Selon un rapport de RTE</a> paru en 2019 et réalisé avec l’association AVERE France, d’ici 2035, notre système serait en mesure d’absorber un parc routier composé à <span class="arithmatex"><span class="MathJax_Preview">40\%</span><script type="math/tex">40\%</script></span> de véhicules électriques.</p>
+<p>Selon ce même rapport, un parc national composé de 15,6 millions de véhicules branchés (Estimation d'ici 2035, cf. Figue x.) représenterait une consommation de <span class="arithmatex"><span class="MathJax_Preview">35</span><script type="math/tex">35</script></span> à <span class="arithmatex"><span class="MathJax_Preview">40 TWh</span><script type="math/tex">40 TWh</script></span>, soit <span class="arithmatex"><span class="MathJax_Preview">8\%</span><script type="math/tex">8\%</script></span> de la production électrique totale française.</p>
+<p><strong>La recharge pilotée, une opportunité pour le réseau électrique ?</strong>  </p>
+<p>L’électrification est même considérée comme une « opportunité », à condition que la recharge soit pilotée. Les millions de véhicules électriques branchés pendant plusieurs heures pourront en effet contribuer à terme à l’équilibre du réseau grâce au "<em>Véhicule to Grid</em>" (V2G), en y injectant du courant lors des pics de consommation.  </p>
+<p>Une solution d’autant plus pertinente qu’une voiture est utilisée pour se déplacer seulement <span class="arithmatex"><span class="MathJax_Preview">4\%</span><script type="math/tex">4\%</script></span> de son temps ! Sans attendre la mise en place du V2G, un pilotage simple tel qu’un système de lancement de charge en heures creuses similaire à celui de nos ballons d’eau chaude permettrait déjà d’éviter de forts appels de puissance et une économie de 5 millions de tonnes de CO2, estime RTE.</p>
+<h4 id="84-quel-futur-pour-la-voiture-electrique_1"><a id="voiture-bilan"><span style="color:black">8.4 Quel futur pour la voiture électrique?</span></a></h4>
+<p>Aujourd'hui, il est sûr que la voiture électrique ne constitue pas une solution de masse. Bien que l’utilisation de  l’énergie électrique soit plus propre que celle de l’essence, les systèmes d’exploitation pour fournir de l’électricité ne sont pas encore tous sans émettre de CO2. L’équation entre l'émergence des véhicules électriques, facteur de l’efficacité énergétique, et l'intégration des énergies de sources renouvelables est encore à résoudre, afin d’éviter d’utiliser les centrales thermiques pour compenser les pics de consommation engendrés par un rechargement simultané des véhicules électriques.</p>
+<p>De plus, rendre le réseau intelligent et communicant, en développant les Smart Grids, est l’ambition de toutes les entreprises concernées par la voiture électrique, comme les fournisseurs d’électricité, les concepteurs des bornes électriques et les constructeurs automobiles.</p>
+<p>Cependant, le <em>Shift-Project</em> et les ingénieurs spécialisés dans ce domaine nous rappelle qu'il est essentiel de nous réorienter vers des modes de vie plus sobres : Il est plus simple de s'affranchir d'un certain nombre de contraintes géopolitiques ou de balances commerciales en consommant moins et en fabricant des voitures certes peut-être moins confortables mais plus petites, sans oublier les transports en commun ou les vélos.</p>
+<hr />
+<h3 id="sources_1"><a id="sources"><span style="color:black">Sources</span></a></h3>
+<p>Données sur le réseau de transport: <a href="https://www.edf.fr/groupe-edf/espaces-dedies/l-energie-de-a-a-z/tout-sur-l-energie/l-acheminement-de-l-electricite/le-reseau-de-transport"><em>EDF</em></a><br />
+Outil de visualisation de données en direct: <a href="https://www.rte-france.com/fr/eco2mix/eco2mix"><em>eco2mix</em></a><br />
+SER: <a href="https://www.strasbourg-electricite-reseaux.fr/">Strasbourg Électricité Réseaux</a><br />
+Informations et détails sur les réseaux électriques français: <a href="https://www.cre.fr/Electricite/Reseaux-d-electricite/Presentation-des-reseaux-d-electricite"><em>CRE</em></a><br />
+Rapport de mobilité de Rte: <a href="https://www.rte-france.com/sites/default/files/rte_-_mobilite_electrique_-_principaux_resultats_-_vf.pdf"><em>Rte</em></a><br />
+Émission "Entendez-vous l'éco ?": <a href="https://www.franceculture.fr/emissions/entendez-vous-leco"><em>France Culture</em></a><br />
+Shift Project: <a href="https://theshiftproject.org/en/home/">Shift Project</a><br />
+Données et graphiques: <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipédia</a>
+Fonctionnement et utilité des Smart-Grids: <a href="http://www.smartgrids-cre.fr/index.php?p=comprendre-les-smart-grids"><em>CRE</em></a>  </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../molle/strategieInternationale/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Stratégie internationale" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Stratégie internationale
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../transitionEnergetique/" class="md-footer__link md-footer__link--next" aria-label="Next: Transition énergétique" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Transition énergétique
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Louison SARLIN--MAGNUS
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
