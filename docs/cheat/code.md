@@ -61,6 +61,8 @@ Il est possible de définir une ligne de code dans une phrase en l'encadrant ave
 !!! tip "Ajouter les numeros de ligne"
     Il est possible d'ajouter les numéros de ligne en ajoutant `linenums="1"` à côté du language choisi.
 
+!!! tip "Ajouter un titre"
+    Il est possible d'ajouter un titre (nom du fichier par exemple) en ajoutant `title="titre.py"` par exemple.
 
 !!! tip "Poupée russe"
     Il est possible d'emboiter des blocs de code en ajoutant un ` a chaque incrément.
